@@ -69,7 +69,7 @@ skill above 0, and a p10-p90 range that held at least 70% of outcomes. Everythin
    `SHA256SUMS` and `RELEASE.json`.
 2. Create a GitHub release in this repository, tag `forecast-vYYYY.MM.DD`, and attach every file of
    `models/release/`. Paste `RELEASE.json`'s `backtest_overall` and `usable_groups` into the release notes, good or
-   bad. Model files are never committed to git.
+   bad. The current served bundle is also committed under `models/release/`; raw training exports remain outside git.
 3. Build and run the image locally, and check it (section 5).
 4. Tell Hemanth (AIAIC backend) and Kaushlendra (CI/CD, VM) the tag. Kaushlendra's pipeline builds the image from
    that tag's assets and runs it beside AIAIC. Hemanth runs AIAIC's integration check against it. **Nobody copies

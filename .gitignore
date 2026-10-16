@@ -65,6 +65,10 @@ mlruns/
 !models/*.json
 models/*.joblib
 
+# The current served release is versioned with its checksums and metadata.
+!models/release/
+!models/release/*
+
 # Allow pipeline report
 !data/versions/pipeline_report.json
 !data/versions/training_runs/

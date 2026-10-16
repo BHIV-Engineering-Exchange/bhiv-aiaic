@@ -1,0 +1,167 @@
+{
+  "model_file": "forecast_20261016T062532Z_97c62dd7.joblib",
+  "trained_at": "20261016T062532Z",
+  "trained_through": "2026-08-26",
+  "backtest_cutoff": "2026-02-27",
+  "data_source": "Agmarknet via data.gov.in, AIAIC pilot export 2026-10-02 (backend_files/agmarknet_pilot_mh_mp_2001_2026.csv.gz)",
+  "data_hash": "97c62dd7488d796fd29895aa54656f155032ad8c8ca276b829fc6ceba06854b0",
+  "market_identity": "the input's 'mandi' for the market and 'crop' for the commodity (one series per mandi and crop across Agmarknet's renames), not the published names",
+  "horizons_days": [
+    7,
+    30
+  ],
+  "backtest_overall": {
+    "n": 18719,
+    "mae_p50": 267.83,
+    "mae_persistence": 289.21,
+    "skill_vs_persistence": 0.0739,
+    "coverage_p10_p90": 0.8631,
+    "coverage_p10_p90_before_calibration": 0.818
+  },
+  "usable_groups": [
+    {
+      "commodity": "onion",
+      "state": "Madhya Pradesh",
+      "horizon_days": 7,
+      "n": 782,
+      "skill_vs_persistence": 0.0238,
+      "coverage_p10_p90": 0.7839
+    },
+    {
+      "commodity": "onion",
+      "state": "Madhya Pradesh",
+      "horizon_days": 30,
+      "n": 563,
+      "skill_vs_persistence": 0.0347,
+      "coverage_p10_p90": 0.7105
+    },
+    {
+      "commodity": "soybean",
+      "state": "Madhya Pradesh",
+      "horizon_days": 7,
+      "n": 1591,
+      "skill_vs_persistence": 0.1031,
+      "coverage_p10_p90": 0.8969
+    },
+    {
+      "commodity": "soybean",
+      "state": "Madhya Pradesh",
+      "horizon_days": 30,
+      "n": 1171,
+      "skill_vs_persistence": 0.0665,
+      "coverage_p10_p90": 0.9103
+    },
+    {
+      "commodity": "soybean",
+      "state": "Maharashtra",
+      "horizon_days": 7,
+      "n": 1211,
+      "skill_vs_persistence": 0.0588,
+      "coverage_p10_p90": 0.8538
+    },
+    {
+      "commodity": "soybean",
+      "state": "Maharashtra",
+      "horizon_days": 30,
+      "n": 920,
+      "skill_vs_persistence": 0.0655,
+      "coverage_p10_p90": 0.9022
+    },
+    {
+      "commodity": "tur",
+      "state": "Madhya Pradesh",
+      "horizon_days": 7,
+      "n": 464,
+      "skill_vs_persistence": 0.1406,
+      "coverage_p10_p90": 0.8082
+    },
+    {
+      "commodity": "tur",
+      "state": "Madhya Pradesh",
+      "horizon_days": 30,
+      "n": 330,
+      "skill_vs_persistence": 0.082,
+      "coverage_p10_p90": 0.8667
+    },
+    {
+      "commodity": "tur",
+      "state": "Maharashtra",
+      "horizon_days": 7,
+      "n": 1163,
+      "skill_vs_persistence": 0.0525,
+      "coverage_p10_p90": 0.8899
+    },
+    {
+      "commodity": "tur",
+      "state": "Maharashtra",
+      "horizon_days": 30,
+      "n": 833,
+      "skill_vs_persistence": 0.0405,
+      "coverage_p10_p90": 0.9352
+    },
+    {
+      "commodity": "wheat",
+      "state": "Madhya Pradesh",
+      "horizon_days": 7,
+      "n": 2997,
+      "skill_vs_persistence": 0.127,
+      "coverage_p10_p90": 0.8612
+    },
+    {
+      "commodity": "wheat",
+      "state": "Madhya Pradesh",
+      "horizon_days": 30,
+      "n": 2225,
+      "skill_vs_persistence": 0.2468,
+      "coverage_p10_p90": 0.9245
+    },
+    {
+      "commodity": "wheat",
+      "state": "Maharashtra",
+      "horizon_days": 7,
+      "n": 1531,
+      "skill_vs_persistence": 0.0424,
+      "coverage_p10_p90": 0.8746
+    },
+    {
+      "commodity": "wheat",
+      "state": "Maharashtra",
+      "horizon_days": 30,
+      "n": 1148,
+      "skill_vs_persistence": 0.1325,
+      "coverage_p10_p90": 0.8693
+    }
+  ],
+  "groups_total": 16,
+  "files": {
+    "forecast_20261016T062532Z_97c62dd7.joblib": {
+      "sha256": "fac02d34d6eacbbaf80ff04d6587f731d0c80fd3ebf151d0ac9165e41159c65d",
+      "bytes": 5399538
+    },
+    "forecast_20261016T062532Z_97c62dd7.json": {
+      "sha256": "54f60f0108cc60589b83ed8175e0d206414d9d9c18ce5af5f52786869bd1ea7e",
+      "bytes": 141569
+    },
+    "forecast_20261016T062532Z_97c62dd7_history.csv.gz": {
+      "sha256": "9764930453e0409fa35c17cd60659b02c21715ea3697139f9f58315493a5cad3",
+      "bytes": 955208
+    }
+  },
+  "smoke_test": {
+    "ready": 200,
+    "meta_model_file": "forecast_20261016T062532Z_97c62dd7.joblib",
+    "forecast": {
+      "commodity": "onion",
+      "state": "Madhya Pradesh",
+      "market": "A lot",
+      "as_of": "2026-08-26",
+      "horizon_days": 7,
+      "target_date": "2026-09-02",
+      "p10": 1742.09,
+      "p50": 2503.87,
+      "p90": 4217.38
+    }
+  },
+  "packaged_at_utc": "2026-10-16T06:53:48Z",
+  "honesty": "Experimental. A forecast is answered only for usable groups (beat persistence, range held >= 70% of outcomes, >= 20 cases); everything else abstains with a reason."
+}
