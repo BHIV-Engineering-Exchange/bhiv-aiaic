@@ -83,4 +83,8 @@ evidence_packet/backend_integration_bundle/history/
 # models/release/ is FILLED by scripts/package_forecast_release.py (or by downloading a GitHub release's assets)
 # and copied into the image; the files themselves live on the release, not in git (models/* above already ignores
 # them).
+models/release/*.joblib
+models/release/*_history.csv.gz
+models/forecast_*/*.joblib
+models/forecast_*/*_history.csv.gz
 experiments/samples_cache_*.pkl
