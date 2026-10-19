@@ -1,38 +1,81 @@
-# Review branch verification
+# Forecast release evidence packet
 
-## Scope
+## Release
 
-Branch `review-2026-10-02` is based on `aiaic-forecast` at `efa3478`. The supplied
-review patch was applied on that branch. The cleanup removes tracked copies,
-bundled model/history files, the old backend-check notebook, and retired helper
-scripts from the proposed commit. Ignored local data/model copies were not
-deleted.
+- Release: `forecast-v2026.10.17`
+- Model: `forecast_20261016T062532Z_97c62dd7.joblib`
+- Trained at: `2026-10-16T06:25:32Z`
+- Trained through: `2026-08-26`
+- Backtest cutoff: `2026-02-27`
+- Data hash: `97c62dd7488d796fd29895aa54656f155032ad8c8ca276b829fc6ceba06854b0`
+- Source: Agmarknet via data.gov.in, AIAIC pilot export 2026-10-02
+- Horizons: 7 and 30 days
 
-The review packet's `/v1/predict` metrics are now explicitly marked invalid:
-the endpoint used same-day minimum and maximum prices to predict that same
-day's modal price. The forecast-quality source of truth is the `/v1/forecast`
-release backtest.
+The release is experimental. It answers only for groups that beat persistence,
+have at least 20 scored cases, and whose calibrated p10-p90 range covered at
+least 70% of scored outcomes. Other requests abstain with a reason.
 
-## Checks completed
+## Overall backtest
 
-- `python -m pytest tests -q -p no:cacheprovider`: **69 passed**, 7 warnings,
-  on Windows with Python 3.10.11. The run did not modify `evidence_packet/`.
-- `docker compose -f docker/docker-compose.yml config --quiet`: passed.
-- A GitHub Actions workflow now runs `python -m pytest tests -q` on pushes and
-  pull requests, using Python 3.11.
-- The review patch redacts the tunnel URL and personal paths from the staged
-  evidence files. Final staged-content scans found no tunnel URLs, personal
-  paths, or common embedded credential patterns.
+| Cases | Model MAE (Rs/q) | Persistence MAE (Rs/q) | Skill vs persistence | p10-p90 coverage |
+|---:|---:|---:|---:|---:|
+| 18,719 | 267.83 | 289.21 | 0.0739 | 86.31% |
 
-## Not yet verified / blocked
+Coverage before calibration was 81.80%.
 
-- No `models/release/` bundle is present. Docker is installed, but its Linux
-  engine is not running, so image build, container health, and the live
-  `/v1/ready` check could not be performed.
-- The `pilot_v2` dataset described in `ARYAN_NEXT_TASK_2026-10-02.md` is not in
-  this workspace. The separate MSP export script also requires AIAIC's proposed
-  D-139 marketing-season relabel to be applied before it can run.
-- Therefore pilot training, same-split experiments, release packaging/tagging,
-  AIAIC integration verification, and forecast replay are not claimed complete.
-- GitHub Actions has not run yet; the workflow must be exercised after the
-  branch is pushed.
+## Usable groups
+
+The release metadata contains 16 total groups; 14 are usable.
+
+| Crop | State | Horizon | Cases | Skill | Coverage |
+|---|---|---:|---:|---:|---:|
+| Onion | Madhya Pradesh | 7 | 782 | 0.0238 | 78.39% |
+| Onion | Madhya Pradesh | 30 | 563 | 0.0347 | 71.05% |
+| Soybean | Madhya Pradesh | 7 | 1,591 | 0.1031 | 89.69% |
+| Soybean | Madhya Pradesh | 30 | 1,171 | 0.0665 | 91.03% |
+| Soybean | Maharashtra | 7 | 1,211 | 0.0588 | 85.38% |
+| Soybean | Maharashtra | 30 | 920 | 0.0655 | 90.22% |
+| Tur | Madhya Pradesh | 7 | 464 | 0.1406 | 80.82% |
+| Tur | Madhya Pradesh | 30 | 330 | 0.0820 | 86.67% |
+| Tur | Maharashtra | 7 | 1,163 | 0.0525 | 88.99% |
+| Tur | Maharashtra | 30 | 833 | 0.0405 | 93.52% |
+| Wheat | Madhya Pradesh | 7 | 2,997 | 0.1270 | 86.12% |
+| Wheat | Madhya Pradesh | 30 | 2,225 | 0.2468 | 92.45% |
+| Wheat | Maharashtra | 7 | 1,531 | 0.0424 | 87.46% |
+| Wheat | Maharashtra | 30 | 1,148 | 0.1325 | 86.93% |
+
+The two non-usable groups are onion/Maharashtra at 7 and 30 days. Their
+backtest records remain in `RELEASE.json`; the service abstains for them.
+
+## Release smoke test
+
+The packaging smoke test loaded the release bundle and checked `/v1/ready`
+and `/v1/forecast/meta`.
+
+```json
+{
+  "ready": 200,
+  "meta_model_file": "forecast_20261016T062532Z_97c62dd7.joblib",
+  "forecast": {
+    "commodity": "onion",
+    "state": "Madhya Pradesh",
+    "market": "A lot",
+    "as_of": "2026-08-26",
+    "horizon_days": 7,
+    "target_date": "2026-09-02",
+    "p10": 1742.09,
+    "p50": 2503.87,
+    "p90": 4217.38
+  }
+}
+```
+
+## Replay evidence
+
+`scripts/replay_forecast_evidence.py` records each `/v1/forecast` request and
+response in `review_packet/runtime_logs/`. Each record includes the original
+request ID, model file, data hash, request body, response, replay request ID,
+replay response, and exact equality checks for `p10`, `p50`, and `p90`.
+
+The generated replay record is the runtime evidence for deterministic
+quantile reproduction.

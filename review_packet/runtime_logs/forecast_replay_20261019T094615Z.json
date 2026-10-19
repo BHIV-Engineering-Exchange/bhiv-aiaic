@@ -1,0 +1,101 @@
+{
+  "recorded_at": "2026-10-19T09:46:15.052968+00:00",
+  "endpoint": "http://127.0.0.1:8000/v1/forecast",
+  "request_id": "977ad71f-eed9-4aea-a1c4-2f53288d1896",
+  "model_file": "forecast_20261016T062532Z_97c62dd7.joblib",
+  "data_hash": "97c62dd7488d796fd29895aa54656f155032ad8c8ca276b829fc6ceba06854b0",
+  "request_body": {
+    "commodity": "onion",
+    "state": "Madhya Pradesh",
+    "market": "A lot",
+    "as_of": "2026-08-26",
+    "horizon_days": 7
+  },
+  "response_status": 200,
+  "response": {
+    "request_id": "977ad71f-eed9-4aea-a1c4-2f53288d1896",
+    "execution_status": "SUCCESS",
+    "commodity": "onion",
+    "state": "Madhya Pradesh",
+    "market": "A lot",
+    "as_of": "2026-08-26",
+    "horizon_days": 7,
+    "target_date": "2026-09-02",
+    "unit": "INR per quintal (modal price)",
+    "model": {
+      "file": "forecast_20261016T062532Z_97c62dd7.joblib",
+      "trained_at": "20261016T062532Z",
+      "trained_through": "2026-08-26",
+      "data_source": "Agmarknet via data.gov.in, AIAIC pilot export 2026-10-02 (backend_files/agmarknet_pilot_mh_mp_2001_2026.csv.gz)",
+      "data_hash": "97c62dd7488d796fd29895aa54656f155032ad8c8ca276b829fc6ceba06854b0"
+    },
+    "backtest": {
+      "commodity": "onion",
+      "state": "Madhya Pradesh",
+      "horizon_days": 7,
+      "n": 782,
+      "mae_p50": 299.33,
+      "mae_persistence": 306.62,
+      "skill_vs_persistence": 0.0238,
+      "coverage_p10_p90": 0.7839,
+      "coverage_p10_p90_before_calibration": 0.7647,
+      "usable": true
+    },
+    "abstain": false,
+    "p10": 1742.09,
+    "p50": 2503.87,
+    "p90": 4217.38,
+    "last_price": 3400.0,
+    "days_since_last_price": 1,
+    "range_widened_by": 19.04,
+    "what_this_is": "A range for the modal price at this mandi around the target date: p50 is the middle estimate. In the backtest the outcome fell inside p10-p90 in the share of cases given as backtest.coverage_p10_p90. It is a model estimate, not a promise."
+  },
+  "replay_request_id": "3a200f26-4800-4f86-a97f-b6906366c5b1",
+  "replay_model_file": "forecast_20261016T062532Z_97c62dd7.joblib",
+  "replay_data_hash": "97c62dd7488d796fd29895aa54656f155032ad8c8ca276b829fc6ceba06854b0",
+  "replay_response_status": 200,
+  "replay_response": {
+    "request_id": "3a200f26-4800-4f86-a97f-b6906366c5b1",
+    "execution_status": "SUCCESS",
+    "commodity": "onion",
+    "state": "Madhya Pradesh",
+    "market": "A lot",
+    "as_of": "2026-08-26",
+    "horizon_days": 7,
+    "target_date": "2026-09-02",
+    "unit": "INR per quintal (modal price)",
+    "model": {
+      "file": "forecast_20261016T062532Z_97c62dd7.joblib",
+      "trained_at": "20261016T062532Z",
+      "trained_through": "2026-08-26",
+      "data_source": "Agmarknet via data.gov.in, AIAIC pilot export 2026-10-02 (backend_files/agmarknet_pilot_mh_mp_2001_2026.csv.gz)",
+      "data_hash": "97c62dd7488d796fd29895aa54656f155032ad8c8ca276b829fc6ceba06854b0"
+    },
+    "backtest": {
+      "commodity": "onion",
+      "state": "Madhya Pradesh",
+      "horizon_days": 7,
+      "n": 782,
+      "mae_p50": 299.33,
+      "mae_persistence": 306.62,
+      "skill_vs_persistence": 0.0238,
+      "coverage_p10_p90": 0.7839,
+      "coverage_p10_p90_before_calibration": 0.7647,
+      "usable": true
+    },
+    "abstain": false,
+    "p10": 1742.09,
+    "p50": 2503.87,
+    "p90": 4217.38,
+    "last_price": 3400.0,
+    "days_since_last_price": 1,
+    "range_widened_by": 19.04,
+    "what_this_is": "A range for the modal price at this mandi around the target date: p50 is the middle estimate. In the backtest the outcome fell inside p10-p90 in the share of cases given as backtest.coverage_p10_p90. It is a model estimate, not a promise."
+  },
+  "quantile_checks": {
+    "p10": true,
+    "p50": true,
+    "p90": true
+  },
+  "deterministic": true
+}
