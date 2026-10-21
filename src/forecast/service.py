@@ -116,6 +116,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         "model": {"file": meta["model_file"], "trained_at": meta["trained_at"], "trained_through": meta["trained_through"],
                   "data_source": meta["data_source"], "data_hash": meta["data_hash"]},
         "backtest": _backtest_row(meta, commodity, state, horizon),
+        "last_price": None,
         "last_price_date": None,
         "expected_change_pct": None,
         "direction": "UNCLEAR",
@@ -156,7 +157,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     last_price_date = g["date"].max().date().isoformat()
     last_price = float(g.loc[g["date"].idxmax(), "modal_price"])
     days_since_last = (generated_dt.date() - pd.Timestamp(last_price_date).date()).days
-    base.update({"last_price_date": last_price_date, "days_since_last_price": days_since_last})
+    base.update({"last_price": last_price, "last_price_date": last_price_date, "days_since_last_price": days_since_last})
     if days_since_last > 30 and as_of >= np.datetime64(generated_dt.date(), "D"):
         base["read_these_first"] = [f"The last price is {days_since_last} days old."]
         return {**base, "abstain": True, "reason_code": "STALE_PRICE",
@@ -179,7 +180,6 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     base.update({"confidence": _confidence(bt, False, freshness), "expected_change_pct": expected_change_pct,
                  "direction": direction})
     return {**base, "abstain": False, "p10": p10, "p50": p50, "p90": p90,
-            "last_price": row["last_price"],
             "range_widened_by": qhat,
             "what_this_is": ("A range for the modal price at this mandi around the target date: p50 is the middle "
                              "estimate. In the backtest the outcome fell inside p10-p90 in the share of cases given as "
