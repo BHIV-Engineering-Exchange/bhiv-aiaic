@@ -13,7 +13,10 @@ The backtest row is returned in every case, so a caller can show how the model h
 from __future__ import annotations
 
 import json
+import os
+import uuid
 from functools import lru_cache
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -57,20 +60,70 @@ def _backtest_row(meta: Dict, commodity: str, state: str, horizon: int) -> Optio
     return None
 
 
+KNOWN_UNKNOWNS = {
+    "onion": ["arrivals data not available", "export policy not included", "weather not included"],
+    "soybean": ["arrivals data not available", "global commodity prices not included"],
+    "tur": ["arrivals data not available", "MSP season coverage partial"],
+    "wheat": ["arrivals data not available"],
+    "maize": ["arrivals data not available"],
+    "gram": ["arrivals data not available"],
+    "bajra": ["arrivals data not available"],
+    "tomato": ["arrivals data not available", "no MSP exists for tomato", "high volatility crop"],
+}
+
+
+def _freshness(trained_through: str, generated_at: datetime) -> str:
+    days = (generated_at.date() - pd.Timestamp(trained_through).date()).days
+    if days < 30:
+        return "fresh"
+    if days < 90:
+        return "aging"
+    return "stale"
+
+
+def _confidence(backtest: Optional[Dict], abstain: bool, freshness: str) -> str:
+    if abstain or not backtest:
+        return "low"
+    skill = backtest.get("skill_vs_persistence", 0)
+    coverage = backtest.get("coverage_p10_p90", 0)
+    if skill > 0.15 and coverage > 0.80:
+        value = "high"
+    elif skill > 0.05 and coverage > 0.70:
+        value = "medium"
+    else:
+        value = "low"
+    return "medium" if freshness == "stale" and value == "high" else value
+
+
 def forecast(req: Dict, models_dir: str) -> Dict:
     """`req`: commodity, state, market, as_of (YYYY-MM-DD), horizon_days, optional history [{date, modal_price}]."""
     loaded = load_bundle(models_dir)
     meta, bundle = loaded["meta"], loaded["bundle"]
+    generated_dt = datetime.now(timezone.utc)
+    generated_at = generated_dt.isoformat().replace("+00:00", "Z")
     commodity, state, market = _norm(req.get("commodity")), _norm(req.get("state")), _norm(req.get("market"))
     horizon = int(req.get("horizon_days") or 0)
     as_of = np.datetime64(pd.Timestamp(req.get("as_of")).normalize().date(), "D")
     target = as_of + np.timedelta64(horizon, "D")
+    freshness = _freshness(meta["trained_through"], generated_dt)
+    engine_version = os.environ.get("ENGINE_VERSION") or Path(meta["model_file"]).stem
     base = {
+        "decision_id": f"forecast-{uuid.uuid4().hex[:8]}",
+        "generated_at": generated_at,
+        "engine_version": engine_version,
         "commodity": commodity, "state": state, "market": market, "as_of": str(as_of), "horizon_days": horizon,
         "target_date": str(target), "unit": "INR per quintal (modal price)",
         "model": {"file": meta["model_file"], "trained_at": meta["trained_at"], "trained_through": meta["trained_through"],
                   "data_source": meta["data_source"], "data_hash": meta["data_hash"]},
         "backtest": _backtest_row(meta, commodity, state, horizon),
+        "last_price_date": None,
+        "expected_change_pct": None,
+        "direction": "UNCLEAR",
+        "confidence": "low",
+        "known_unknowns": KNOWN_UNKNOWNS.get(commodity.lower(), []),
+        "read_these_first": [],
+        "sources_used": [{"source_name": meta["data_source"], "trained_through": meta["trained_through"],
+                          "real_world_freshness": freshness}],
     }
 
     def abstain(code: str, why: str) -> Dict:
@@ -87,15 +140,9 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         return abstain("in_sample", f"This day's outcome ({target}) is inside the model's training data (to "
                                     f"{meta['trained_through']}), so a range here would not be a forecast.")
     latest = np.datetime64(meta["trained_through"], "D") + np.timedelta64(ASOF_TOLERANCE_DAYS, "D")
-    if as_of > latest and not req.get("history"):
+    if as_of > latest and not req.get("history") and as_of > np.datetime64(generated_dt.date(), "D"):
         return abstain("as_of_outside_history", f"The model's prices end on {meta['trained_through']}; send `history` "
                                                 "to forecast from a later day.")
-    bt = base["backtest"]
-    if not bt or not bt.get("usable"):
-        return abstain("no_skill", "In its backtest the model did not beat 'the price stays where it is' for this crop, "
-                                   "state and horizon, or its range held too few of the real outcomes (under 70%), or "
-                                   "there were too few test cases to say.")
-
     if req.get("history"):
         h = pd.DataFrame(req["history"])
         h["date"] = pd.to_datetime(h["date"]).dt.normalize()
@@ -106,6 +153,20 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     g = g[g["date"] <= pd.Timestamp(as_of)]
     if g.empty:
         return abstain("no_recent_price", "No price for this mandi on or before that day.")
+    last_price_date = g["date"].max().date().isoformat()
+    last_price = float(g.loc[g["date"].idxmax(), "modal_price"])
+    days_since_last = (generated_dt.date() - pd.Timestamp(last_price_date).date()).days
+    base.update({"last_price_date": last_price_date, "days_since_last_price": days_since_last})
+    if days_since_last > 30 and as_of >= np.datetime64(generated_dt.date(), "D"):
+        base["read_these_first"] = [f"The last price is {days_since_last} days old."]
+        return {**base, "abstain": True, "reason_code": "STALE_PRICE",
+                "reason": f"The last price is {days_since_last} days old.",
+                "p10": None, "p50": None, "p90": None}
+    bt = base["backtest"]
+    if not bt or not bt.get("usable"):
+        return abstain("no_skill", "In its backtest the model did not beat 'the price stays where it is' for this crop, "
+                                   "state and horizon, or its range held too few of the real outcomes (under 70%), or "
+                                   "there were too few test cases to say.")
     row = features_as_of((commodity, state, market), Series.from_frame(g), as_of, horizon)
     if row is None:
         return abstain("no_recent_price", f"The mandi has no quote in the {ASOF_TOLERANCE_DAYS} days before {as_of}.")
@@ -113,8 +174,12 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     qhat = float((meta.get("range_widening") or {}).get(str(horizon), {}).get("qhat", 0.0))
     raw = predict_quantiles(bundle["models"], X)[0]
     p10, p50, p90 = (round(float(v), 2) for v in (raw[0] - qhat, raw[1], raw[2] + qhat))
+    expected_change_pct = round((p50 - last_price) / last_price * 100, 2)
+    direction = "UP" if expected_change_pct > 3 else "DOWN" if expected_change_pct < -3 else "FLAT"
+    base.update({"confidence": _confidence(bt, False, freshness), "expected_change_pct": expected_change_pct,
+                 "direction": direction})
     return {**base, "abstain": False, "p10": p10, "p50": p50, "p90": p90,
-            "last_price": row["last_price"], "days_since_last_price": int(row["days_since_last"]),
+            "last_price": row["last_price"],
             "range_widened_by": qhat,
             "what_this_is": ("A range for the modal price at this mandi around the target date: p50 is the middle "
                              "estimate. In the backtest the outcome fell inside p10-p90 in the share of cases given as "
