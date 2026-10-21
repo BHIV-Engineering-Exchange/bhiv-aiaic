@@ -1,0 +1,1662 @@
+{
+  "dataset": "C:\\Users\\Microsoft\\Downloads\\aiaic\\aiaic-ml-foundation\\2026-10-17_next\\pilot_v3_nashik_next",
+  "manifest": "C:\\Users\\Microsoft\\Downloads\\aiaic\\aiaic-ml-foundation\\2026-10-17_next\\pilot_v3_nashik_next\\MANIFEST.json",
+  "msp_manifest": "C:\\Users\\Microsoft\\Downloads\\aiaic\\aiaic-ml-foundation\\2026-10-17_next\\pilot_v3_nashik_next\\MSP_MANIFEST.json",
+  "data_hash": "0492e1a1f0d9652a68183f4a78500a48586113901fbb3e44c8dd770061816fab",
+  "rows": {
+    "daily": 1667571,
+    "samples": 723753,
+    "train": 698141,
+    "calibration": 11511,
+    "scored": 11663
+  },
+  "split": {
+    "cutoff": "2026-02-27",
+    "calibration_through": "2026-05-15",
+    "scored_from": "2026-05-16",
+    "holdout_days": 180,
+    "step_days": 7
+  },
+  "selection": "For each crop, maximize calibration-half 7/30-day pooled absolute skill; scored half is not used.",
+  "chosen": {
+    "bajra": {
+      "variant": "per_crop_msp_level",
+      "calibration_skill": {
+        "pooled_level": 0.13668167715917712,
+        "pooled_log_change": 0.12730723705819413,
+        "per_crop_level": 0.16931096590954076,
+        "per_crop_log_change": 0.1533485744648977,
+        "per_crop_msp_level": 0.1729394551198714,
+        "per_crop_msp_log_change": 0.125008800330213
+      }
+    },
+    "gram": {
+      "variant": "per_crop_msp_level",
+      "calibration_skill": {
+        "pooled_level": 0.0622890743040706,
+        "pooled_log_change": 0.046311404264635425,
+        "per_crop_level": 0.041802751793539206,
+        "per_crop_log_change": 0.030641760061374868,
+        "per_crop_msp_level": 0.09480743453582285,
+        "per_crop_msp_log_change": 0.05220840133974802
+      }
+    },
+    "maize": {
+      "variant": "pooled_level",
+      "calibration_skill": {
+        "pooled_level": 0.10605125699117801,
+        "pooled_log_change": 0.07167456751155321,
+        "per_crop_level": 0.10201683108843951,
+        "per_crop_log_change": 0.08818473413941252,
+        "per_crop_msp_level": 0.0023110470634822855,
+        "per_crop_msp_log_change": 0.03113001373154667
+      }
+    },
+    "tomato": {
+      "variant": "pooled_log_change",
+      "calibration_skill": {
+        "pooled_level": 0.07736962587402973,
+        "pooled_log_change": 0.09006468775306331,
+        "per_crop_level": 0.0782558566732251,
+        "per_crop_log_change": 0.08705150393479033,
+        "per_crop_msp_level": 0.0782558566732251,
+        "per_crop_msp_log_change": 0.08705150393479033
+      }
+    }
+  },
+  "selected_backtest": {
+    "overall": {
+      "n": 11663,
+      "mae_p50": 235.45,
+      "mae_persistence": 278.53,
+      "skill_vs_persistence": 0.1547,
+      "coverage_p10_p90": 0.8061
+    },
+    "groups": [
+      {
+        "commodity": "bajra",
+        "state": "Madhya Pradesh",
+        "horizon_days": 7,
+        "n": 69,
+        "mae_p50": 96.76,
+        "mae_persistence": 76.83,
+        "skill_vs_persistence": -0.2594,
+        "coverage_p10_p90": 0.8986,
+        "usable": false
+      },
+      {
+        "commodity": "bajra",
+        "state": "Madhya Pradesh",
+        "horizon_days": 30,
+        "n": 46,
+        "mae_p50": 99.58,
+        "mae_persistence": 106.66,
+        "skill_vs_persistence": 0.0664,
+        "coverage_p10_p90": 0.913,
+        "usable": true
+      },
+      {
+        "commodity": "bajra",
+        "state": "Maharashtra",
+        "horizon_days": 7,
+        "n": 623,
+        "mae_p50": 148.73,
+        "mae_persistence": 170.78,
+        "skill_vs_persistence": 0.1291,
+        "coverage_p10_p90": 0.8106,
+        "usable": true
+      },
+      {
+        "commodity": "bajra",
+        "state": "Maharashtra",
+        "horizon_days": 30,
+        "n": 468,
+        "mae_p50": 160.9,
+        "mae_persistence": 202.7,
+        "skill_vs_persistence": 0.2062,
+        "coverage_p10_p90": 0.859,
+        "usable": true
+      },
+      {
+        "commodity": "gram",
+        "state": "Madhya Pradesh",
+        "horizon_days": 7,
+        "n": 1879,
+        "mae_p50": 245.36,
+        "mae_persistence": 285.62,
+        "skill_vs_persistence": 0.141,
+        "coverage_p10_p90": 0.7573,
+        "usable": true
+      },
+      {
+        "commodity": "gram",
+        "state": "Madhya Pradesh",
+        "horizon_days": 30,
+        "n": 1390,
+        "mae_p50": 276.37,
+        "mae_persistence": 355.88,
+        "skill_vs_persistence": 0.2234,
+        "coverage_p10_p90": 0.8525,
+        "usable": true
+      },
+      {
+        "commodity": "gram",
+        "state": "Maharashtra",
+        "horizon_days": 7,
+        "n": 1431,
+        "mae_p50": 215.51,
+        "mae_persistence": 235.7,
+        "skill_vs_persistence": 0.0857,
+        "coverage_p10_p90": 0.8211,
+        "usable": true
+      },
+      {
+        "commodity": "gram",
+        "state": "Maharashtra",
+        "horizon_days": 30,
+        "n": 1093,
+        "mae_p50": 279.06,
+        "mae_persistence": 351.68,
+        "skill_vs_persistence": 0.2065,
+        "coverage_p10_p90": 0.8701,
+        "usable": true
+      },
+      {
+        "commodity": "maize",
+        "state": "Madhya Pradesh",
+        "horizon_days": 7,
+        "n": 946,
+        "mae_p50": 124.5,
+        "mae_persistence": 140.58,
+        "skill_vs_persistence": 0.1143,
+        "coverage_p10_p90": 0.7209,
+        "usable": true
+      },
+      {
+        "commodity": "maize",
+        "state": "Madhya Pradesh",
+        "horizon_days": 30,
+        "n": 679,
+        "mae_p50": 168.94,
+        "mae_persistence": 195.73,
+        "skill_vs_persistence": 0.1369,
+        "coverage_p10_p90": 0.6613,
+        "usable": false
+      },
+      {
+        "commodity": "maize",
+        "state": "Maharashtra",
+        "horizon_days": 7,
+        "n": 710,
+        "mae_p50": 92.96,
+        "mae_persistence": 97.52,
+        "skill_vs_persistence": 0.0467,
+        "coverage_p10_p90": 0.7901,
+        "usable": true
+      },
+      {
+        "commodity": "maize",
+        "state": "Maharashtra",
+        "horizon_days": 30,
+        "n": 527,
+        "mae_p50": 154.7,
+        "mae_persistence": 176.42,
+        "skill_vs_persistence": 0.1232,
+        "coverage_p10_p90": 0.6812,
+        "usable": false
+      },
+      {
+        "commodity": "tomato",
+        "state": "Madhya Pradesh",
+        "horizon_days": 7,
+        "n": 494,
+        "mae_p50": 313.81,
+        "mae_persistence": 323.12,
+        "skill_vs_persistence": 0.0288,
+        "coverage_p10_p90": 0.8623,
+        "usable": true
+      },
+      {
+        "commodity": "tomato",
+        "state": "Madhya Pradesh",
+        "horizon_days": 30,
+        "n": 350,
+        "mae_p50": 504.73,
+        "mae_persistence": 608.42,
+        "skill_vs_persistence": 0.1704,
+        "coverage_p10_p90": 0.8857,
+        "usable": true
+      },
+      {
+        "commodity": "tomato",
+        "state": "Maharashtra",
+        "horizon_days": 7,
+        "n": 549,
+        "mae_p50": 395.98,
+        "mae_persistence": 415.47,
+        "skill_vs_persistence": 0.0469,
+        "coverage_p10_p90": 0.8907,
+        "usable": true
+      },
+      {
+        "commodity": "tomato",
+        "state": "Maharashtra",
+        "horizon_days": 30,
+        "n": 409,
+        "mae_p50": 438.11,
+        "mae_persistence": 624.04,
+        "skill_vs_persistence": 0.2979,
+        "coverage_p10_p90": 0.9291,
+        "usable": true
+      }
+    ]
+  },
+  "variants": {
+    "pooled_level": {
+      "name": "pooled_level",
+      "backtest": {
+        "overall": {
+          "n": 11663,
+          "mae_p50": 244.53,
+          "mae_persistence": 278.53,
+          "skill_vs_persistence": 0.1221,
+          "coverage_p10_p90": 0.8166,
+          "coverage_p10_p90_before_calibration": 0.8166
+        },
+        "groups": [
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 69,
+            "mae_p50": 81.71,
+            "mae_persistence": 76.83,
+            "skill_vs_persistence": -0.0635,
+            "coverage_p10_p90": 0.8261,
+            "coverage_p10_p90_before_calibration": 0.8261,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 46,
+            "mae_p50": 79.33,
+            "mae_persistence": 106.66,
+            "skill_vs_persistence": 0.2563,
+            "coverage_p10_p90": 0.8913,
+            "coverage_p10_p90_before_calibration": 0.8913,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 623,
+            "mae_p50": 157.99,
+            "mae_persistence": 170.78,
+            "skill_vs_persistence": 0.0749,
+            "coverage_p10_p90": 0.7496,
+            "coverage_p10_p90_before_calibration": 0.7496,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 468,
+            "mae_p50": 173.66,
+            "mae_persistence": 202.7,
+            "skill_vs_persistence": 0.1432,
+            "coverage_p10_p90": 0.7842,
+            "coverage_p10_p90_before_calibration": 0.7842,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 1879,
+            "mae_p50": 257.88,
+            "mae_persistence": 285.62,
+            "skill_vs_persistence": 0.0971,
+            "coverage_p10_p90": 0.8398,
+            "coverage_p10_p90_before_calibration": 0.8398,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 1390,
+            "mae_p50": 308.95,
+            "mae_persistence": 355.88,
+            "skill_vs_persistence": 0.1319,
+            "coverage_p10_p90": 0.8417,
+            "coverage_p10_p90_before_calibration": 0.8417,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 1431,
+            "mae_p50": 221.82,
+            "mae_persistence": 235.7,
+            "skill_vs_persistence": 0.0589,
+            "coverage_p10_p90": 0.8714,
+            "coverage_p10_p90_before_calibration": 0.8714,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 1093,
+            "mae_p50": 310.99,
+            "mae_persistence": 351.68,
+            "skill_vs_persistence": 0.1157,
+            "coverage_p10_p90": 0.86,
+            "coverage_p10_p90_before_calibration": 0.86,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 946,
+            "mae_p50": 124.5,
+            "mae_persistence": 140.58,
+            "skill_vs_persistence": 0.1143,
+            "coverage_p10_p90": 0.7209,
+            "coverage_p10_p90_before_calibration": 0.7209,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 679,
+            "mae_p50": 168.94,
+            "mae_persistence": 195.73,
+            "skill_vs_persistence": 0.1369,
+            "coverage_p10_p90": 0.6613,
+            "coverage_p10_p90_before_calibration": 0.6613,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 710,
+            "mae_p50": 92.96,
+            "mae_persistence": 97.52,
+            "skill_vs_persistence": 0.0467,
+            "coverage_p10_p90": 0.7901,
+            "coverage_p10_p90_before_calibration": 0.7901,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 527,
+            "mae_p50": 154.7,
+            "mae_persistence": 176.42,
+            "skill_vs_persistence": 0.1232,
+            "coverage_p10_p90": 0.6812,
+            "coverage_p10_p90_before_calibration": 0.6812,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 494,
+            "mae_p50": 309.56,
+            "mae_persistence": 323.12,
+            "skill_vs_persistence": 0.042,
+            "coverage_p10_p90": 0.8664,
+            "coverage_p10_p90_before_calibration": 0.8664,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 350,
+            "mae_p50": 501.21,
+            "mae_persistence": 608.42,
+            "skill_vs_persistence": 0.1762,
+            "coverage_p10_p90": 0.8943,
+            "coverage_p10_p90_before_calibration": 0.8943,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 549,
+            "mae_p50": 383.96,
+            "mae_persistence": 415.47,
+            "skill_vs_persistence": 0.0759,
+            "coverage_p10_p90": 0.8689,
+            "coverage_p10_p90_before_calibration": 0.8689,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 409,
+            "mae_p50": 421.66,
+            "mae_persistence": 624.04,
+            "skill_vs_persistence": 0.3243,
+            "coverage_p10_p90": 0.9487,
+            "coverage_p10_p90_before_calibration": 0.9487,
+            "usable": true
+          }
+        ]
+      },
+      "range_widening": {
+        "7": {
+          "qhat": 0.0,
+          "n_calibration": 5769
+        },
+        "30": {
+          "qhat": 0.0,
+          "n_calibration": 5742
+        }
+      },
+      "per_crop": false,
+      "log_target": false,
+      "numeric_features": [
+        "last_price",
+        "days_since_last",
+        "price_lag_7",
+        "price_lag_14",
+        "price_lag_30",
+        "roll_mean_30",
+        "roll_std_30",
+        "roll_n_30",
+        "change_7_pct",
+        "change_30_pct",
+        "horizon_days",
+        "target_month_sin",
+        "target_month_cos"
+      ]
+    },
+    "pooled_log_change": {
+      "name": "pooled_log_change",
+      "backtest": {
+        "overall": {
+          "n": 11663,
+          "mae_p50": 246.51,
+          "mae_persistence": 278.53,
+          "skill_vs_persistence": 0.115,
+          "coverage_p10_p90": 0.8172,
+          "coverage_p10_p90_before_calibration": 0.8055
+        },
+        "groups": [
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 69,
+            "mae_p50": 78.46,
+            "mae_persistence": 76.83,
+            "skill_vs_persistence": -0.0213,
+            "coverage_p10_p90": 0.8696,
+            "coverage_p10_p90_before_calibration": 0.8696,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 46,
+            "mae_p50": 86.58,
+            "mae_persistence": 106.66,
+            "skill_vs_persistence": 0.1882,
+            "coverage_p10_p90": 0.8696,
+            "coverage_p10_p90_before_calibration": 0.8261,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 623,
+            "mae_p50": 156.06,
+            "mae_persistence": 170.78,
+            "skill_vs_persistence": 0.0862,
+            "coverage_p10_p90": 0.756,
+            "coverage_p10_p90_before_calibration": 0.7416,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 468,
+            "mae_p50": 174.98,
+            "mae_persistence": 202.7,
+            "skill_vs_persistence": 0.1368,
+            "coverage_p10_p90": 0.797,
+            "coverage_p10_p90_before_calibration": 0.7799,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 1879,
+            "mae_p50": 261.65,
+            "mae_persistence": 285.62,
+            "skill_vs_persistence": 0.0839,
+            "coverage_p10_p90": 0.8095,
+            "coverage_p10_p90_before_calibration": 0.801,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 1390,
+            "mae_p50": 311.33,
+            "mae_persistence": 355.88,
+            "skill_vs_persistence": 0.1252,
+            "coverage_p10_p90": 0.8698,
+            "coverage_p10_p90_before_calibration": 0.8604,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 1431,
+            "mae_p50": 219.74,
+            "mae_persistence": 235.7,
+            "skill_vs_persistence": 0.0677,
+            "coverage_p10_p90": 0.8526,
+            "coverage_p10_p90_before_calibration": 0.8463,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 1093,
+            "mae_p50": 307.79,
+            "mae_persistence": 351.68,
+            "skill_vs_persistence": 0.1248,
+            "coverage_p10_p90": 0.8829,
+            "coverage_p10_p90_before_calibration": 0.8792,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 946,
+            "mae_p50": 128.61,
+            "mae_persistence": 140.58,
+            "skill_vs_persistence": 0.0851,
+            "coverage_p10_p90": 0.7209,
+            "coverage_p10_p90_before_calibration": 0.6966,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 679,
+            "mae_p50": 169.67,
+            "mae_persistence": 195.73,
+            "skill_vs_persistence": 0.1331,
+            "coverage_p10_p90": 0.6716,
+            "coverage_p10_p90_before_calibration": 0.6465,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 710,
+            "mae_p50": 92.65,
+            "mae_persistence": 97.52,
+            "skill_vs_persistence": 0.05,
+            "coverage_p10_p90": 0.7831,
+            "coverage_p10_p90_before_calibration": 0.762,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 527,
+            "mae_p50": 152.52,
+            "mae_persistence": 176.42,
+            "skill_vs_persistence": 0.1355,
+            "coverage_p10_p90": 0.7078,
+            "coverage_p10_p90_before_calibration": 0.6831,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 494,
+            "mae_p50": 313.81,
+            "mae_persistence": 323.12,
+            "skill_vs_persistence": 0.0288,
+            "coverage_p10_p90": 0.8623,
+            "coverage_p10_p90_before_calibration": 0.8583,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 350,
+            "mae_p50": 504.73,
+            "mae_persistence": 608.42,
+            "skill_vs_persistence": 0.1704,
+            "coverage_p10_p90": 0.8857,
+            "coverage_p10_p90_before_calibration": 0.8771,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 549,
+            "mae_p50": 395.98,
+            "mae_persistence": 415.47,
+            "skill_vs_persistence": 0.0469,
+            "coverage_p10_p90": 0.8907,
+            "coverage_p10_p90_before_calibration": 0.8852,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 409,
+            "mae_p50": 438.11,
+            "mae_persistence": 624.04,
+            "skill_vs_persistence": 0.2979,
+            "coverage_p10_p90": 0.9291,
+            "coverage_p10_p90_before_calibration": 0.9291,
+            "usable": true
+          }
+        ]
+      },
+      "range_widening": {
+        "7": {
+          "qhat": 6.15,
+          "n_calibration": 5769
+        },
+        "30": {
+          "qhat": 8.99,
+          "n_calibration": 5742
+        }
+      },
+      "per_crop": false,
+      "log_target": true,
+      "numeric_features": [
+        "last_price",
+        "days_since_last",
+        "price_lag_7",
+        "price_lag_14",
+        "price_lag_30",
+        "roll_mean_30",
+        "roll_std_30",
+        "roll_n_30",
+        "change_7_pct",
+        "change_30_pct",
+        "horizon_days",
+        "target_month_sin",
+        "target_month_cos"
+      ]
+    },
+    "per_crop_level": {
+      "name": "per_crop_level",
+      "backtest": {
+        "overall": {
+          "n": 11663,
+          "mae_p50": 247.13,
+          "mae_persistence": 278.53,
+          "skill_vs_persistence": 0.1127,
+          "coverage_p10_p90": 0.7878,
+          "coverage_p10_p90_before_calibration": 0.786
+        },
+        "groups": [
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 69,
+            "mae_p50": 93.88,
+            "mae_persistence": 76.83,
+            "skill_vs_persistence": -0.2219,
+            "coverage_p10_p90": 0.8841,
+            "coverage_p10_p90_before_calibration": 0.8841,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 46,
+            "mae_p50": 105.05,
+            "mae_persistence": 106.66,
+            "skill_vs_persistence": 0.0151,
+            "coverage_p10_p90": 0.8478,
+            "coverage_p10_p90_before_calibration": 0.8478,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 623,
+            "mae_p50": 153.81,
+            "mae_persistence": 170.78,
+            "skill_vs_persistence": 0.0993,
+            "coverage_p10_p90": 0.6966,
+            "coverage_p10_p90_before_calibration": 0.6966,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 468,
+            "mae_p50": 170.3,
+            "mae_persistence": 202.7,
+            "skill_vs_persistence": 0.1598,
+            "coverage_p10_p90": 0.6902,
+            "coverage_p10_p90_before_calibration": 0.6752,
+            "usable": false
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 1879,
+            "mae_p50": 262.91,
+            "mae_persistence": 285.62,
+            "skill_vs_persistence": 0.0795,
+            "coverage_p10_p90": 0.7994,
+            "coverage_p10_p90_before_calibration": 0.7994,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 1390,
+            "mae_p50": 322.68,
+            "mae_persistence": 355.88,
+            "skill_vs_persistence": 0.0933,
+            "coverage_p10_p90": 0.823,
+            "coverage_p10_p90_before_calibration": 0.8194,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 1431,
+            "mae_p50": 227.44,
+            "mae_persistence": 235.7,
+            "skill_vs_persistence": 0.0351,
+            "coverage_p10_p90": 0.8393,
+            "coverage_p10_p90_before_calibration": 0.8393,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 1093,
+            "mae_p50": 320.67,
+            "mae_persistence": 351.68,
+            "skill_vs_persistence": 0.0882,
+            "coverage_p10_p90": 0.8463,
+            "coverage_p10_p90_before_calibration": 0.8435,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 946,
+            "mae_p50": 123.94,
+            "mae_persistence": 140.58,
+            "skill_vs_persistence": 0.1183,
+            "coverage_p10_p90": 0.7304,
+            "coverage_p10_p90_before_calibration": 0.7304,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 679,
+            "mae_p50": 164.83,
+            "mae_persistence": 195.73,
+            "skill_vs_persistence": 0.1579,
+            "coverage_p10_p90": 0.6171,
+            "coverage_p10_p90_before_calibration": 0.6112,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 710,
+            "mae_p50": 92.75,
+            "mae_persistence": 97.52,
+            "skill_vs_persistence": 0.0489,
+            "coverage_p10_p90": 0.7831,
+            "coverage_p10_p90_before_calibration": 0.7831,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 527,
+            "mae_p50": 148.83,
+            "mae_persistence": 176.42,
+            "skill_vs_persistence": 0.1564,
+            "coverage_p10_p90": 0.6281,
+            "coverage_p10_p90_before_calibration": 0.6262,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 494,
+            "mae_p50": 329.04,
+            "mae_persistence": 323.12,
+            "skill_vs_persistence": -0.0183,
+            "coverage_p10_p90": 0.7976,
+            "coverage_p10_p90_before_calibration": 0.7976,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 350,
+            "mae_p50": 489.94,
+            "mae_persistence": 608.42,
+            "skill_vs_persistence": 0.1947,
+            "coverage_p10_p90": 0.8457,
+            "coverage_p10_p90_before_calibration": 0.8429,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 549,
+            "mae_p50": 383.64,
+            "mae_persistence": 415.47,
+            "skill_vs_persistence": 0.0766,
+            "coverage_p10_p90": 0.8871,
+            "coverage_p10_p90_before_calibration": 0.8871,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 409,
+            "mae_p50": 388.4,
+            "mae_persistence": 624.04,
+            "skill_vs_persistence": 0.3776,
+            "coverage_p10_p90": 0.9413,
+            "coverage_p10_p90_before_calibration": 0.9413,
+            "usable": true
+          }
+        ]
+      },
+      "range_widening": {
+        "7": {
+          "qhat": 0.0,
+          "n_calibration": 5769
+        },
+        "30": {
+          "qhat": 2.11,
+          "n_calibration": 5742
+        }
+      },
+      "per_crop": true,
+      "log_target": false,
+      "numeric_features": [
+        "last_price",
+        "days_since_last",
+        "price_lag_7",
+        "price_lag_14",
+        "price_lag_30",
+        "roll_mean_30",
+        "roll_std_30",
+        "roll_n_30",
+        "change_7_pct",
+        "change_30_pct",
+        "horizon_days",
+        "target_month_sin",
+        "target_month_cos"
+      ]
+    },
+    "per_crop_log_change": {
+      "name": "per_crop_log_change",
+      "backtest": {
+        "overall": {
+          "n": 11663,
+          "mae_p50": 252.21,
+          "mae_persistence": 278.53,
+          "skill_vs_persistence": 0.0945,
+          "coverage_p10_p90": 0.8074,
+          "coverage_p10_p90_before_calibration": 0.7878
+        },
+        "groups": [
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 69,
+            "mae_p50": 85.69,
+            "mae_persistence": 76.83,
+            "skill_vs_persistence": -0.1153,
+            "coverage_p10_p90": 0.8551,
+            "coverage_p10_p90_before_calibration": 0.8116,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 46,
+            "mae_p50": 91.89,
+            "mae_persistence": 106.66,
+            "skill_vs_persistence": 0.1386,
+            "coverage_p10_p90": 0.8913,
+            "coverage_p10_p90_before_calibration": 0.8478,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 623,
+            "mae_p50": 151.92,
+            "mae_persistence": 170.78,
+            "skill_vs_persistence": 0.1104,
+            "coverage_p10_p90": 0.748,
+            "coverage_p10_p90_before_calibration": 0.7239,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 468,
+            "mae_p50": 171.3,
+            "mae_persistence": 202.7,
+            "skill_vs_persistence": 0.1549,
+            "coverage_p10_p90": 0.7756,
+            "coverage_p10_p90_before_calibration": 0.7244,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 1879,
+            "mae_p50": 263.08,
+            "mae_persistence": 285.62,
+            "skill_vs_persistence": 0.0789,
+            "coverage_p10_p90": 0.8095,
+            "coverage_p10_p90_before_calibration": 0.7999,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 1390,
+            "mae_p50": 342.79,
+            "mae_persistence": 355.88,
+            "skill_vs_persistence": 0.0368,
+            "coverage_p10_p90": 0.8453,
+            "coverage_p10_p90_before_calibration": 0.8302,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 1431,
+            "mae_p50": 225.8,
+            "mae_persistence": 235.7,
+            "skill_vs_persistence": 0.042,
+            "coverage_p10_p90": 0.8532,
+            "coverage_p10_p90_before_calibration": 0.8442,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 1093,
+            "mae_p50": 333.85,
+            "mae_persistence": 351.68,
+            "skill_vs_persistence": 0.0507,
+            "coverage_p10_p90": 0.8646,
+            "coverage_p10_p90_before_calibration": 0.8545,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 946,
+            "mae_p50": 128.42,
+            "mae_persistence": 140.58,
+            "skill_vs_persistence": 0.0865,
+            "coverage_p10_p90": 0.7452,
+            "coverage_p10_p90_before_calibration": 0.7188,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 679,
+            "mae_p50": 168.68,
+            "mae_persistence": 195.73,
+            "skill_vs_persistence": 0.1382,
+            "coverage_p10_p90": 0.6568,
+            "coverage_p10_p90_before_calibration": 0.5862,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 710,
+            "mae_p50": 91.68,
+            "mae_persistence": 97.52,
+            "skill_vs_persistence": 0.0599,
+            "coverage_p10_p90": 0.7986,
+            "coverage_p10_p90_before_calibration": 0.7775,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 527,
+            "mae_p50": 145.98,
+            "mae_persistence": 176.42,
+            "skill_vs_persistence": 0.1726,
+            "coverage_p10_p90": 0.6717,
+            "coverage_p10_p90_before_calibration": 0.6281,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 494,
+            "mae_p50": 327.81,
+            "mae_persistence": 323.12,
+            "skill_vs_persistence": -0.0145,
+            "coverage_p10_p90": 0.8158,
+            "coverage_p10_p90_before_calibration": 0.8036,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 350,
+            "mae_p50": 486.59,
+            "mae_persistence": 608.42,
+            "skill_vs_persistence": 0.2002,
+            "coverage_p10_p90": 0.8343,
+            "coverage_p10_p90_before_calibration": 0.8257,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 549,
+            "mae_p50": 392.27,
+            "mae_persistence": 415.47,
+            "skill_vs_persistence": 0.0559,
+            "coverage_p10_p90": 0.8689,
+            "coverage_p10_p90_before_calibration": 0.867,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 409,
+            "mae_p50": 420.92,
+            "mae_persistence": 624.04,
+            "skill_vs_persistence": 0.3255,
+            "coverage_p10_p90": 0.934,
+            "coverage_p10_p90_before_calibration": 0.9315,
+            "usable": true
+          }
+        ]
+      },
+      "range_widening": {
+        "7": {
+          "qhat": 9.48,
+          "n_calibration": 5769
+        },
+        "30": {
+          "qhat": 17.76,
+          "n_calibration": 5742
+        }
+      },
+      "per_crop": true,
+      "log_target": true,
+      "numeric_features": [
+        "last_price",
+        "days_since_last",
+        "price_lag_7",
+        "price_lag_14",
+        "price_lag_30",
+        "roll_mean_30",
+        "roll_std_30",
+        "roll_n_30",
+        "change_7_pct",
+        "change_30_pct",
+        "horizon_days",
+        "target_month_sin",
+        "target_month_cos"
+      ]
+    },
+    "per_crop_msp_level": {
+      "name": "per_crop_msp_level",
+      "backtest": {
+        "overall": {
+          "n": 11663,
+          "mae_p50": 238.17,
+          "mae_persistence": 278.53,
+          "skill_vs_persistence": 0.1449,
+          "coverage_p10_p90": 0.8239,
+          "coverage_p10_p90_before_calibration": 0.7437
+        },
+        "groups": [
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 69,
+            "mae_p50": 96.76,
+            "mae_persistence": 76.83,
+            "skill_vs_persistence": -0.2594,
+            "coverage_p10_p90": 0.8986,
+            "coverage_p10_p90_before_calibration": 0.8696,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 46,
+            "mae_p50": 99.58,
+            "mae_persistence": 106.66,
+            "skill_vs_persistence": 0.0664,
+            "coverage_p10_p90": 0.913,
+            "coverage_p10_p90_before_calibration": 0.8478,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 623,
+            "mae_p50": 148.73,
+            "mae_persistence": 170.78,
+            "skill_vs_persistence": 0.1291,
+            "coverage_p10_p90": 0.8106,
+            "coverage_p10_p90_before_calibration": 0.7223,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 468,
+            "mae_p50": 160.9,
+            "mae_persistence": 202.7,
+            "skill_vs_persistence": 0.2062,
+            "coverage_p10_p90": 0.859,
+            "coverage_p10_p90_before_calibration": 0.7009,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 1879,
+            "mae_p50": 245.36,
+            "mae_persistence": 285.62,
+            "skill_vs_persistence": 0.141,
+            "coverage_p10_p90": 0.7573,
+            "coverage_p10_p90_before_calibration": 0.6956,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 1390,
+            "mae_p50": 276.37,
+            "mae_persistence": 355.88,
+            "skill_vs_persistence": 0.2234,
+            "coverage_p10_p90": 0.8525,
+            "coverage_p10_p90_before_calibration": 0.7597,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 1431,
+            "mae_p50": 215.51,
+            "mae_persistence": 235.7,
+            "skill_vs_persistence": 0.0857,
+            "coverage_p10_p90": 0.8211,
+            "coverage_p10_p90_before_calibration": 0.7736,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 1093,
+            "mae_p50": 279.06,
+            "mae_persistence": 351.68,
+            "skill_vs_persistence": 0.2065,
+            "coverage_p10_p90": 0.8701,
+            "coverage_p10_p90_before_calibration": 0.7877,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 946,
+            "mae_p50": 136.72,
+            "mae_persistence": 140.58,
+            "skill_vs_persistence": 0.0274,
+            "coverage_p10_p90": 0.7896,
+            "coverage_p10_p90_before_calibration": 0.7167,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 679,
+            "mae_p50": 193.81,
+            "mae_persistence": 195.73,
+            "skill_vs_persistence": 0.0098,
+            "coverage_p10_p90": 0.785,
+            "coverage_p10_p90_before_calibration": 0.5788,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 710,
+            "mae_p50": 111.18,
+            "mae_persistence": 97.52,
+            "skill_vs_persistence": -0.1401,
+            "coverage_p10_p90": 0.8254,
+            "coverage_p10_p90_before_calibration": 0.7507,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 527,
+            "mae_p50": 183.21,
+            "mae_persistence": 176.42,
+            "skill_vs_persistence": -0.0385,
+            "coverage_p10_p90": 0.759,
+            "coverage_p10_p90_before_calibration": 0.5712,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 494,
+            "mae_p50": 329.04,
+            "mae_persistence": 323.12,
+            "skill_vs_persistence": -0.0183,
+            "coverage_p10_p90": 0.8239,
+            "coverage_p10_p90_before_calibration": 0.7976,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 350,
+            "mae_p50": 489.94,
+            "mae_persistence": 608.42,
+            "skill_vs_persistence": 0.1947,
+            "coverage_p10_p90": 0.8714,
+            "coverage_p10_p90_before_calibration": 0.8429,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 549,
+            "mae_p50": 383.64,
+            "mae_persistence": 415.47,
+            "skill_vs_persistence": 0.0766,
+            "coverage_p10_p90": 0.9053,
+            "coverage_p10_p90_before_calibration": 0.8871,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 409,
+            "mae_p50": 388.4,
+            "mae_persistence": 624.04,
+            "skill_vs_persistence": 0.3776,
+            "coverage_p10_p90": 0.9511,
+            "coverage_p10_p90_before_calibration": 0.9413,
+            "usable": true
+          }
+        ]
+      },
+      "range_widening": {
+        "7": {
+          "qhat": 32.67,
+          "n_calibration": 5769
+        },
+        "30": {
+          "qhat": 73.87,
+          "n_calibration": 5742
+        }
+      },
+      "per_crop": true,
+      "log_target": false,
+      "numeric_features": [
+        "last_price",
+        "days_since_last",
+        "price_lag_7",
+        "price_lag_14",
+        "price_lag_30",
+        "roll_mean_30",
+        "roll_std_30",
+        "roll_n_30",
+        "change_7_pct",
+        "change_30_pct",
+        "horizon_days",
+        "target_month_sin",
+        "target_month_cos",
+        "msp_gap_pct"
+      ]
+    },
+    "per_crop_msp_log_change": {
+      "name": "per_crop_msp_log_change",
+      "backtest": {
+        "overall": {
+          "n": 11663,
+          "mae_p50": 236.33,
+          "mae_persistence": 278.53,
+          "skill_vs_persistence": 0.1515,
+          "coverage_p10_p90": 0.842,
+          "coverage_p10_p90_before_calibration": 0.8013
+        },
+        "groups": [
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 69,
+            "mae_p50": 88.28,
+            "mae_persistence": 76.83,
+            "skill_vs_persistence": -0.1491,
+            "coverage_p10_p90": 0.8986,
+            "coverage_p10_p90_before_calibration": 0.8116,
+            "usable": false
+          },
+          {
+            "commodity": "bajra",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 46,
+            "mae_p50": 101.77,
+            "mae_persistence": 106.66,
+            "skill_vs_persistence": 0.0459,
+            "coverage_p10_p90": 0.8913,
+            "coverage_p10_p90_before_calibration": 0.8478,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 623,
+            "mae_p50": 148.17,
+            "mae_persistence": 170.78,
+            "skill_vs_persistence": 0.1324,
+            "coverage_p10_p90": 0.825,
+            "coverage_p10_p90_before_calibration": 0.7608,
+            "usable": true
+          },
+          {
+            "commodity": "bajra",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 468,
+            "mae_p50": 158.87,
+            "mae_persistence": 202.7,
+            "skill_vs_persistence": 0.2162,
+            "coverage_p10_p90": 0.8761,
+            "coverage_p10_p90_before_calibration": 0.8013,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 1879,
+            "mae_p50": 235.93,
+            "mae_persistence": 285.62,
+            "skill_vs_persistence": 0.174,
+            "coverage_p10_p90": 0.7861,
+            "coverage_p10_p90_before_calibration": 0.7515,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 1390,
+            "mae_p50": 271.5,
+            "mae_persistence": 355.88,
+            "skill_vs_persistence": 0.2371,
+            "coverage_p10_p90": 0.8446,
+            "coverage_p10_p90_before_calibration": 0.7986,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 1431,
+            "mae_p50": 203.61,
+            "mae_persistence": 235.7,
+            "skill_vs_persistence": 0.1362,
+            "coverage_p10_p90": 0.847,
+            "coverage_p10_p90_before_calibration": 0.8127,
+            "usable": true
+          },
+          {
+            "commodity": "gram",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 1093,
+            "mae_p50": 272.07,
+            "mae_persistence": 351.68,
+            "skill_vs_persistence": 0.2264,
+            "coverage_p10_p90": 0.8426,
+            "coverage_p10_p90_before_calibration": 0.8042,
+            "usable": true
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 946,
+            "mae_p50": 146.44,
+            "mae_persistence": 140.58,
+            "skill_vs_persistence": -0.0417,
+            "coverage_p10_p90": 0.834,
+            "coverage_p10_p90_before_calibration": 0.7992,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 679,
+            "mae_p50": 198.18,
+            "mae_persistence": 195.73,
+            "skill_vs_persistence": -0.0125,
+            "coverage_p10_p90": 0.8601,
+            "coverage_p10_p90_before_calibration": 0.7938,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 710,
+            "mae_p50": 113.28,
+            "mae_persistence": 97.52,
+            "skill_vs_persistence": -0.1617,
+            "coverage_p10_p90": 0.8732,
+            "coverage_p10_p90_before_calibration": 0.8324,
+            "usable": false
+          },
+          {
+            "commodity": "maize",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 527,
+            "mae_p50": 182.47,
+            "mae_persistence": 176.42,
+            "skill_vs_persistence": -0.0343,
+            "coverage_p10_p90": 0.8406,
+            "coverage_p10_p90_before_calibration": 0.7742,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 7,
+            "n": 494,
+            "mae_p50": 327.81,
+            "mae_persistence": 323.12,
+            "skill_vs_persistence": -0.0145,
+            "coverage_p10_p90": 0.8279,
+            "coverage_p10_p90_before_calibration": 0.8036,
+            "usable": false
+          },
+          {
+            "commodity": "tomato",
+            "state": "Madhya Pradesh",
+            "horizon_days": 30,
+            "n": 350,
+            "mae_p50": 486.59,
+            "mae_persistence": 608.42,
+            "skill_vs_persistence": 0.2002,
+            "coverage_p10_p90": 0.8457,
+            "coverage_p10_p90_before_calibration": 0.8257,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 7,
+            "n": 549,
+            "mae_p50": 392.27,
+            "mae_persistence": 415.47,
+            "skill_vs_persistence": 0.0559,
+            "coverage_p10_p90": 0.8816,
+            "coverage_p10_p90_before_calibration": 0.867,
+            "usable": true
+          },
+          {
+            "commodity": "tomato",
+            "state": "Maharashtra",
+            "horizon_days": 30,
+            "n": 409,
+            "mae_p50": 420.92,
+            "mae_persistence": 624.04,
+            "skill_vs_persistence": 0.3255,
+            "coverage_p10_p90": 0.9389,
+            "coverage_p10_p90_before_calibration": 0.9315,
+            "usable": true
+          }
+        ]
+      },
+      "range_widening": {
+        "7": {
+          "qhat": 23.84,
+          "n_calibration": 5769
+        },
+        "30": {
+          "qhat": 44.49,
+          "n_calibration": 5742
+        }
+      },
+      "per_crop": true,
+      "log_target": true,
+      "numeric_features": [
+        "last_price",
+        "days_since_last",
+        "price_lag_7",
+        "price_lag_14",
+        "price_lag_30",
+        "roll_mean_30",
+        "roll_std_30",
+        "roll_n_30",
+        "change_7_pct",
+        "change_30_pct",
+        "horizon_days",
+        "target_month_sin",
+        "target_month_cos",
+        "msp_gap_pct"
+      ]
+    }
+  }
+}

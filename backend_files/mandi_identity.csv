@@ -1,0 +1,1467 @@
+state,market,district,mandi,mandi_district,rule
+Madhya Pradesh,A lot,Ratlam,A lot,Ratlam,as_published
+Madhya Pradesh,A lot APMC,Ratlam,A lot,Ratlam,apmc_rename_folded
+Madhya Pradesh,APMC Sausar,Chhindwara,APMC Sausar,Chhindwara,as_published
+Madhya Pradesh,Aaron(F&V) APMC,Guna,Aaron(F&V) APMC,Guna,as_published
+Madhya Pradesh,Aashta(F&V),Sehore,Aashta(F&V),Sehore,as_published
+Madhya Pradesh,Aashta(F&V) APMC,Sehore,Aashta(F&V),Sehore,apmc_rename_folded
+Madhya Pradesh,Agar,Shajapur,Agar,Shajapur,as_published
+Madhya Pradesh,Agar APMC,Shajapur,Agar,Shajapur,apmc_rename_folded
+Madhya Pradesh,Agar(F&V),Agar Malwa,Agar(F&V),Agar Malwa,as_published
+Madhya Pradesh,Agar(F&V) APMC,Agar Malwa,Agar(F&V),Agar Malwa,apmc_rename_folded
+Madhya Pradesh,Ajaygarh,Panna,Ajaygarh,Panna,as_published
+Madhya Pradesh,Ajaygarh APMC,Panna,Ajaygarh,Panna,apmc_rename_folded
+Madhya Pradesh,Akodia,Shajapur,Akodia,Shajapur,as_published
+Madhya Pradesh,Akodiya,Shajapur,Akodiya,Shajapur,as_published
+Madhya Pradesh,Akodiya APMC,Shajapur,Akodiya,Shajapur,apmc_rename_folded
+Madhya Pradesh,Akodiya(F&V),Shajapur,Akodiya(F&V),Shajapur,as_published
+Madhya Pradesh,Akodiya(F&V) APMC,Shajapur,Akodiya(F&V),Shajapur,apmc_rename_folded
+Madhya Pradesh,Alampur,Bhind,Alampur,Bhind,as_published
+Madhya Pradesh,Alampur APMC,Bhind,Alampur,Bhind,apmc_rename_folded
+Madhya Pradesh,Alirajpur,Alirajpur,Alirajpur,Alirajpur,as_published
+Madhya Pradesh,Alirajpur APMC,Alirajpur,Alirajpur,Alirajpur,apmc_rename_folded
+Madhya Pradesh,Alirajpur(F&V),Alirajpur,Alirajpur(F&V),Alirajpur,as_published
+Madhya Pradesh,Alot(F&V),Ratlam,Alot(F&V),Ratlam,as_published
+Madhya Pradesh,Alot(F&V) APMC,Ratlam,Alot(F&V),Ratlam,apmc_rename_folded
+Madhya Pradesh,Amarpatan,Satna,Amarpatan,Satna,as_published
+Madhya Pradesh,Amarpatan APMC,Satna,Amarpatan,Satna,apmc_rename_folded
+Madhya Pradesh,Amarwda,Chhindwara,Amarwda,Chhindwara,as_published
+Madhya Pradesh,Amarwda APMC,Chhindwara,Amarwda,Chhindwara,apmc_rename_folded
+Madhya Pradesh,Ambaha,Morena,Ambaha,Morena,as_published
+Madhya Pradesh,Ambaha APMC,Morena,Ambaha,Morena,apmc_rename_folded
+Madhya Pradesh,Anjad,Badwani,Anjad,Barwani,as_published
+Madhya Pradesh,Anjad APMC,Badwani,Anjad,Barwani,apmc_rename_folded
+Madhya Pradesh,Anjad(F&V),Badwani,Anjad(F&V),Barwani,as_published
+Madhya Pradesh,Anuppur,Anupur,Anuppur,Anuppur,as_published
+Madhya Pradesh,Anuppur APMC,Anupur,Anuppur,Anuppur,apmc_rename_folded
+Madhya Pradesh,Anuppur(F&V) APMC,Anupur,Anuppur(F&V) APMC,Anuppur,as_published
+Madhya Pradesh,Aron,Guna,Aron,Guna,as_published
+Madhya Pradesh,Aron APMC,Guna,Aron,Guna,apmc_rename_folded
+Madhya Pradesh,Ashoknagar,Ashoknagar,Ashoknagar,Ashoknagar,as_published
+Madhya Pradesh,Ashoknagar APMC,Ashoknagar,Ashoknagar,Ashoknagar,apmc_rename_folded
+Madhya Pradesh,Ashoknagar(F&V),Ashoknagar,Ashoknagar(F&V),Ashoknagar,as_published
+Madhya Pradesh,Ashta,Sehore,Ashta,Sehore,as_published
+Madhya Pradesh,Ashta APMC,Sehore,Ashta,Sehore,apmc_rename_folded
+Madhya Pradesh,Babai,Hoshangabad,Babai,Narmadapuram,as_published
+Madhya Pradesh,Babai APMC,Hoshangabad,Babai,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Badamalhera,Chhatarpur,Badamalhera,Chhatarpur,as_published
+Madhya Pradesh,Badamalhera APMC,Chhatarpur,Badamalhera,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Badarwas,Shivpuri,Badarwas,Shivpuri,as_published
+Madhya Pradesh,Badarwas APMC,Shivpuri,Badarwas,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Badnagar,Ujjain,Badnagar,Ujjain,as_published
+Madhya Pradesh,Badnagar APMC,Ujjain,Badnagar,Ujjain,apmc_rename_folded
+Madhya Pradesh,Badnawar,Dhar,Badnawar,Dhar,as_published
+Madhya Pradesh,Badnawar APMC,Dhar,Badnawar,Dhar,apmc_rename_folded
+Madhya Pradesh,Badnawar(F&V),Dhar,Badnawar(F&V),Dhar,as_published
+Madhya Pradesh,Badnawar(F&V) APMC,Dhar,Badnawar(F&V),Dhar,apmc_rename_folded
+Madhya Pradesh,Badod,Shajapur,Badod,Shajapur,as_published
+Madhya Pradesh,Badod APMC,Shajapur,Badod,Shajapur,apmc_rename_folded
+Madhya Pradesh,Badwah(F&V),Khandwa,Badwah(F&V),Khandwa,as_published
+Madhya Pradesh,Badwah(F&V) APMC,Khandwa,Badwah(F&V),Khandwa,apmc_rename_folded
+Madhya Pradesh,Badwaha,Khargone,Badwaha,Khargone,as_published
+Madhya Pradesh,Badwaha APMC,Khargone,Badwaha,Khargone,apmc_rename_folded
+Madhya Pradesh,Badwani,Badwani,Badwani,Barwani,as_published
+Madhya Pradesh,Badwani APMC,Badwani,Badwani,Barwani,apmc_rename_folded
+Madhya Pradesh,Badwani(F&V),Badwani,Badwani(F&V),Barwani,as_published
+Madhya Pradesh,Badwani(F&V) APMC,Badwani,Badwani(F&V),Barwani,apmc_rename_folded
+Madhya Pradesh,Bagli,Dewas,Bagli,Dewas,as_published
+Madhya Pradesh,Bagli APMC,Dewas,Bagli,Dewas,apmc_rename_folded
+Madhya Pradesh,Baikunthpur,Rewa,Baikunthpur,Rewa,as_published
+Madhya Pradesh,Baikunthpur APMC,Rewa,Baikunthpur,Rewa,apmc_rename_folded
+Madhya Pradesh,Bairad(F&V) APMC,Shivpuri,Bairad(F&V),Shivpuri,apmc_rename_folded
+Madhya Pradesh,Bakswaha,Chhatarpur,Bakswaha,Chhatarpur,as_published
+Madhya Pradesh,Bakswaha APMC,Chhatarpur,Bakswaha,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Baktara,Sehore,Baktara,Sehore,as_published
+Madhya Pradesh,Baktara APMC,Sehore,Baktara,Sehore,apmc_rename_folded
+Madhya Pradesh,Balaghat,Balaghat,Balaghat,Balaghat,as_published
+Madhya Pradesh,Balaghat APMC,Balaghat,Balaghat,Balaghat,apmc_rename_folded
+Madhya Pradesh,Balwadi,Badwani,Balwadi,Barwani,as_published
+Madhya Pradesh,Balwadi APMC,Badwani,Balwadi,Barwani,apmc_rename_folded
+Madhya Pradesh,Bamora,Sagar,Bamora,Sagar,as_published
+Madhya Pradesh,Bamora APMC,Sagar,Bamora,Sagar,apmc_rename_folded
+Madhya Pradesh,Banapura,Hoshangabad,Banapura,Narmadapuram,as_published
+Madhya Pradesh,Banapura APMC,Hoshangabad,Banapura,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Banapura(F&V),Hoshangabad,Banapura(F&V),Narmadapuram,as_published
+Madhya Pradesh,Banda,Sagar,Banda,Sagar,as_published
+Madhya Pradesh,Banda APMC,Sagar,Banda,Sagar,apmc_rename_folded
+Madhya Pradesh,Bankhedi,Hoshangabad,Bankhedi,Narmadapuram,as_published
+Madhya Pradesh,Bankhedi APMC,Hoshangabad,Bankhedi,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Banmorkalan,Morena,Banmorkalan,Morena,as_published
+Madhya Pradesh,Banmorkalan APMC,Morena,Banmorkalan,Morena,apmc_rename_folded
+Madhya Pradesh,Barad,Shivpuri,Barad,Shivpuri,as_published
+Madhya Pradesh,Barad APMC,Shivpuri,Barad,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Bareli,Raisen,Bareli,Raisen,as_published
+Madhya Pradesh,Bareli APMC,Raisen,Bareli,Raisen,apmc_rename_folded
+Madhya Pradesh,Bareli(F&V),Raisen,Bareli(F&V),Raisen,as_published
+Madhya Pradesh,Bareli(F&V) APMC,Raisen,Bareli(F&V),Raisen,apmc_rename_folded
+Madhya Pradesh,Barghat,Seoni,Barghat,Seoni,as_published
+Madhya Pradesh,Barghat APMC,Seoni,Barghat,Seoni,apmc_rename_folded
+Madhya Pradesh,Begamganj,Raisen,Begamganj,Raisen,as_published
+Madhya Pradesh,Begamganj APMC,Raisen,Begamganj,Raisen,apmc_rename_folded
+Madhya Pradesh,Beohari,Shehdol,Beohari,Shahdol,as_published
+Madhya Pradesh,Beohari APMC,Shehdol,Beohari,Shahdol,apmc_rename_folded
+Madhya Pradesh,Berachha,Shajapur,Berachha,Shajapur,as_published
+Madhya Pradesh,Berachha APMC,Shajapur,Berachha,Shajapur,apmc_rename_folded
+Madhya Pradesh,Berasia,Bhopal,Berasia,Bhopal,as_published
+Madhya Pradesh,Berasia APMC,Bhopal,Berasia,Bhopal,apmc_rename_folded
+Madhya Pradesh,Betul,Betul,Betul,Betul,as_published
+Madhya Pradesh,Betul APMC,Betul,Betul,Betul,apmc_rename_folded
+Madhya Pradesh,Betul(F&V),Betul,Betul(F&V),Betul,as_published
+Madhya Pradesh,Betul(F&V) APMC,Betul,Betul(F&V),Betul,apmc_rename_folded
+Madhya Pradesh,Bhander,Datia,Bhander,Datia,as_published
+Madhya Pradesh,Bhander APMC,Datia,Bhander,Datia,apmc_rename_folded
+Madhya Pradesh,Bhanpura,Mandsaur,Bhanpura,Mandsaur,as_published
+Madhya Pradesh,Bhanpura APMC,Mandsaur,Bhanpura,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Bhensdehi,Betul,Bhensdehi,Betul,as_published
+Madhya Pradesh,Bhensdehi APMC,Betul,Bhensdehi,Betul,apmc_rename_folded
+Madhya Pradesh,Bhikangaon,Khargone,Bhikangaon,Khargone,as_published
+Madhya Pradesh,Bhikangaon APMC,Khargone,Bhikangaon,Khargone,apmc_rename_folded
+Madhya Pradesh,Bhind,Bhind,Bhind,Bhind,as_published
+Madhya Pradesh,Bhind APMC,Bhind,Bhind,Bhind,apmc_rename_folded
+Madhya Pradesh,Bhitarwar,Gwalior,Bhitarwar,Gwalior,as_published
+Madhya Pradesh,Bhitarwar APMC,Gwalior,Bhitarwar,Gwalior,apmc_rename_folded
+Madhya Pradesh,Bhopal,Bhopal,Bhopal,Bhopal,as_published
+Madhya Pradesh,Bhopal APMC,Bhopal,Bhopal,Bhopal,apmc_rename_folded
+Madhya Pradesh,Bhopal(F&V),Bhopal,Bhopal(F&V),Bhopal,as_published
+Madhya Pradesh,Bhopal(F&V) APMC,Bhopal,Bhopal(F&V),Bhopal,apmc_rename_folded
+Madhya Pradesh,Biaora,Rajgarh,Biaora,Rajgarh,as_published
+Madhya Pradesh,Biaora APMC,Rajgarh,Biaora,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Bichhiya,Mandla,Bichhiya,Mandla,as_published
+Madhya Pradesh,Bichhiya APMC,Mandla,Bichhiya,Mandla,apmc_rename_folded
+Madhya Pradesh,Bichiya(F&V),Mandla,Bichiya(F&V),Mandla,as_published
+Madhya Pradesh,Bichiya(F&V) APMC,Mandla,Bichiya(F&V),Mandla,apmc_rename_folded
+Madhya Pradesh,Bijawar,Chhatarpur,Bijawar,Chhatarpur,as_published
+Madhya Pradesh,Bijawar APMC,Chhatarpur,Bijawar,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Bina,Sagar,Bina,Sagar,as_published
+Madhya Pradesh,Bina APMC,Sagar,Bina,Sagar,apmc_rename_folded
+Madhya Pradesh,Binaganj,Guna,Binaganj,Guna,as_published
+Madhya Pradesh,Binaganj APMC,Guna,Binaganj,Guna,apmc_rename_folded
+Madhya Pradesh,Budhar,Shehdol,Budhar,Shahdol,as_published
+Madhya Pradesh,Budhar APMC,Shehdol,Budhar,Shahdol,apmc_rename_folded
+Madhya Pradesh,Burhanpur,Burhanpur,Burhanpur,Burhanpur,as_published
+Madhya Pradesh,Burhanpur APMC,Burhanpur,Burhanpur,Burhanpur,apmc_rename_folded
+Madhya Pradesh,Burhanpur(F&V),Burhanpur,Burhanpur(F&V),Burhanpur,as_published
+Madhya Pradesh,Burhanpur(F&V) APMC,Burhanpur,Burhanpur(F&V),Burhanpur,apmc_rename_folded
+Madhya Pradesh,Chaakghat,Rewa,Chaakghat,Rewa,as_published
+Madhya Pradesh,Chaakghat APMC,Rewa,Chaakghat,Rewa,apmc_rename_folded
+Madhya Pradesh,Chanderi,Ashoknagar,Chanderi,Ashoknagar,as_published
+Madhya Pradesh,Chanderi APMC,Ashoknagar,Chanderi,Ashoknagar,apmc_rename_folded
+Madhya Pradesh,Chattarpur(F&V) APMC,Chhatarpur,Chattarpur(F&V),Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Chaurai,Chhindwara,Chaurai,Chhindwara,as_published
+Madhya Pradesh,Chaurai APMC,Chhindwara,Chaurai,Chhindwara,apmc_rename_folded
+Madhya Pradesh,Chhapara(F&V),Seoni,Chhapara(F&V),Seoni,as_published
+Madhya Pradesh,Chhapara(F&V) APMC,Seoni,Chhapara(F&V),Seoni,apmc_rename_folded
+Madhya Pradesh,Chhapiheda,Rajgarh,Chhapiheda,Rajgarh,as_published
+Madhya Pradesh,Chhapiheda APMC,Rajgarh,Chhapiheda,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Chhatarpur,Chhatarpur,Chhatarpur,Chhatarpur,as_published
+Madhya Pradesh,Chhatarpur APMC,Chhatarpur,Chhatarpur,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Chhindwara,Chhindwara,Chhindwara,Chhindwara,as_published
+Madhya Pradesh,Chhindwara APMC,Chhindwara,Chhindwara,Chhindwara,apmc_rename_folded
+Madhya Pradesh,Chhindwara(F&V),Chhindwara,Chhindwara(F&V),Chhindwara,as_published
+Madhya Pradesh,Chhpara,Seoni,Chhpara,Seoni,as_published
+Madhya Pradesh,Chhpara APMC,Seoni,Chhpara,Seoni,apmc_rename_folded
+Madhya Pradesh,Chindwara(F&V),Chhindwara,Chindwara(F&V),Chhindwara,as_published
+Madhya Pradesh,Chindwara(F&V) APMC,Chhindwara,Chindwara(F&V),Chhindwara,apmc_rename_folded
+Madhya Pradesh,Dabra,Gwalior,Dabra,Gwalior,as_published
+Madhya Pradesh,Dabra APMC,Gwalior,Dabra,Gwalior,apmc_rename_folded
+Madhya Pradesh,Daloda,Mandsaur,Daloda,Mandsaur,as_published
+Madhya Pradesh,Daloda APMC,Mandsaur,Daloda,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Damoh,Damoh,Damoh,Damoh,as_published
+Madhya Pradesh,Damoh APMC,Damoh,Damoh,Damoh,apmc_rename_folded
+Madhya Pradesh,Damoh(F&V),Damoh,Damoh(F&V),Damoh,as_published
+Madhya Pradesh,Damoh(F&V) APMC,Damoh,Damoh(F&V),Damoh,apmc_rename_folded
+Madhya Pradesh,Datia,Datia,Datia,Datia,as_published
+Madhya Pradesh,Datia APMC,Datia,Datia,Datia,apmc_rename_folded
+Madhya Pradesh,Deori,Sagar,Deori,Sagar,as_published
+Madhya Pradesh,Deori APMC,Sagar,Deori,Sagar,apmc_rename_folded
+Madhya Pradesh,Devandranagar,Panna,Devandranagar,Panna,as_published
+Madhya Pradesh,Devandranagar APMC,Panna,Devandranagar,Panna,apmc_rename_folded
+Madhya Pradesh,Devri(F&V),Sagar,Devri(F&V),Sagar,as_published
+Madhya Pradesh,Dewas,Dewas,Dewas,Dewas,as_published
+Madhya Pradesh,Dewas APMC,Dewas,Dewas,Dewas,apmc_rename_folded
+Madhya Pradesh,Dewas(F&V),Dewas,Dewas(F&V),Dewas,as_published
+Madhya Pradesh,Dewas(F&V) APMC,Dewas,Dewas(F&V),Dewas,apmc_rename_folded
+Madhya Pradesh,Dhamnod,Dhar,Dhamnod,Dhar,as_published
+Madhya Pradesh,Dhamnod APMC,Dhar,Dhamnod,Dhar,apmc_rename_folded
+Madhya Pradesh,Dhamnod(F&V),Dhar,Dhamnod(F&V),Dhar,as_published
+Madhya Pradesh,Dhamnod(F&V) APMC,Dhar,Dhamnod(F&V),Dhar,apmc_rename_folded
+Madhya Pradesh,Dhar,Dhar,Dhar,Dhar,as_published
+Madhya Pradesh,Dhar APMC,Dhar,Dhar,Dhar,apmc_rename_folded
+Madhya Pradesh,Dhar(F&V),Dhar,Dhar(F&V),Dhar,as_published
+Madhya Pradesh,Dhar(F&V) APMC,Dhar,Dhar(F&V),Dhar,apmc_rename_folded
+Madhya Pradesh,Dindori,Dindori,Dindori,Dindori,as_published
+Madhya Pradesh,Dindori APMC,Dindori,Dindori,Dindori,apmc_rename_folded
+Madhya Pradesh,Gadarwada,Narsinghpur,Gadarwada,Narsinghpur,as_published
+Madhya Pradesh,Gadarwada APMC,Narsinghpur,Gadarwada,Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Gadarwara(F&V),Narsinghpur,Gadarwara(F&V),Narsinghpur,as_published
+Madhya Pradesh,Gadarwara(F&V) APMC,Narsinghpur,Gadarwara(F&V),Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Gairatganj,Raisen,Gairatganj,Raisen,as_published
+Madhya Pradesh,Gairatganj APMC,Raisen,Gairatganj,Raisen,apmc_rename_folded
+Madhya Pradesh,Gandhwani,Dhar,Gandhwani,Dhar,as_published
+Madhya Pradesh,Gandhwani APMC,Dhar,Gandhwani,Dhar,apmc_rename_folded
+Madhya Pradesh,Ganjbasoda,Vidisha,Ganjbasoda,Vidisha,as_published
+Madhya Pradesh,Ganjbasoda APMC,Vidisha,Ganjbasoda,Vidisha,apmc_rename_folded
+Madhya Pradesh,Garhakota,Sagar,Garhakota,Sagar,as_published
+Madhya Pradesh,Garhakota APMC,Sagar,Garhakota,Sagar,apmc_rename_folded
+Madhya Pradesh,Garoth,Mandsaur,Garoth,Mandsaur,as_published
+Madhya Pradesh,Garoth APMC,Mandsaur,Garoth,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Gautampura,Indore,Gautampura,Indore,as_published
+Madhya Pradesh,Gautampura APMC,Indore,Gautampura,Indore,apmc_rename_folded
+Madhya Pradesh,Gautampura(F&V) APMC,Indore,Gautampura(F&V),Indore,apmc_rename_folded
+Madhya Pradesh,Ghansour,Seoni,Ghansour,Seoni,as_published
+Madhya Pradesh,Ghansour APMC,Seoni,Ghansour,Seoni,apmc_rename_folded
+Madhya Pradesh,Gohad,Bhind,Gohad,Bhind,as_published
+Madhya Pradesh,Gohad APMC,Bhind,Gohad,Bhind,apmc_rename_folded
+Madhya Pradesh,Gohad(F&V),Bhind,Gohad(F&V),Bhind,as_published
+Madhya Pradesh,Gorakhpur,Dindori,Gorakhpur,Dindori,as_published
+Madhya Pradesh,Gorakhpur APMC,Dindori,Gorakhpur,Dindori,apmc_rename_folded
+Madhya Pradesh,Gotegaon,Narsinghpur,Gotegaon,Narsinghpur,as_published
+Madhya Pradesh,Gotegaon APMC,Narsinghpur,Gotegaon,Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Gotegaon(F&V),Narsinghpur,Gotegaon(F&V),Narsinghpur,as_published
+Madhya Pradesh,Gotegaon(F&V) APMC,Narsinghpur,Gotegaon(F&V),Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Gulabganj,Vidisha,Gulabganj,Vidisha,as_published
+Madhya Pradesh,Gulabganj APMC,Vidisha,Gulabganj,Vidisha,apmc_rename_folded
+Madhya Pradesh,Guna,Guna,Guna,Guna,as_published
+Madhya Pradesh,Guna APMC,Guna,Guna,Guna,apmc_rename_folded
+Madhya Pradesh,Guna(F&V),Guna,Guna(F&V),Guna,as_published
+Madhya Pradesh,Guna(F&V) APMC,Guna,Guna(F&V),Guna,apmc_rename_folded
+Madhya Pradesh,Haatpipliya,Dewas,Haatpipliya,Dewas,as_published
+Madhya Pradesh,Haatpipliya APMC,Dewas,Haatpipliya,Dewas,apmc_rename_folded
+Madhya Pradesh,Hanumana,Rewa,Hanumana,Rewa,as_published
+Madhya Pradesh,Hanumana APMC,Rewa,Hanumana,Rewa,apmc_rename_folded
+Madhya Pradesh,Hanumana(F&V),Rewa,Hanumana(F&V),Rewa,as_published
+Madhya Pradesh,Hanumana(F&V) APMC,Rewa,Hanumana(F&V),Rewa,apmc_rename_folded
+Madhya Pradesh,Harda,Harda,Harda,Harda,as_published
+Madhya Pradesh,Harda APMC,Harda,Harda,Harda,apmc_rename_folded
+Madhya Pradesh,Harda(F&V),Harda,Harda(F&V),Harda,as_published
+Madhya Pradesh,Harda(F&V) APMC,Harda,Harda(F&V),Harda,apmc_rename_folded
+Madhya Pradesh,Harpalpur,Chhatarpur,Harpalpur,Chhatarpur,as_published
+Madhya Pradesh,Harpalpur APMC,Chhatarpur,Harpalpur,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Harsood,Khandwa,Harsood,Khandwa,as_published
+Madhya Pradesh,Harsood APMC,Khandwa,Harsood,Khandwa,apmc_rename_folded
+Madhya Pradesh,Hata,Damoh,Hata,Damoh,as_published
+Madhya Pradesh,Hata APMC,Damoh,Hata,Damoh,apmc_rename_folded
+Madhya Pradesh,Hatpiplya(F&V) APMC,Dewas,Hatpiplya(F&V) APMC,Dewas,as_published
+Madhya Pradesh,Hoshangabad,Hoshangabad,Hoshangabad,Narmadapuram,as_published
+Madhya Pradesh,Hoshangabad APMC,Hoshangabad,Hoshangabad,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Hoshangabad(F&V),Hoshangabad,Hoshangabad(F&V),Narmadapuram,as_published
+Madhya Pradesh,Hoshangabad(F&V) APMC,Hoshangabad,Hoshangabad(F&V),Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Ichhawar,Sehore,Ichhawar,Sehore,as_published
+Madhya Pradesh,Ichhawar APMC,Sehore,Ichhawar,Sehore,apmc_rename_folded
+Madhya Pradesh,Ichhawar(F&V),Sehore,Ichhawar(F&V),Sehore,as_published
+Madhya Pradesh,Ichhawar(F&V) APMC,Sehore,Ichhawar(F&V),Sehore,apmc_rename_folded
+Madhya Pradesh,Indore,Indore,Indore,Indore,as_published
+Madhya Pradesh,Indore APMC,Indore,Indore,Indore,apmc_rename_folded
+Madhya Pradesh,Indore(F&V),Indore,Indore(F&V),Indore,as_published
+Madhya Pradesh,Indore(F&V) APMC,Indore,Indore(F&V),Indore,apmc_rename_folded
+Madhya Pradesh,Isagarh,Ashoknagar,Isagarh,Ashoknagar,as_published
+Madhya Pradesh,Isagarh APMC,Ashoknagar,Isagarh,Ashoknagar,apmc_rename_folded
+Madhya Pradesh,Itarsi,Hoshangabad,Itarsi,Narmadapuram,as_published
+Madhya Pradesh,Itarsi APMC,Hoshangabad,Itarsi,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Itarsi(F&V),Hoshangabad,Itarsi(F&V),Narmadapuram,as_published
+Madhya Pradesh,Itarsi(F&V) APMC,Hoshangabad,Itarsi(F&V),Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Jabalpur,Jabalpur,Jabalpur,Jabalpur,as_published
+Madhya Pradesh,Jabalpur APMC,Jabalpur,Jabalpur,Jabalpur,apmc_rename_folded
+Madhya Pradesh,Jabalpur(F&V),Jabalpur,Jabalpur(F&V),Jabalpur,as_published
+Madhya Pradesh,Jabalpur(F&V) APMC,Jabalpur,Jabalpur(F&V),Jabalpur,apmc_rename_folded
+Madhya Pradesh,Jaisinagar,Sagar,Jaisinagar,Sagar,as_published
+Madhya Pradesh,Jaisinagar APMC,Sagar,Jaisinagar,Sagar,apmc_rename_folded
+Madhya Pradesh,Jaithari,Anupur,Jaithari,Anuppur,as_published
+Madhya Pradesh,Jaithari APMC,Anupur,Jaithari,Anuppur,apmc_rename_folded
+Madhya Pradesh,Jaora,Ratlam,Jaora,Ratlam,as_published
+Madhya Pradesh,Jaora APMC,Ratlam,Jaora,Ratlam,apmc_rename_folded
+Madhya Pradesh,Jatara,Tikamgarh,Jatara,Tikamgarh,as_published
+Madhya Pradesh,Jatara APMC,Tikamgarh,Jatara,Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Javad,Neemuch,Javad,Neemuch,as_published
+Madhya Pradesh,Javad APMC,Neemuch,Javad,Neemuch,apmc_rename_folded
+Madhya Pradesh,Javera,Damoh,Javera,Damoh,as_published
+Madhya Pradesh,Javera APMC,Damoh,Javera,Damoh,apmc_rename_folded
+Madhya Pradesh,Jawar,Sehore,Jawar,Sehore,as_published
+Madhya Pradesh,Jawar APMC,Sehore,Jawar,Sehore,apmc_rename_folded
+Madhya Pradesh,Jeerapur,Rajgarh,Jeerapur,Rajgarh,as_published
+Madhya Pradesh,Jeerapur APMC,Rajgarh,Jeerapur,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Jhabua,Jhabua,Jhabua,Jhabua,as_published
+Madhya Pradesh,Jhabua APMC,Jhabua,Jhabua,Jhabua,apmc_rename_folded
+Madhya Pradesh,Jhabua(F&V),Jhabua,Jhabua(F&V),Jhabua,as_published
+Madhya Pradesh,Jhabua(F&V) APMC,Jhabua,Jhabua(F&V),Jhabua,apmc_rename_folded
+Madhya Pradesh,Jobat,Alirajpur,Jobat,Alirajpur,as_published
+Madhya Pradesh,Jobat APMC,Alirajpur,Jobat,Alirajpur,apmc_rename_folded
+Madhya Pradesh,Jobat(F&V),Alirajpur,Jobat(F&V),Alirajpur,as_published
+Madhya Pradesh,Jobat(F&V) APMC,Alirajpur,Jobat(F&V),Alirajpur,apmc_rename_folded
+Madhya Pradesh,Jora,Morena,Jora,Morena,as_published
+Madhya Pradesh,Jora APMC,Morena,Jora,Morena,apmc_rename_folded
+Madhya Pradesh,Kailaras,Morena,Kailaras,Morena,as_published
+Madhya Pradesh,Kailaras APMC,Morena,Kailaras,Morena,apmc_rename_folded
+Madhya Pradesh,Kalapipal,Shajapur,Kalapipal,Shajapur,as_published
+Madhya Pradesh,Kalapipal APMC,Shajapur,Kalapipal,Shajapur,apmc_rename_folded
+Madhya Pradesh,Kalapipal(F&V),Shajapur,Kalapipal(F&V),Shajapur,as_published
+Madhya Pradesh,Kalapipal(F&V) APMC,Shajapur,Kalapipal(F&V),Shajapur,apmc_rename_folded
+Madhya Pradesh,Kannod,Dewas,Kannod,Dewas,as_published
+Madhya Pradesh,Kannod APMC,Dewas,Kannod,Dewas,apmc_rename_folded
+Madhya Pradesh,Kareli,Narsinghpur,Kareli,Narsinghpur,as_published
+Madhya Pradesh,Kareli APMC,Narsinghpur,Kareli,Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Kareli(F&V),Narsinghpur,Kareli(F&V),Narsinghpur,as_published
+Madhya Pradesh,Kareli(F&V) APMC,Narsinghpur,Kareli(F&V),Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Karera,Shivpuri,Karera,Shivpuri,as_published
+Madhya Pradesh,Karera APMC,Shivpuri,Karera,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Karera(F&V),Shivpuri,Karera(F&V),Shivpuri,as_published
+Madhya Pradesh,Karera(F&V) APMC,Shivpuri,Karera(F&V),Shivpuri,apmc_rename_folded
+Madhya Pradesh,Karhi,Khargone,Karhi,Khargone,as_published
+Madhya Pradesh,Karhi APMC,Khargone,Karhi,Khargone,apmc_rename_folded
+Madhya Pradesh,Kasrawad,Khargone,Kasrawad,Khargone,as_published
+Madhya Pradesh,Kasrawad APMC,Khargone,Kasrawad,Khargone,apmc_rename_folded
+Madhya Pradesh,Katangi,Balaghat,Katangi,Balaghat,as_published
+Madhya Pradesh,Katangi APMC,Balaghat,Katangi,Balaghat,apmc_rename_folded
+Madhya Pradesh,Katni,Katni,Katni,Katni,as_published
+Madhya Pradesh,Katni APMC,Katni,Katni,Katni,apmc_rename_folded
+Madhya Pradesh,Katni(F&V),Katni,Katni(F&V),Katni,as_published
+Madhya Pradesh,Katni(F&V) APMC,Katni,Katni(F&V),Katni,apmc_rename_folded
+Madhya Pradesh,Keolari,Seoni,Keolari,Seoni,as_published
+Madhya Pradesh,Keolari APMC,Seoni,Keolari,Seoni,apmc_rename_folded
+Madhya Pradesh,Kesli,Sagar,Kesli,Sagar,as_published
+Madhya Pradesh,Kesli APMC,Sagar,Kesli,Sagar,apmc_rename_folded
+Madhya Pradesh,Kewalri(F&V),Seoni,Kewalri(F&V),Seoni,as_published
+Madhya Pradesh,Khachrod,Ujjain,Khachrod,Ujjain,as_published
+Madhya Pradesh,Khachrod APMC,Ujjain,Khachrod,Ujjain,apmc_rename_folded
+Madhya Pradesh,Khandwa,Khandwa,Khandwa,Khandwa,as_published
+Madhya Pradesh,Khandwa APMC,Khandwa,Khandwa,Khandwa,apmc_rename_folded
+Madhya Pradesh,Khandwa(F&V),Khandwa,Khandwa(F&V),Khandwa,as_published
+Madhya Pradesh,Khandwa(F&V) APMC,Khandwa,Khandwa(F&V),Khandwa,apmc_rename_folded
+Madhya Pradesh,Khaniadhana,Shivpuri,Khaniadhana,Shivpuri,as_published
+Madhya Pradesh,Khaniadhana APMC,Shivpuri,Khaniadhana,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Khanyadhana,Shivpuri,Khanyadhana,Shivpuri,as_published
+Madhya Pradesh,Khanyadhana APMC,Shivpuri,Khanyadhana,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Khargapur,Tikamgarh,Khargapur,Tikamgarh,as_published
+Madhya Pradesh,Khargapur APMC,Tikamgarh,Khargapur,Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Khargone,Khargone,Khargone,Khargone,as_published
+Madhya Pradesh,Khargone APMC,Khargone,Khargone,Khargone,apmc_rename_folded
+Madhya Pradesh,Khategaon,Dewas,Khategaon,Dewas,as_published
+Madhya Pradesh,Khategaon APMC,Dewas,Khategaon,Dewas,apmc_rename_folded
+Madhya Pradesh,Khatora,Shivpuri,Khatora,Shivpuri,as_published
+Madhya Pradesh,Khatora APMC,Shivpuri,Khatora,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Khetia,Badwani,Khetia,Barwani,as_published
+Madhya Pradesh,Khetia APMC,Badwani,Khetia,Barwani,apmc_rename_folded
+Madhya Pradesh,Khilchipur,Rajgarh,Khilchipur,Rajgarh,as_published
+Madhya Pradesh,Khilchipur APMC,Rajgarh,Khilchipur,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Khirakiya,Harda,Khirakiya,Harda,as_published
+Madhya Pradesh,Khirakiya APMC,Harda,Khirakiya,Harda,apmc_rename_folded
+Madhya Pradesh,Khujner,Rajgarh,Khujner,Rajgarh,as_published
+Madhya Pradesh,Khujner APMC,Rajgarh,Khujner,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Khurai,Sagar,Khurai,Sagar,as_published
+Madhya Pradesh,Khurai APMC,Sagar,Khurai,Sagar,apmc_rename_folded
+Madhya Pradesh,Khurai(F&V),Sagar,Khurai(F&V),Sagar,as_published
+Madhya Pradesh,Khurai(F&V) APMC,Sagar,Khurai(F&V),Sagar,apmc_rename_folded
+Madhya Pradesh,Kolaras,Shivpuri,Kolaras,Shivpuri,as_published
+Madhya Pradesh,Kolaras APMC,Shivpuri,Kolaras,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Kolaras(F&V),Shivpuri,Kolaras(F&V),Shivpuri,as_published
+Madhya Pradesh,Kolaras(F&V) APMC,Shivpuri,Kolaras(F&V),Shivpuri,apmc_rename_folded
+Madhya Pradesh,Kotma,Anupur,Kotma,Anuppur,as_published
+Madhya Pradesh,Kotma APMC,Anupur,Kotma,Anuppur,apmc_rename_folded
+Madhya Pradesh,Krishi Upaj Mandi Samiti Bichhiya,Mandla,Krishi Upaj Mandi Samiti Bichhiya,Mandla,as_published
+Madhya Pradesh,Kukshi,Dhar,Kukshi,Dhar,as_published
+Madhya Pradesh,Kukshi APMC,Dhar,Kukshi,Dhar,apmc_rename_folded
+Madhya Pradesh,Kukshi(F&V),Dhar,Kukshi(F&V),Dhar,as_published
+Madhya Pradesh,Kukshi(F&V) APMC,Dhar,Kukshi(F&V),Dhar,apmc_rename_folded
+Madhya Pradesh,Kumbhraj,Guna,Kumbhraj,Guna,as_published
+Madhya Pradesh,Kumbhraj APMC,Guna,Kumbhraj,Guna,apmc_rename_folded
+Madhya Pradesh,Kurawar,Rajgarh,Kurawar,Rajgarh,as_published
+Madhya Pradesh,Kurawar APMC,Rajgarh,Kurawar,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Kurwai,Vidisha,Kurwai,Vidisha,as_published
+Madhya Pradesh,Kurwai APMC,Vidisha,Kurwai,Vidisha,apmc_rename_folded
+Madhya Pradesh,Lahar,Bhind,Lahar,Bhind,as_published
+Madhya Pradesh,Lahar APMC,Bhind,Lahar,Bhind,apmc_rename_folded
+Madhya Pradesh,Lakhnadon,Seoni,Lakhnadon,Seoni,as_published
+Madhya Pradesh,Lakhnadon APMC,Seoni,Lakhnadon,Seoni,apmc_rename_folded
+Madhya Pradesh,Lakhnadon(F&V),Seoni,Lakhnadon(F&V),Seoni,as_published
+Madhya Pradesh,Lalbarra,Balaghat,Lalbarra,Balaghat,as_published
+Madhya Pradesh,Lalbarra APMC,Balaghat,Lalbarra,Balaghat,apmc_rename_folded
+Madhya Pradesh,Lashkar,Gwalior,Lashkar,Gwalior,as_published
+Madhya Pradesh,Lashkar APMC,Gwalior,Lashkar,Gwalior,apmc_rename_folded
+Madhya Pradesh,Lashkar(F&V),Gwalior,Lashkar(F&V),Gwalior,as_published
+Madhya Pradesh,Lashkar(F&V) APMC,Gwalior,Lashkar(F&V),Gwalior,apmc_rename_folded
+Madhya Pradesh,Lateri,Vidisha,Lateri,Vidisha,as_published
+Madhya Pradesh,Lateri APMC,Vidisha,Lateri,Vidisha,apmc_rename_folded
+Madhya Pradesh,LavKush Nagar(Laundi),Chhatarpur,LavKush Nagar(Laundi),Chhatarpur,as_published
+Madhya Pradesh,LavKush Nagar(Laundi) APMC,Chhatarpur,LavKush Nagar(Laundi),Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Loharda,Dewas,Loharda,Dewas,as_published
+Madhya Pradesh,Loharda APMC,Dewas,Loharda,Dewas,apmc_rename_folded
+Madhya Pradesh,Machalpur,Rajgarh,Machalpur,Rajgarh,as_published
+Madhya Pradesh,Machalpur APMC,Rajgarh,Machalpur,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Magroni,Shivpuri,Magroni,Shivpuri,as_published
+Madhya Pradesh,Magroni APMC,Shivpuri,Magroni,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Mahidpur,Ujjain,Mahidpur,Ujjain,as_published
+Madhya Pradesh,Mahidpur APMC,Ujjain,Mahidpur,Ujjain,apmc_rename_folded
+Madhya Pradesh,Mahidpur(F&V),Ujjain,Mahidpur(F&V),Ujjain,as_published
+Madhya Pradesh,Mahidpur(F&V) APMC,Ujjain,Mahidpur(F&V),Ujjain,apmc_rename_folded
+Madhya Pradesh,Maihar(F&V),Satna,Maihar(F&V),Satna,as_published
+Madhya Pradesh,Maihar(F&V) APMC,Satna,Maihar(F&V),Satna,apmc_rename_folded
+Madhya Pradesh,Maksi,Shajapur,Maksi,Shajapur,as_published
+Madhya Pradesh,Maksi APMC,Shajapur,Maksi,Shajapur,apmc_rename_folded
+Madhya Pradesh,Maksudangarh,Guna,Maksudangarh,Guna,as_published
+Madhya Pradesh,Maksudangarh APMC,Guna,Maksudangarh,Guna,apmc_rename_folded
+Madhya Pradesh,Malthone,Sagar,Malthone,Sagar,as_published
+Madhya Pradesh,Malthone APMC,Sagar,Malthone,Sagar,apmc_rename_folded
+Madhya Pradesh,Malthone(F&V) APMC,Sagar,Malthone(F&V) APMC,Sagar,as_published
+Madhya Pradesh,Manasa,Neemuch,Manasa,Neemuch,as_published
+Madhya Pradesh,Manasa APMC,Neemuch,Manasa,Neemuch,apmc_rename_folded
+Madhya Pradesh,Manawar,Dhar,Manawar,Dhar,as_published
+Madhya Pradesh,Manawar APMC,Dhar,Manawar,Dhar,apmc_rename_folded
+Madhya Pradesh,Manawar(F&V),Dhar,Manawar(F&V),Dhar,as_published
+Madhya Pradesh,Manawar(F&V) APMC,Dhar,Manawar(F&V),Dhar,apmc_rename_folded
+Madhya Pradesh,Mandla,Mandla,Mandla,Mandla,as_published
+Madhya Pradesh,Mandla APMC,Mandla,Mandla,Mandla,apmc_rename_folded
+Madhya Pradesh,Mandsaur,Mandsaur,Mandsaur,Mandsaur,as_published
+Madhya Pradesh,Mandsaur APMC,Mandsaur,Mandsaur,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Mandsaur(F&V),Mandsaur,Mandsaur(F&V),Mandsaur,as_published
+Madhya Pradesh,Mehar,Satna,Mehar,Satna,as_published
+Madhya Pradesh,Mehar APMC,Satna,Mehar,Satna,apmc_rename_folded
+Madhya Pradesh,Mehgaon,Bhind,Mehgaon,Bhind,as_published
+Madhya Pradesh,Mehgaon APMC,Bhind,Mehgaon,Bhind,apmc_rename_folded
+Madhya Pradesh,Mhow,Indore,Mhow,Indore,as_published
+Madhya Pradesh,Mhow APMC,Indore,Mhow,Indore,apmc_rename_folded
+Madhya Pradesh,Mhow(F&V),Indore,Mhow(F&V),Indore,as_published
+Madhya Pradesh,Mhow(F&V) APMC,Indore,Mhow(F&V),Indore,apmc_rename_folded
+Madhya Pradesh,Mohgaon,Balaghat,Mohgaon,Balaghat,as_published
+Madhya Pradesh,Mohgaon APMC,Balaghat,Mohgaon,Balaghat,apmc_rename_folded
+Madhya Pradesh,Momanbadodiya,Shajapur,Momanbadodiya,Shajapur,as_published
+Madhya Pradesh,Momanbadodiya APMC,Shajapur,Momanbadodiya,Shajapur,apmc_rename_folded
+Madhya Pradesh,Morena,Morena,Morena,Morena,as_published
+Madhya Pradesh,Morena APMC,Morena,Morena,Morena,apmc_rename_folded
+Madhya Pradesh,Morena(F&V),Morena,Morena(F&V),Morena,as_published
+Madhya Pradesh,Morena(F&V) APMC,Morena,Morena(F&V),Morena,apmc_rename_folded
+Madhya Pradesh,Mow,Bhind,Mow,Bhind,as_published
+Madhya Pradesh,Mow APMC,Bhind,Mow,Bhind,apmc_rename_folded
+Madhya Pradesh,Multai,Betul,Multai,Betul,as_published
+Madhya Pradesh,Multai APMC,Betul,Multai,Betul,apmc_rename_folded
+Madhya Pradesh,Multai(F&V),Betul,Multai(F&V),Betul,as_published
+Madhya Pradesh,Multai(F&V) APMC,Betul,Multai(F&V),Betul,apmc_rename_folded
+Madhya Pradesh,Mundi,Khandwa,Mundi,Khandwa,as_published
+Madhya Pradesh,Mundi APMC,Khandwa,Mundi,Khandwa,apmc_rename_folded
+Madhya Pradesh,Mungawali,Ashoknagar,Mungawali,Ashoknagar,as_published
+Madhya Pradesh,Mungawali APMC,Ashoknagar,Mungawali,Ashoknagar,apmc_rename_folded
+Madhya Pradesh,Nagda,Ujjain,Nagda,Ujjain,as_published
+Madhya Pradesh,Nagda APMC,Ujjain,Nagda,Ujjain,apmc_rename_folded
+Madhya Pradesh,Nagda(F&V),Ujjain,Nagda(F&V),Ujjain,as_published
+Madhya Pradesh,Nagod,Satna,Nagod,Satna,as_published
+Madhya Pradesh,Nagod APMC,Satna,Nagod,Satna,apmc_rename_folded
+Madhya Pradesh,Nainpur,Mandla,Nainpur,Mandla,as_published
+Madhya Pradesh,Nainpur APMC,Mandla,Nainpur,Mandla,apmc_rename_folded
+Madhya Pradesh,Nalkehda,Shajapur,Nalkehda,Shajapur,as_published
+Madhya Pradesh,Nalkehda APMC,Shajapur,Nalkehda,Shajapur,apmc_rename_folded
+Madhya Pradesh,Nalkheda(F&V),Agar Malwa,Nalkheda(F&V),Agar Malwa,as_published
+Madhya Pradesh,Narsinghgarh,Rajgarh,Narsinghgarh,Rajgarh,as_published
+Madhya Pradesh,Narsinghgarh APMC,Rajgarh,Narsinghgarh,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Narsinghpur,Narsinghpur,Narsinghpur,Narsinghpur,as_published
+Madhya Pradesh,Narsinghpur APMC,Narsinghpur,Narsinghpur,Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Nasrullaganj,Sehore,Nasrullaganj,Sehore,as_published
+Madhya Pradesh,Nasrullaganj APMC,Sehore,Nasrullaganj,Sehore,apmc_rename_folded
+Madhya Pradesh,Naugaon,Chhatarpur,Naugaon,Chhatarpur,as_published
+Madhya Pradesh,Naugaon APMC,Chhatarpur,Naugaon,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Neemuch,Neemuch,Neemuch,Neemuch,as_published
+Madhya Pradesh,Neemuch APMC,Neemuch,Neemuch,Neemuch,apmc_rename_folded
+Madhya Pradesh,Neemuch(F&V) APMC,Neemuch,Neemuch(F&V) APMC,Neemuch,as_published
+Madhya Pradesh,Niwadi,Tikamgarh,Niwadi,Tikamgarh,as_published
+Madhya Pradesh,Niwadi APMC,Tikamgarh,Niwadi,Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Obedullaganj,Raisen,Obedullaganj,Raisen,as_published
+Madhya Pradesh,Obedullaganj APMC,Raisen,Obedullaganj,Raisen,apmc_rename_folded
+Madhya Pradesh,Obedullaganj(F&V),Raisen,Obedullaganj(F&V),Raisen,as_published
+Madhya Pradesh,Paatan,Jabalpur,Paatan,Jabalpur,as_published
+Madhya Pradesh,Paatan APMC,Jabalpur,Paatan,Jabalpur,apmc_rename_folded
+Madhya Pradesh,Pachaur,Rajgarh,Pachaur,Rajgarh,as_published
+Madhya Pradesh,Pachaur APMC,Rajgarh,Pachaur,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Pachaur(F&V) APMC,Rajgarh,Pachaur(F&V) APMC,Rajgarh,as_published
+Madhya Pradesh,Palari,Seoni,Palari,Seoni,as_published
+Madhya Pradesh,Palari APMC,Seoni,Palari,Seoni,apmc_rename_folded
+Madhya Pradesh,Palari(F&V),Seoni,Palari(F&V),Seoni,as_published
+Madhya Pradesh,Palera,Tikamgarh,Palera,Tikamgarh,as_published
+Madhya Pradesh,Palera APMC,Tikamgarh,Palera,Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Pandhana,Khandwa,Pandhana,Khandwa,as_published
+Madhya Pradesh,Pandhana APMC,Khandwa,Pandhana,Khandwa,apmc_rename_folded
+Madhya Pradesh,Pandhana(F&V),Khandwa,Pandhana(F&V),Khandwa,as_published
+Madhya Pradesh,Pandhurna,Chhindwara,Pandhurna,Chhindwara,as_published
+Madhya Pradesh,Pandhurna APMC,Chhindwara,Pandhurna,Chhindwara,apmc_rename_folded
+Madhya Pradesh,Panna,Panna,Panna,Panna,as_published
+Madhya Pradesh,Panna APMC,Panna,Panna,Panna,apmc_rename_folded
+Madhya Pradesh,Patan(F&V),Jabalpur,Patan(F&V),Jabalpur,as_published
+Madhya Pradesh,Patharia,Damoh,Patharia,Damoh,as_published
+Madhya Pradesh,Patharia APMC,Damoh,Patharia,Damoh,apmc_rename_folded
+Madhya Pradesh,Pawai,Panna,Pawai,Panna,as_published
+Madhya Pradesh,Pawai APMC,Panna,Pawai,Panna,apmc_rename_folded
+Madhya Pradesh,Petlawad,Jhabua,Petlawad,Jhabua,as_published
+Madhya Pradesh,Petlawad APMC,Jhabua,Petlawad,Jhabua,apmc_rename_folded
+Madhya Pradesh,Petlawad(F&V),Jhabua,Petlawad(F&V),Jhabua,as_published
+Madhya Pradesh,Petlawad(F&V) APMC,Jhabua,Petlawad(F&V),Jhabua,apmc_rename_folded
+Madhya Pradesh,Pichhour,Shivpuri,Pichhour,Shivpuri,as_published
+Madhya Pradesh,Pichhour APMC,Shivpuri,Pichhour,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Pipariya,Hoshangabad,Pipariya,Narmadapuram,as_published
+Madhya Pradesh,Pipariya APMC,Hoshangabad,Pipariya,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Pipariya(F&V),Hoshangabad,Pipariya(F&V),Narmadapuram,as_published
+Madhya Pradesh,Pipariya(F&V) APMC,Hoshangabad,Pipariya(F&V),Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Piplya,Mandsaur,Piplya,Mandsaur,as_published
+Madhya Pradesh,Piplya APMC,Mandsaur,Piplya,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Piprai,Ashoknagar,Piprai,Ashoknagar,as_published
+Madhya Pradesh,Piprai APMC,Ashoknagar,Piprai,Ashoknagar,apmc_rename_folded
+Madhya Pradesh,Pohari,Shivpuri,Pohari,Shivpuri,as_published
+Madhya Pradesh,Pohari APMC,Shivpuri,Pohari,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Porsa,Morena,Porsa,Morena,as_published
+Madhya Pradesh,Porsa APMC,Morena,Porsa,Morena,apmc_rename_folded
+Madhya Pradesh,Porsa(F&V),Morena,Porsa(F&V),Morena,as_published
+Madhya Pradesh,Praswada,Balaghat,Praswada,Balaghat,as_published
+Madhya Pradesh,Praswada APMC,Balaghat,Praswada,Balaghat,apmc_rename_folded
+Madhya Pradesh,Prithvipur,Tikamgarh,Prithvipur,Tikamgarh,as_published
+Madhya Pradesh,Prithvipur APMC,Tikamgarh,Prithvipur,Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Raghogarh,Guna,Raghogarh,Guna,as_published
+Madhya Pradesh,Raghogarh APMC,Guna,Raghogarh,Guna,apmc_rename_folded
+Madhya Pradesh,Rahatgarh,Sagar,Rahatgarh,Sagar,as_published
+Madhya Pradesh,Rahatgarh APMC,Sagar,Rahatgarh,Sagar,apmc_rename_folded
+Madhya Pradesh,Raisen,Raisen,Raisen,Raisen,as_published
+Madhya Pradesh,Raisen APMC,Raisen,Raisen,Raisen,apmc_rename_folded
+Madhya Pradesh,Rajgarh,Dhar,Rajgarh,Dhar,as_published
+Madhya Pradesh,Rajgarh APMC,Dhar,Rajgarh,Dhar,apmc_rename_folded
+Madhya Pradesh,Rajgarh(F&V),Dhar,Rajgarh(F&V),Dhar,as_published
+Madhya Pradesh,Rajgarh(F&V) APMC,Dhar,Rajgarh(F&V),Dhar,apmc_rename_folded
+Madhya Pradesh,Rajnagar,Chhatarpur,Rajnagar,Chhatarpur,as_published
+Madhya Pradesh,Rajnagar APMC,Chhatarpur,Rajnagar,Chhatarpur,apmc_rename_folded
+Madhya Pradesh,Ramnagar,Satna,Ramnagar,Satna,as_published
+Madhya Pradesh,Ramnagar APMC,Satna,Ramnagar,Satna,apmc_rename_folded
+Madhya Pradesh,Rannod,Shivpuri,Rannod,Shivpuri,as_published
+Madhya Pradesh,Rannod APMC,Shivpuri,Rannod,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Ratlam,Ratlam,Ratlam,Ratlam,as_published
+Madhya Pradesh,Ratlam APMC,Ratlam,Ratlam,Ratlam,apmc_rename_folded
+Madhya Pradesh,Ratlam(F&V),Ratlam,Ratlam(F&V),Ratlam,as_published
+Madhya Pradesh,Ratlam(F&V) APMC,Ratlam,Ratlam(F&V),Ratlam,apmc_rename_folded
+Madhya Pradesh,Rehati,Sehore,Rehati,Sehore,as_published
+Madhya Pradesh,Rehati APMC,Sehore,Rehati,Sehore,apmc_rename_folded
+Madhya Pradesh,Rehli,Sagar,Rehli,Sagar,as_published
+Madhya Pradesh,Rehli APMC,Sagar,Rehli,Sagar,apmc_rename_folded
+Madhya Pradesh,Rehli(F&V),Sagar,Rehli(F&V),Sagar,as_published
+Madhya Pradesh,Rehli(F&V) APMC,Sagar,Rehli(F&V),Sagar,apmc_rename_folded
+Madhya Pradesh,Rewa,Rewa,Rewa,Rewa,as_published
+Madhya Pradesh,Rewa APMC,Rewa,Rewa,Rewa,apmc_rename_folded
+Madhya Pradesh,Rewa(F&V),Rewa,Rewa(F&V),Rewa,as_published
+Madhya Pradesh,Rewa(F&V) APMC,Rewa,Rewa(F&V),Rewa,apmc_rename_folded
+Madhya Pradesh,Sabalgarh,Morena,Sabalgarh,Morena,as_published
+Madhya Pradesh,Sabalgarh APMC,Morena,Sabalgarh,Morena,apmc_rename_folded
+Madhya Pradesh,Sabalgarh(F&V),Morena,Sabalgarh(F&V),Morena,as_published
+Madhya Pradesh,Sabalgarh(F&V) APMC,Morena,Sabalgarh(F&V),Morena,apmc_rename_folded
+Madhya Pradesh,Sagar,Sagar,Sagar,Sagar,as_published
+Madhya Pradesh,Sagar APMC,Sagar,Sagar,Sagar,apmc_rename_folded
+Madhya Pradesh,Sagar(F&V),Sagar,Sagar(F&V),Sagar,as_published
+Madhya Pradesh,Sagar(F&V) APMC,Sagar,Sagar(F&V),Sagar,apmc_rename_folded
+Madhya Pradesh,Sailana,Ratlam,Sailana,Ratlam,as_published
+Madhya Pradesh,Sailana APMC,Ratlam,Sailana,Ratlam,apmc_rename_folded
+Madhya Pradesh,Sailana(F&V),Ratlam,Sailana(F&V),Ratlam,as_published
+Madhya Pradesh,Sailana(F&V) APMC,Ratlam,Sailana(F&V),Ratlam,apmc_rename_folded
+Madhya Pradesh,Sajapur,Shajapur,Sajapur,Shajapur,as_published
+Madhya Pradesh,Sanawad,Khargone,Sanawad,Khargone,as_published
+Madhya Pradesh,Sanawad APMC,Khargone,Sanawad,Khargone,apmc_rename_folded
+Madhya Pradesh,Sanawad(F&V),Khandwa,Sanawad(F&V),Khandwa,as_published
+Madhya Pradesh,Sanawad(F&V) APMC,Khandwa,Sanawad(F&V),Khandwa,apmc_rename_folded
+Madhya Pradesh,Sanwer,Indore,Sanwer,Indore,as_published
+Madhya Pradesh,Sanwer APMC,Indore,Sanwer,Indore,apmc_rename_folded
+Madhya Pradesh,Sanwer(F&V),Indore,Sanwer(F&V),Indore,as_published
+Madhya Pradesh,Sanwer(F&V) APMC,Indore,Sanwer(F&V),Indore,apmc_rename_folded
+Madhya Pradesh,Sarangpur,Rajgarh,Sarangpur,Rajgarh,as_published
+Madhya Pradesh,Sarangpur APMC,Rajgarh,Sarangpur,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Satna,Satna,Satna,Satna,as_published
+Madhya Pradesh,Satna APMC,Satna,Satna,Satna,apmc_rename_folded
+Madhya Pradesh,Satna(F&V),Satna,Satna(F&V),Satna,as_published
+Madhya Pradesh,Satna(F&V) APMC,Satna,Satna(F&V),Satna,apmc_rename_folded
+Madhya Pradesh,Saunsar,Chhindwara,Saunsar,Chhindwara,as_published
+Madhya Pradesh,Saunsar (F&V),Chhindwara,Saunsar (F&V),Chhindwara,as_published
+Madhya Pradesh,Saunsar APMC,Chhindwara,Saunsar,Chhindwara,apmc_rename_folded
+Madhya Pradesh,Segaon,Khargone,Segaon,Khargone,as_published
+Madhya Pradesh,Segaon APMC,Khargone,Segaon,Khargone,apmc_rename_folded
+Madhya Pradesh,Sehora,Jabalpur,Sehora,Jabalpur,as_published
+Madhya Pradesh,Sehora APMC,Jabalpur,Sehora,Jabalpur,apmc_rename_folded
+Madhya Pradesh,Sehore,Sehore,Sehore,Sehore,as_published
+Madhya Pradesh,Sehore APMC,Sehore,Sehore,Sehore,apmc_rename_folded
+Madhya Pradesh,Semriharchand,Hoshangabad,Semriharchand,Narmadapuram,as_published
+Madhya Pradesh,Semriharchand APMC,Hoshangabad,Semriharchand,Narmadapuram,apmc_rename_folded
+Madhya Pradesh,Sendhwa,Badwani,Sendhwa,Barwani,as_published
+Madhya Pradesh,Sendhwa APMC,Badwani,Sendhwa,Barwani,apmc_rename_folded
+Madhya Pradesh,Sendhwa(F&V),Badwani,Sendhwa(F&V),Barwani,as_published
+Madhya Pradesh,Sendhwa(F&V) APMC,Badwani,Sendhwa(F&V),Barwani,apmc_rename_folded
+Madhya Pradesh,Sendhwa(F&amp;V) APMC,Badwani,Sendhwa(F&amp;V) APMC,Barwani,as_published
+Madhya Pradesh,Seoni,Seoni,Seoni,Seoni,as_published
+Madhya Pradesh,Seoni APMC,Seoni,Seoni,Seoni,apmc_rename_folded
+Madhya Pradesh,Seoni(F&V) APMC,Seoni,Seoni(F&V) APMC,Seoni,as_published
+Madhya Pradesh,Sevda,Datia,Sevda,Datia,as_published
+Madhya Pradesh,Sevda APMC,Datia,Sevda,Datia,apmc_rename_folded
+Madhya Pradesh,Shadora,Ashoknagar,Shadora,Ashoknagar,as_published
+Madhya Pradesh,Shadora APMC,Ashoknagar,Shadora,Ashoknagar,apmc_rename_folded
+Madhya Pradesh,Shahagarh,Sagar,Shahagarh,Sagar,as_published
+Madhya Pradesh,Shahagarh APMC,Sagar,Shahagarh,Sagar,apmc_rename_folded
+Madhya Pradesh,Shahdol,Shehdol,Shahdol,Shahdol,as_published
+Madhya Pradesh,Shahdol APMC,Shehdol,Shahdol,Shahdol,apmc_rename_folded
+Madhya Pradesh,Shahpura,Dindori,Shahpura,Dindori,as_published
+Madhya Pradesh,Shahpura APMC,Dindori,Shahpura,Dindori,apmc_rename_folded
+Madhya Pradesh,Shahpura Bhitoni (F&V),Jabalpur,Shahpura Bhitoni (F&V),Jabalpur,as_published
+Madhya Pradesh,Shahpura Bhitoni (F&V) APMC,Jabalpur,Shahpura Bhitoni (F&V),Jabalpur,apmc_rename_folded
+Madhya Pradesh,Shahpura(Jabalpur),Jabalpur,Shahpura(Jabalpur),Jabalpur,as_published
+Madhya Pradesh,Shahpura(Jabalpur) APMC,Jabalpur,Shahpura(Jabalpur),Jabalpur,apmc_rename_folded
+Madhya Pradesh,Shajapur,Shajapur,Shajapur,Shajapur,as_published
+Madhya Pradesh,Shajapur APMC,Shajapur,Shajapur,Shajapur,apmc_rename_folded
+Madhya Pradesh,Shajapur(F&V),Shajapur,Shajapur(F&V),Shajapur,as_published
+Madhya Pradesh,Shajapur(F&V) APMC,Shajapur,Shajapur(F&V),Shajapur,apmc_rename_folded
+Madhya Pradesh,Shamgarh,Mandsaur,Shamgarh,Mandsaur,as_published
+Madhya Pradesh,Shamgarh APMC,Mandsaur,Shamgarh,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Shamgarh(F&V),Mandsaur,Shamgarh(F&V),Mandsaur,as_published
+Madhya Pradesh,Shamgarh(F&V) APMC,Mandsaur,Shamgarh(F&V),Mandsaur,apmc_rename_folded
+Madhya Pradesh,Shamshabad,Vidisha,Shamshabad,Vidisha,as_published
+Madhya Pradesh,Shamshabad APMC,Vidisha,Shamshabad,Vidisha,apmc_rename_folded
+Madhya Pradesh,Sheopurbadod,Sheopur,Sheopurbadod,Sheopur,as_published
+Madhya Pradesh,Sheopurbadod APMC,Sheopur,Sheopurbadod,Sheopur,apmc_rename_folded
+Madhya Pradesh,Sheopurkalan,Sheopur,Sheopurkalan,Sheopur,as_published
+Madhya Pradesh,Sheopurkalan APMC,Sheopur,Sheopurkalan,Sheopur,apmc_rename_folded
+Madhya Pradesh,Shivpuri,Shivpuri,Shivpuri,Shivpuri,as_published
+Madhya Pradesh,Shivpuri APMC,Shivpuri,Shivpuri,Shivpuri,apmc_rename_folded
+Madhya Pradesh,Shivpuri(F&V),Shivpuri,Shivpuri(F&V),Shivpuri,as_published
+Madhya Pradesh,Shujalpur,Shajapur,Shujalpur,Shajapur,as_published
+Madhya Pradesh,Shujalpur APMC,Shajapur,Shujalpur,Shajapur,apmc_rename_folded
+Madhya Pradesh,Shujalpur(F&V),Shajapur,Shujalpur(F&V),Shajapur,as_published
+Madhya Pradesh,Shujalpur(F&V) APMC,Shajapur,Shujalpur(F&V),Shajapur,apmc_rename_folded
+Madhya Pradesh,Shyampur,Sehore,Shyampur,Sehore,as_published
+Madhya Pradesh,Shyampur APMC,Sehore,Shyampur,Sehore,apmc_rename_folded
+Madhya Pradesh,Sidhi,Sidhi,Sidhi,Sidhi,as_published
+Madhya Pradesh,Sidhi APMC,Sidhi,Sidhi,Sidhi,apmc_rename_folded
+Madhya Pradesh,Sihora,Jabalpur,Sihora,Jabalpur,as_published
+Madhya Pradesh,Sihora APMC,Jabalpur,Sihora,Jabalpur,apmc_rename_folded
+Madhya Pradesh,Silvani,Raisen,Silvani,Raisen,as_published
+Madhya Pradesh,Silvani APMC,Raisen,Silvani,Raisen,apmc_rename_folded
+Madhya Pradesh,Simariya,Panna,Simariya,Panna,as_published
+Madhya Pradesh,Simariya APMC,Panna,Simariya,Panna,apmc_rename_folded
+Madhya Pradesh,Singroli,Singroli,Singroli,Singrauli,as_published
+Madhya Pradesh,Singroli APMC,Singroli,Singroli,Singrauli,apmc_rename_folded
+Madhya Pradesh,Singroli(F&V) APMC,Singroli,Singroli(F&V),Singrauli,apmc_rename_folded
+Madhya Pradesh,Sirali,Harda,Sirali,Harda,as_published
+Madhya Pradesh,Sirali APMC,Harda,Sirali,Harda,apmc_rename_folded
+Madhya Pradesh,Sironj,Vidisha,Sironj,Vidisha,as_published
+Madhya Pradesh,Sironj APMC,Vidisha,Sironj,Vidisha,apmc_rename_folded
+Madhya Pradesh,Sitamau(F&V),Mandsaur,Sitamau(F&V),Mandsaur,as_published
+Madhya Pradesh,Sitamau(F&V) APMC,Mandsaur,Sitamau(F&V),Mandsaur,apmc_rename_folded
+Madhya Pradesh,Sitmau,Mandsaur,Sitmau,Mandsaur,as_published
+Madhya Pradesh,Sitmau APMC,Mandsaur,Sitmau,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Sonkachh(F&V),Dewas,Sonkachh(F&V),Dewas,as_published
+Madhya Pradesh,Sonkatch,Dewas,Sonkatch,Dewas,as_published
+Madhya Pradesh,Sonkatch APMC,Dewas,Sonkatch,Dewas,apmc_rename_folded
+Madhya Pradesh,Sounsar(F&V),Chhindwara,Sounsar(F&V),Chhindwara,as_published
+Madhya Pradesh,Sounsar(F&V) APMC,Chhindwara,Sounsar(F&V),Chhindwara,apmc_rename_folded
+Madhya Pradesh,Soyatkalan,Shajapur,Soyatkalan,Shajapur,as_published
+Madhya Pradesh,Soyatkalan APMC,Shajapur,Soyatkalan,Shajapur,apmc_rename_folded
+Madhya Pradesh,Soyatkalan(F&V),Agar Malwa,Soyatkalan(F&V),Agar Malwa,as_published
+Madhya Pradesh,Soyatkalan(F&V) APMC,Agar Malwa,Soyatkalan(F&V),Agar Malwa,apmc_rename_folded
+Madhya Pradesh,Susner,Shajapur,Susner,Shajapur,as_published
+Madhya Pradesh,Susner APMC,Shajapur,Susner,Shajapur,apmc_rename_folded
+Madhya Pradesh,Suthalia,Rajgarh,Suthalia,Rajgarh,as_published
+Madhya Pradesh,Suthalia APMC,Rajgarh,Suthalia,Rajgarh,apmc_rename_folded
+Madhya Pradesh,Suvasra,Mandsaur,Suvasra,Mandsaur,as_published
+Madhya Pradesh,Suvasra APMC,Mandsaur,Suvasra,Mandsaur,apmc_rename_folded
+Madhya Pradesh,Syopurkalan(F&V),Sheopur,Syopurkalan(F&V),Sheopur,as_published
+Madhya Pradesh,Taal,Ratlam,Taal,Ratlam,as_published
+Madhya Pradesh,Taal APMC,Ratlam,Taal,Ratlam,apmc_rename_folded
+Madhya Pradesh,Tarana,Ujjain,Tarana,Ujjain,as_published
+Madhya Pradesh,Tarana APMC,Ujjain,Tarana,Ujjain,apmc_rename_folded
+Madhya Pradesh,Tendukheda,Narsinghpur,Tendukheda,Narsinghpur,as_published
+Madhya Pradesh,Tendukheda APMC,Narsinghpur,Tendukheda,Narsinghpur,apmc_rename_folded
+Madhya Pradesh,Thandla,Jhabua,Thandla,Jhabua,as_published
+Madhya Pradesh,Thandla APMC,Jhabua,Thandla,Jhabua,apmc_rename_folded
+Madhya Pradesh,Thandla(F&V),Jhabua,Thandla(F&V),Jhabua,as_published
+Madhya Pradesh,Thandla(F&V) APMC,Jhabua,Thandla(F&V),Jhabua,apmc_rename_folded
+Madhya Pradesh,Tikamgarh,Tikamgarh,Tikamgarh,Tikamgarh,as_published
+Madhya Pradesh,Tikamgarh APMC,Tikamgarh,Tikamgarh,Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Tikamgarh(F&V),Tikamgarh,Tikamgarh(F&V),Tikamgarh,as_published
+Madhya Pradesh,Tikamgarh(F&V) APMC,Tikamgarh,Tikamgarh(F&V),Tikamgarh,apmc_rename_folded
+Madhya Pradesh,Timarni,Harda,Timarni,Harda,as_published
+Madhya Pradesh,Timarni APMC,Harda,Timarni,Harda,apmc_rename_folded
+Madhya Pradesh,Timarni(F&V),Harda,Timarni(F&V),Harda,as_published
+Madhya Pradesh,Timarni(F&V) APMC,Harda,Timarni(F&V),Harda,apmc_rename_folded
+Madhya Pradesh,Udaipura,Raisen,Udaipura,Raisen,as_published
+Madhya Pradesh,Udaipura APMC,Raisen,Udaipura,Raisen,apmc_rename_folded
+Madhya Pradesh,Ujjain,Ujjain,Ujjain,Ujjain,as_published
+Madhya Pradesh,Ujjain APMC,Ujjain,Ujjain,Ujjain,apmc_rename_folded
+Madhya Pradesh,Ujjain(F&V),Ujjain,Ujjain(F&V),Ujjain,as_published
+Madhya Pradesh,Ujjain(F&V) APMC,Ujjain,Ujjain(F&V),Ujjain,apmc_rename_folded
+Madhya Pradesh,Umariya,Umariya,Umariya,Umaria,as_published
+Madhya Pradesh,Umariya APMC,Umariya,Umariya,Umaria,apmc_rename_folded
+Madhya Pradesh,Unhel,Ujjain,Unhel,Ujjain,as_published
+Madhya Pradesh,Unhel APMC,Ujjain,Unhel,Ujjain,apmc_rename_folded
+Madhya Pradesh,Varaseoni,Balaghat,Varaseoni,Balaghat,as_published
+Madhya Pradesh,Varaseoni APMC,Balaghat,Varaseoni,Balaghat,apmc_rename_folded
+Madhya Pradesh,Vidisha,Vidisha,Vidisha,Vidisha,as_published
+Madhya Pradesh,Vidisha APMC,Vidisha,Vidisha,Vidisha,apmc_rename_folded
+Madhya Pradesh,Vijaypur,Sheopur,Vijaypur,Sheopur,as_published
+Madhya Pradesh,Vijaypur APMC,Sheopur,Vijaypur,Sheopur,apmc_rename_folded
+Maharashtra,AGRICULTURE PRODUCE MARKET COMITEE CHANDWAD,Nashik,AGRICULTURE PRODUCE MARKET COMITEE CHANDWAD,Nashik,as_published
+Maharashtra,APMC CHANDRAPUR,Chandrapur,APMC CHANDRAPUR,Chandrapur,as_published
+Maharashtra,APMC CHOPADA,Jalgaon,APMC CHOPADA,Jalgaon,as_published
+Maharashtra,APMC Latur,Latur,APMC Latur,Latur,as_published
+Maharashtra,APMC Nandurbar,Nandurbar,APMC Nandurbar,Nandurbar,as_published
+Maharashtra,APMC PACHORA,Jalgaon,APMC PACHORA,Jalgaon,as_published
+Maharashtra,APMC Rajura,Chandrapur,APMC Rajura,Chandrapur,as_published
+Maharashtra,APMC SINDI BRANCH SELOO,Wardha,APMC SINDI BRANCH SELOO,Wardha,as_published
+Maharashtra,APMC Yawal,Jalgaon,APMC Yawal,Jalgaon,as_published
+Maharashtra,Aarni,Yavatmal,Aarni,Yavatmal,as_published
+Maharashtra,Aarni APMC,Yavatmal,Aarni,Yavatmal,apmc_rename_folded
+Maharashtra,Aatpadi,Sangli,Aatpadi,Sangli,as_published
+Maharashtra,Achalpur,Amarawati,Achalpur,Amravati,as_published
+Maharashtra,Achalpur APMC,Amarawati,Achalpur,Amravati,apmc_rename_folded
+Maharashtra,Agricultural Produce Market Committee Nandgaon Khandeshwar,Amarawati,Agricultural Produce Market Committee Nandgaon Khandeshwar,Amravati,as_published
+Maharashtra,Agricultural Produce Market Committee Sillod,Chattrapati Sambhajinagar,Agricultural Produce Market Committee Sillod,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Agriculture Produce Market Committee Hingna,Nagpur,Agriculture Produce Market Committee Hingna,Nagpur,as_published
+Maharashtra,Agriculture Produce Market Committee Katol,Nagpur,Agriculture Produce Market Committee Katol,Nagpur,as_published
+Maharashtra,Agriculture Produce Market Committee Umarga,Dharashiv,Agriculture Produce Market Committee Umarga,Dharashiv,as_published
+Maharashtra,Aheri,Gadchiroli,Aheri,Gadchiroli,as_published
+Maharashtra,Ahilyanagar APMC,Ahilyanagar,Ahilyanagar APMC,Ahilyanagar,as_published
+Maharashtra,Ahmednagar,Ahmednagar,Ahmednagar,Ahilyanagar,as_published
+Maharashtra,Ahmednagar APMC,Ahmednagar,Ahmednagar,Ahilyanagar,apmc_rename_folded
+Maharashtra,Ahmedpur,Latur,Ahmedpur,Latur,as_published
+Maharashtra,Ahmedpur APMC,Latur,Ahmedpur,Latur,apmc_rename_folded
+Maharashtra,Akhadabalapur,Hingoli,Akhadabalapur,Hingoli,as_published
+Maharashtra,Akhadabalapur APMC,Hingoli,Akhadabalapur,Hingoli,apmc_rename_folded
+Maharashtra,Akkalkot,Sholapur,Akkalkot,Solapur,as_published
+Maharashtra,Akkalkuwa,Nandurbar,Akkalkuwa,Nandurbar,as_published
+Maharashtra,Akkalkuwa APMC,Nandurbar,Akkalkuwa,Nandurbar,apmc_rename_folded
+Maharashtra,Akluj,Sholapur,Akluj,Solapur,as_published
+Maharashtra,Akluj APMC,Sholapur,Akluj,Solapur,apmc_rename_folded
+Maharashtra,Akola,Akola,Akola,Akola,as_published
+Maharashtra,Akola APMC,Akola,Akola,Akola,apmc_rename_folded
+Maharashtra,Akole,Ahmednagar,Akole,Ahilyanagar,as_published
+Maharashtra,Akole APMC,Ahilyanagar,Akole,Ahilyanagar,apmc_rename_folded
+Maharashtra,Akole APMC,Ahmednagar,Akole,Ahilyanagar,apmc_rename_folded
+Maharashtra,Akot,Akola,Akot,Akola,as_published
+Maharashtra,Akot APMC,Akola,Akot,Akola,apmc_rename_folded
+Maharashtra,Alibagh,Raigad,Alibagh,Raigad,as_published
+Maharashtra,Amalner,Jalgaon,Amalner,Jalgaon,as_published
+Maharashtra,Amalner APMC,Jalgaon,Amalner,Jalgaon,apmc_rename_folded
+Maharashtra,Amarawati,Amarawati,Amarawati,Amravati,as_published
+Maharashtra,Amarawati APMC,Amarawati,Amarawati,Amravati,apmc_rename_folded
+Maharashtra,Ambad (Vadigodri),Jalana,Ambad (Vadigodri),Jalna,as_published
+Maharashtra,Ambad (Vadigodri) APMC,Jalna,Ambad (Vadigodri),Jalna,apmc_rename_folded
+Maharashtra,Ambejaogai,Beed,Ambejaogai,Beed,as_published
+Maharashtra,Ambejaogai APMC,Beed,Ambejaogai,Beed,apmc_rename_folded
+Maharashtra,Ambejogai APMC,Beed,Ambejogai APMC,Beed,as_published
+Maharashtra,Amrawati(Frui & Veg. Market),Amarawati,Amrawati(Frui & Veg. Market),Amravati,as_published
+Maharashtra,Amrawati(Frui & Veg. Market) APMC,Amarawati,Amrawati(Frui & Veg. Market),Amravati,apmc_rename_folded
+Maharashtra,Anajngaon,Amarawati,Anajngaon,Amravati,as_published
+Maharashtra,Anajngaon APMC,Amarawati,Anajngaon,Amravati,apmc_rename_folded
+Maharashtra,Arjuni,Gondiya,Arjuni,Gondia,as_published
+Maharashtra,Armori,Gadchiroli,Armori,Gadchiroli,as_published
+Maharashtra,Arvi,Wardha,Arvi,Wardha,as_published
+Maharashtra,Arvi APMC,Wardha,Arvi,Wardha,apmc_rename_folded
+Maharashtra,Ashti,Wardha,Ashti,Wardha,as_published
+Maharashtra,Ashti APMC,Wardha,Ashti,Wardha,apmc_rename_folded
+Maharashtra,Ashti(Jalna),Jalana,Ashti(Jalna),Jalna,as_published
+Maharashtra,Ashti(Jalna) APMC,Jalana,Ashti(Jalna),Jalna,apmc_rename_folded
+Maharashtra,Ashti(Karanja),Wardha,Ashti(Karanja),Wardha,as_published
+Maharashtra,Ashti(Karanja) APMC,Wardha,Ashti(Karanja),Wardha,apmc_rename_folded
+Maharashtra,Aurad Shahajani,Latur,Aurad Shahajani,Latur,as_published
+Maharashtra,Aurad Shahajani APMC,Latur,Aurad Shahajani,Latur,apmc_rename_folded
+Maharashtra,Ausa,Latur,Ausa,Latur,as_published
+Maharashtra,Ausa APMC,Latur,Ausa,Latur,apmc_rename_folded
+Maharashtra,BHOKARDAN APMC,Jalna,BHOKARDAN APMC,Jalna,as_published
+Maharashtra,BSK Krishi Bazar Private Ltd,Buldhana,BSK Krishi Bazar Private Ltd,Buldhana,as_published
+Maharashtra,BSK Krishi Bazar Private Ltd APMC,Buldhana,BSK Krishi Bazar Private Ltd,Buldhana,apmc_rename_folded
+Maharashtra,Babhulgaon,Yavatmal,Babhulgaon,Yavatmal,as_published
+Maharashtra,Babhulgaon APMC,Yavatmal,Babhulgaon,Yavatmal,apmc_rename_folded
+Maharashtra,Balapur,Akola,Balapur,Akola,as_published
+Maharashtra,Balapur APMC,Akola,Balapur,Akola,apmc_rename_folded
+Maharashtra,Baramati,Pune,Baramati,Pune,as_published
+Maharashtra,Baramati APMC,Pune,Baramati,Pune,apmc_rename_folded
+Maharashtra,Barshi,Sholapur,Barshi,Solapur,as_published
+Maharashtra,Barshi APMC,Sholapur,Barshi,Solapur,apmc_rename_folded
+Maharashtra,Barshi Takli,Akola,Barshi Takli,Akola,as_published
+Maharashtra,Barshi Takli APMC,Akola,Barshi Takli,Akola,apmc_rename_folded
+Maharashtra,Barshi(Vairag),Sholapur,Barshi(Vairag),Solapur,as_published
+Maharashtra,Barshi(Vairag) APMC,Sholapur,Barshi(Vairag),Solapur,apmc_rename_folded
+Maharashtra,Basmat,Hingoli,Basmat,Hingoli,as_published
+Maharashtra,Basmat APMC,Hingoli,Basmat,Hingoli,apmc_rename_folded
+Maharashtra,Basmat(Kurunda),Hingoli,Basmat(Kurunda),Hingoli,as_published
+Maharashtra,Beed,Beed,Beed,Beed,as_published
+Maharashtra,Beed APMC,Beed,Beed,Beed,apmc_rename_folded
+Maharashtra,Bhadrawati,Chandrapur,Bhadrawati,Chandrapur,as_published
+Maharashtra,Bhadrawati APMC,Chandrapur,Bhadrawati,Chandrapur,apmc_rename_folded
+Maharashtra,Bhagyoday Cotton and Agri Market,Chattrapati Sambhajinagar,Bhagyoday Cotton and Agri Market,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Bhandara,Bhandara,Bhandara,Bhandara,as_published
+Maharashtra,Bhandara APMC,Bhandara,Bhandara,Bhandara,apmc_rename_folded
+Maharashtra,Bhivandi,Thane,Bhivandi,Thane,as_published
+Maharashtra,Bhiwapur,Nagpur,Bhiwapur,Nagpur,as_published
+Maharashtra,Bhiwapur APMC,Nagpur,Bhiwapur,Nagpur,apmc_rename_folded
+Maharashtra,Bhokar,Nanded,Bhokar,Nanded,as_published
+Maharashtra,Bhokar APMC,Nanded,Bhokar,Nanded,apmc_rename_folded
+Maharashtra,Bhokardan,Jalana,Bhokardan,Jalna,as_published
+Maharashtra,Bhokardan APMC,Jalana,Bhokardan,Jalna,apmc_rename_folded
+Maharashtra,Bhokardan APMC,Jalna,Bhokardan,Jalna,apmc_rename_folded
+Maharashtra,Bhokardan(Pimpalgaon Renu),Jalana,Bhokardan(Pimpalgaon Renu),Jalna,as_published
+Maharashtra,Bhokardan(Pimpalgaon Renu) APMC,Jalana,Bhokardan(Pimpalgaon Renu),Jalna,apmc_rename_folded
+Maharashtra,Bhokardan(Pimpalgaon Renu) APMC,Jalna,Bhokardan(Pimpalgaon Renu),Jalna,apmc_rename_folded
+Maharashtra,Bhoom,Dharashiv(Usmanabad),Bhoom,Dharashiv,as_published
+Maharashtra,Bhoom APMC,Dharashiv,Bhoom,Dharashiv,apmc_rename_folded
+Maharashtra,Bhoom APMC,Dharashiv(Usmanabad),Bhoom,Dharashiv,apmc_rename_folded
+Maharashtra,Bhor,Pune,Bhor,Pune,as_published
+Maharashtra,Bhusaval,Jalgaon,Bhusaval,Jalgaon,as_published
+Maharashtra,Bhusaval APMC,Jalgaon,Bhusaval,Jalgaon,apmc_rename_folded
+Maharashtra,Bodwad,Jalgaon,Bodwad,Jalgaon,as_published
+Maharashtra,Bodwad(Varangaon),Jalgaon,Bodwad(Varangaon),Jalgaon,as_published
+Maharashtra,Bori,Parbhani,Bori,Parbhani,as_published
+Maharashtra,Bori APMC,Parbhani,Bori,Parbhani,apmc_rename_folded
+Maharashtra,Bori Arab,Yavatmal,Bori Arab,Yavatmal,as_published
+Maharashtra,Bori Arab APMC,Yavatmal,Bori Arab,Yavatmal,apmc_rename_folded
+Maharashtra,Brahmpuri,Chandrapur,Brahmpuri,Chandrapur,as_published
+Maharashtra,"Bsk Krishi Bazar Private Limited, Mehkar, Dist Buldhana",Buldhana,"Bsk Krishi Bazar Private Limited, Mehkar, Dist Buldhana",Buldhana,as_published
+Maharashtra,Buldhana,Buldhana,Buldhana,Buldhana,as_published
+Maharashtra,Buldhana APMC,Buldhana,Buldhana,Buldhana,apmc_rename_folded
+Maharashtra,Buldhana(Dhad),Buldhana,Buldhana(Dhad),Buldhana,as_published
+Maharashtra,Buldhana(Dhad) APMC,Buldhana,Buldhana(Dhad),Buldhana,apmc_rename_folded
+Maharashtra,Chakur,Latur,Chakur,Latur,as_published
+Maharashtra,Chakur APMC,Latur,Chakur,Latur,apmc_rename_folded
+Maharashtra,Chalisgaon,Jalgaon,Chalisgaon,Jalgaon,as_published
+Maharashtra,Chalisgaon APMC,Jalgaon,Chalisgaon,Jalgaon,apmc_rename_folded
+Maharashtra,Chamorshi,Gadchiroli,Chamorshi,Gadchiroli,as_published
+Maharashtra,Chandrapur,Chandrapur,Chandrapur,Chandrapur,as_published
+Maharashtra,Chandrapur APMC,Chandrapur,Chandrapur,Chandrapur,apmc_rename_folded
+Maharashtra,Chandrapur(Ganjwad),Chandrapur,Chandrapur(Ganjwad),Chandrapur,as_published
+Maharashtra,Chandrapur(Ganjwad) APMC,Chandrapur,Chandrapur(Ganjwad),Chandrapur,apmc_rename_folded
+Maharashtra,Chandur Bazar,Amarawati,Chandur Bazar,Amravati,as_published
+Maharashtra,Chandur Bazar APMC,Amarawati,Chandur Bazar,Amravati,apmc_rename_folded
+Maharashtra,Chandur Railway,Amarawati,Chandur Railway,Amravati,as_published
+Maharashtra,Chandur Railway APMC,Amarawati,Chandur Railway,Amravati,apmc_rename_folded
+Maharashtra,Chandvad,Nashik,Chandvad,Nashik,as_published
+Maharashtra,Chandvad APMC,Nashik,Chandvad,Nashik,apmc_rename_folded
+Maharashtra,Chattrapati Sambhajinagar,Chattrapati Sambhajinagar,Chattrapati Sambhajinagar,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Chattrapati Sambhajinagar APMC,Chattrapati Sambhajinagar,Chattrapati Sambhajinagar,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Chikali,Buldhana,Chikali,Buldhana,as_published
+Maharashtra,Chikali APMC,Buldhana,Chikali,Buldhana,apmc_rename_folded
+Maharashtra,Chimur,Chandrapur,Chimur,Chandrapur,as_published
+Maharashtra,Chimur APMC,Chandrapur,Chimur,Chandrapur,apmc_rename_folded
+Maharashtra,Chopada,Jalgaon,Chopada,Jalgaon,as_published
+Maharashtra,Chopada APMC,Jalgaon,Chopada,Jalgaon,apmc_rename_folded
+Maharashtra,Cottoncity Agro Foods Private Ltd,Yavatmal,Cottoncity Agro Foods Private Ltd,Yavatmal,as_published
+Maharashtra,Cottoncity Agro Foods Private Ltd APMC,Yavatmal,Cottoncity Agro Foods Private Ltd,Yavatmal,apmc_rename_folded
+Maharashtra,"Cottoncity Agro Foods Pvt Ltd, Dist Yavatmal",Yavatmal,"Cottoncity Agro Foods Pvt Ltd, Dist Yavatmal",Yavatmal,as_published
+Maharashtra,Dahivadi,Satara,Dahivadi,Satara,as_published
+Maharashtra,Darwha,Yavatmal,Darwha,Yavatmal,as_published
+Maharashtra,Daryapur,Amarawati,Daryapur,Amravati,as_published
+Maharashtra,Daryapur APMC,Amarawati,Daryapur,Amravati,apmc_rename_folded
+Maharashtra,Deglur,Nanded,Deglur,Nanded,as_published
+Maharashtra,Deoulgaon Raja,Buldhana,Deoulgaon Raja,Buldhana,as_published
+Maharashtra,Deoulgaon Raja APMC,Buldhana,Deoulgaon Raja,Buldhana,apmc_rename_folded
+Maharashtra,Deulgaon Raja Balaji Agro Marketing Private Market,Buldhana,Deulgaon Raja Balaji Agro Marketing Private Market,Buldhana,as_published
+Maharashtra,Devala,Nashik,Devala,Nashik,as_published
+Maharashtra,Devala APMC,Nashik,Devala,Nashik,apmc_rename_folded
+Maharashtra,Devani,Latur,Devani,Latur,as_published
+Maharashtra,Devani APMC,Latur,Devani,Latur,apmc_rename_folded
+Maharashtra,Dhadgaon,Nandurbar,Dhadgaon,Nandurbar,as_published
+Maharashtra,Dhadgaon APMC,Nandurbar,Dhadgaon,Nandurbar,apmc_rename_folded
+Maharashtra,Dhamngaon-Railway,Amarawati,Dhamngaon-Railway,Amravati,as_published
+Maharashtra,Dhamngaon-Railway APMC,Amarawati,Dhamngaon-Railway,Amravati,apmc_rename_folded
+Maharashtra,Dharangaon,Jalgaon,Dharangaon,Jalgaon,as_published
+Maharashtra,Dharangaon APMC,Jalgaon,Dharangaon,Jalgaon,apmc_rename_folded
+Maharashtra,Dharashiv,Dharashiv(Usmanabad),Dharashiv,Dharashiv,as_published
+Maharashtra,Dharashiv,Murum,Dharashiv [murum],Murum,one_name_two_mandis_split_by_district_label
+Maharashtra,Dharashiv APMC,Dharashiv,Dharashiv,Dharashiv,apmc_rename_folded
+Maharashtra,Dharashiv APMC,Dharashiv(Usmanabad),Dharashiv,Dharashiv,apmc_rename_folded
+Maharashtra,Dharmabad,Nanded,Dharmabad,Nanded,as_published
+Maharashtra,Dharmabad APMC,Nanded,Dharmabad,Nanded,apmc_rename_folded
+Maharashtra,Dharni,Amarawati,Dharni,Amravati,as_published
+Maharashtra,Dharni APMC,Amarawati,Dharni,Amravati,apmc_rename_folded
+Maharashtra,Dhule,Dhule,Dhule,Dhule,as_published
+Maharashtra,Dhule APMC,Dhule,Dhule,Dhule,apmc_rename_folded
+Maharashtra,Digras,Yavatmal,Digras,Yavatmal,as_published
+Maharashtra,Digras APMC,Yavatmal,Digras,Yavatmal,apmc_rename_folded
+Maharashtra,Dindori,Nashik,Dindori,Nashik,as_published
+Maharashtra,Dindori APMC,Nashik,Dindori,Nashik,apmc_rename_folded
+Maharashtra,Dindori(Vani),Nashik,Dindori(Vani),Nashik,as_published
+Maharashtra,Dindori(Vani) APMC,Nashik,Dindori(Vani),Nashik,apmc_rename_folded
+Maharashtra,Dondaicha,Dhule,Dondaicha,Dhule,as_published
+Maharashtra,Dondaicha (Sindhkheda) APMC,Dhule,Dondaicha (Sindhkheda) APMC,Dhule,as_published
+Maharashtra,Dondaicha APMC,Dhule,Dondaicha,Dhule,apmc_rename_folded
+Maharashtra,Dondaicha(Sindhkheda),Dhule,Dondaicha(Sindhkheda),Dhule,as_published
+Maharashtra,Dondaicha(Sindhkheda) APMC,Dhule,Dondaicha(Sindhkheda),Dhule,apmc_rename_folded
+Maharashtra,Dound,Pune,Dound,Pune,as_published
+Maharashtra,Dound APMC,Pune,Dound,Pune,apmc_rename_folded
+Maharashtra,Dudhani,Sholapur,Dudhani,Solapur,as_published
+Maharashtra,Dudhani APMC,Sholapur,Dudhani,Solapur,apmc_rename_folded
+Maharashtra,Fulmbri,Chattrapati Sambhajinagar,Fulmbri,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Fulmbri APMC,Chattrapati Sambhajinagar,Fulmbri,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Gadhinglaj,Kolhapur,Gadhinglaj,Kolhapur,as_published
+Maharashtra,Gajanan Krushi Utpanna Bazar (India) Pvt Ltd,Hingoli,Gajanan Krushi Utpanna Bazar (India) Pvt Ltd,Hingoli,as_published
+Maharashtra,Gajanan Krushi Utpanna Bazar (India) Pvt Ltd  APMC,Hingoli,Gajanan Krushi Utpanna Bazar (India) Pvt Ltd,Hingoli,apmc_rename_folded
+Maharashtra,Gandchiroli,Gadchiroli,Gandchiroli,Gadchiroli,as_published
+Maharashtra,Gangakhed,Parbhani,Gangakhed,Parbhani,as_published
+Maharashtra,Gangakhed APMC,Parbhani,Gangakhed,Parbhani,apmc_rename_folded
+Maharashtra,Gangapur,Chattrapati Sambhajinagar,Gangapur,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Gangapur APMC,Chattrapati Sambhajinagar,Gangapur,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Gevrai,Beed,Gevrai,Beed,as_published
+Maharashtra,Gevrai APMC,Beed,Gevrai,Beed,apmc_rename_folded
+Maharashtra,Ghansawangi,Jalana,Ghansawangi,Jalna,as_published
+Maharashtra,Ghansawangi APMC,Jalana,Ghansawangi,Jalna,apmc_rename_folded
+Maharashtra,Ghansawangi APMC,Jalna,Ghansawangi,Jalna,apmc_rename_folded
+Maharashtra,Ghatanji,Yavatmal,Ghatanji,Yavatmal,as_published
+Maharashtra,Ghatanji APMC,Yavatmal,Ghatanji,Yavatmal,apmc_rename_folded
+Maharashtra,Ghoti,Nashik,Ghoti,Nashik,as_published
+Maharashtra,Gondiya,Gondiya,Gondiya,Gondia,as_published
+Maharashtra,Gondpimpri,Chandrapur,Gondpimpri,Chandrapur,as_published
+Maharashtra,HINGNA - APMC,Nagpur,HINGNA - APMC,Nagpur,as_published
+Maharashtra,Hadgaon,Nanded,Hadgaon,Nanded,as_published
+Maharashtra,Hadgaon APMC,Nanded,Hadgaon,Nanded,apmc_rename_folded
+Maharashtra,Hadgaon(Tamsa),Nanded,Hadgaon(Tamsa),Nanded,as_published
+Maharashtra,Hadgaon(Tamsa) APMC,Nanded,Hadgaon(Tamsa),Nanded,apmc_rename_folded
+Maharashtra,Hanegaon,Nanded,Hanegaon,Nanded,as_published
+Maharashtra,Himalyatnagar,Nanded,Himalyatnagar,Nanded,as_published
+Maharashtra,Himalyatnagar APMC,Nanded,Himalyatnagar,Nanded,apmc_rename_folded
+Maharashtra,Himayatnagar APMC,Nanded,Himayatnagar APMC,Nanded,as_published
+Maharashtra,Hinganghat,Wardha,Hinganghat,Wardha,as_published
+Maharashtra,Hinganghat APMC,Wardha,Hinganghat,Wardha,apmc_rename_folded
+Maharashtra,Hingna,Nagpur,Hingna,Nagpur,as_published
+Maharashtra,Hingna APMC,Nagpur,Hingna,Nagpur,apmc_rename_folded
+Maharashtra,Hingoli,Hingoli,Hingoli,Hingoli,as_published
+Maharashtra,Hingoli APMC,Hingoli,Hingoli,Hingoli,apmc_rename_folded
+Maharashtra,Hingoli(Kanegoan Naka),Hingoli,Hingoli(Kanegoan Naka),Hingoli,as_published
+Maharashtra,Hingoli(Kanegoan Naka) APMC,Hingoli,Hingoli(Kanegoan Naka),Hingoli,apmc_rename_folded
+Maharashtra,Indapur,Pune,Indapur,Pune,as_published
+Maharashtra,Indapur APMC,Pune,Indapur,Pune,apmc_rename_folded
+Maharashtra,Indapur(Bhigwan),Pune,Indapur(Bhigwan),Pune,as_published
+Maharashtra,Indapur(Bhigwan) APMC,Pune,Indapur(Bhigwan),Pune,apmc_rename_folded
+Maharashtra,Indapur(Nimgaon Ketki),Pune,Indapur(Nimgaon Ketki),Pune,as_published
+Maharashtra,Indapur(Nimgaon Ketki) APMC,Pune,Indapur(Nimgaon Ketki),Pune,apmc_rename_folded
+Maharashtra,Islampur,Sangli,Islampur,Sangli,as_published
+Maharashtra,Islampur APMC,Sangli,Islampur,Sangli,apmc_rename_folded
+Maharashtra,J S K Agro Market,Jalgaon,J S K Agro Market,Jalgaon,as_published
+Maharashtra,Jafrabad,Jalana,Jafrabad,Jalna,as_published
+Maharashtra,Jafrabad APMC,Jalana,Jafrabad,Jalna,apmc_rename_folded
+Maharashtra,Jafrabad APMC,Jalna,Jafrabad,Jalna,apmc_rename_folded
+Maharashtra,Jai Gajanan Krishi Bazar,Vashim,Jai Gajanan Krishi Bazar,Washim,as_published
+Maharashtra,Jalana,Jalana,Jalana,Jalna,as_published
+Maharashtra,Jalana APMC,Jalana,Jalana,Jalna,apmc_rename_folded
+Maharashtra,Jalana APMC,Jalna,Jalana,Jalna,apmc_rename_folded
+Maharashtra,Jalgaon,Jalgaon,Jalgaon,Jalgaon,as_published
+Maharashtra,Jalgaon APMC,Jalgaon,Jalgaon,Jalgaon,apmc_rename_folded
+Maharashtra,Jalgaon Jamod(Aasalgaon),Buldhana,Jalgaon Jamod(Aasalgaon),Buldhana,as_published
+Maharashtra,Jalgaon Jamod(Aasalgaon) APMC,Buldhana,Jalgaon Jamod(Aasalgaon),Buldhana,apmc_rename_folded
+Maharashtra,Jalgaon(Jamod),Buldhana,Jalgaon(Jamod),Buldhana,as_published
+Maharashtra,Jalgaon(Masawat),Jalgaon,Jalgaon(Masawat),Jalgaon,as_published
+Maharashtra,Jalgaon(Masawat) APMC,Jalgaon,Jalgaon(Masawat),Jalgaon,apmc_rename_folded
+Maharashtra,Jalkot,Latur,Jalkot,Latur,as_published
+Maharashtra,Jalkot APMC,Latur,Jalkot,Latur,apmc_rename_folded
+Maharashtra,Jalna(Badnapur),Jalana,Jalna(Badnapur),Jalna,as_published
+Maharashtra,Jamkhed,Ahmednagar,Jamkhed,Ahilyanagar,as_published
+Maharashtra,Jamkhed APMC,Ahilyanagar,Jamkhed,Ahilyanagar,apmc_rename_folded
+Maharashtra,Jamkhed APMC,Ahmednagar,Jamkhed,Ahilyanagar,apmc_rename_folded
+Maharashtra,Jamner,Jalgaon,Jamner,Jalgaon,as_published
+Maharashtra,Jamner(Neri),Jalgaon,Jamner(Neri),Jalgaon,as_published
+Maharashtra,Janata Agri Market (DLS Agro Infrastructure Pvt Lt,Dhule,Janata Agri Market (DLS Agro Infrastructure Pvt Lt,Dhule,as_published
+Maharashtra,"Janata Agri Market (DLS Agro Infrastructure Pvt Ltd), Dist Dhule",Dhule,"Janata Agri Market (DLS Agro Infrastructure Pvt Ltd), Dist Dhule",Dhule,as_published
+Maharashtra,Jawala-Bajar,Hingoli,Jawala-Bajar,Hingoli,as_published
+Maharashtra,Jawala-Bajar APMC,Hingoli,Jawala-Bajar,Hingoli,apmc_rename_folded
+Maharashtra,Jawali,Satara,Jawali,Satara,as_published
+Maharashtra,Jaykissan Krushi Uttpan Khajgi Bazar,Buldhana,Jaykissan Krushi Uttpan Khajgi Bazar,Buldhana,as_published
+Maharashtra,Jaykissan Krushi Uttpan Khajgi Bazar  APMC,Buldhana,Jaykissan Krushi Uttpan Khajgi Bazar,Buldhana,apmc_rename_folded
+Maharashtra,"Jaykissan Krushi Uttpan Khajgi Bazar, Khamgaon, Dist Buldhana",Buldhana,"Jaykissan Krushi Uttpan Khajgi Bazar, Khamgaon, Dist Buldhana",Buldhana,as_published
+Maharashtra,Jaysingpur,Kolhapur,Jaysingpur,Kolhapur,as_published
+Maharashtra,Jintur,Parbhani,Jintur,Parbhani,as_published
+Maharashtra,Jintur APMC,Parbhani,Jintur,Parbhani,apmc_rename_folded
+Maharashtra,Junnar,Pune,Junnar,Pune,as_published
+Maharashtra,Junnar APMC,Pune,Junnar,Pune,apmc_rename_folded
+Maharashtra,Junnar(Alephata),Pune,Junnar(Alephata),Pune,as_published
+Maharashtra,Junnar(Alephata) APMC,Pune,Junnar(Alephata),Pune,apmc_rename_folded
+Maharashtra,Junnar(Narayangaon),Pune,Junnar(Narayangaon),Pune,as_published
+Maharashtra,Junnar(Narayangaon) APMC,Pune,Junnar(Narayangaon),Pune,apmc_rename_folded
+Maharashtra,Junnar(Otur),Pune,Junnar(Otur),Pune,as_published
+Maharashtra,Junnar(Otur) APMC,Pune,Junnar(Otur),Pune,apmc_rename_folded
+Maharashtra,KISAN MARKET YARD,Yavatmal,KISAN MARKET YARD,Yavatmal,as_published
+Maharashtra,Kada,Beed,Kada,Beed,as_published
+Maharashtra,Kada APMC,Beed,Kada,Beed,apmc_rename_folded
+Maharashtra,Kada(Ashti),Beed,Kada(Ashti),Beed,as_published
+Maharashtra,Kada(Ashti) APMC,Beed,Kada(Ashti),Beed,apmc_rename_folded
+Maharashtra,Kaij,Beed,Kaij,Beed,as_published
+Maharashtra,Kaij APMC,Beed,Kaij,Beed,apmc_rename_folded
+Maharashtra,Kalamb,Yavatmal,Kalamb,Yavatmal,as_published
+Maharashtra,Kalamb (Dharashiv),Dharashiv(Usmanabad),Kalamb (Dharashiv),Dharashiv,as_published
+Maharashtra,Kalamb (Dharashiv) APMC,Dharashiv,Kalamb (Dharashiv),Dharashiv,apmc_rename_folded
+Maharashtra,Kalamb (Dharashiv) APMC,Dharashiv(Usmanabad),Kalamb (Dharashiv),Dharashiv,apmc_rename_folded
+Maharashtra,Kalamb APMC,Yavatmal,Kalamb,Yavatmal,apmc_rename_folded
+Maharashtra,Kalamnuri,Hingoli,Kalamnuri,Hingoli,as_published
+Maharashtra,Kalamnuri APMC,Hingoli,Kalamnuri,Hingoli,apmc_rename_folded
+Maharashtra,Kalmeshwar,Nagpur,Kalmeshwar,Nagpur,as_published
+Maharashtra,Kalmeshwar APMC,Nagpur,Kalmeshwar,Nagpur,apmc_rename_folded
+Maharashtra,Kalvan,Nashik,Kalvan,Nashik,as_published
+Maharashtra,Kalvan APMC,Nashik,Kalvan,Nashik,apmc_rename_folded
+Maharashtra,Kalyan,Thane,Kalyan,Thane,as_published
+Maharashtra,Kalyan APMC,Palghar,Kalyan,Thane,apmc_rename_folded
+Maharashtra,Kalyan APMC,Thane,Kalyan,Thane,apmc_rename_folded
+Maharashtra,Kamthi,Nagpur,Kamthi,Nagpur,as_published
+Maharashtra,Kamthi APMC,Nagpur,Kamthi,Nagpur,apmc_rename_folded
+Maharashtra,Kandhar,Nanded,Kandhar,Nanded,as_published
+Maharashtra,Kandhar APMC,Nanded,Kandhar,Nanded,apmc_rename_folded
+Maharashtra,Kannad,Chattrapati Sambhajinagar,Kannad,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Kannad APMC,Chattrapati Sambhajinagar,Kannad,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Karad,Satara,Karad,Satara,as_published
+Maharashtra,Karad APMC,Satara,Karad,Satara,apmc_rename_folded
+Maharashtra,Karanja,Vashim,Karanja,Washim,as_published
+Maharashtra,Karanja APMC,Vashim,Karanja,Washim,apmc_rename_folded
+Maharashtra,Karanja APMC,Washim,Karanja,Washim,apmc_rename_folded
+Maharashtra,Karjat,Ahmednagar,Karjat,Ahilyanagar,as_published
+Maharashtra,Karjat APMC,Ahilyanagar,Karjat,Ahilyanagar,apmc_rename_folded
+Maharashtra,Karjat APMC,Ahmednagar,Karjat,Ahilyanagar,apmc_rename_folded
+Maharashtra,Karjat(Raigad),Raigad,Karjat(Raigad),Raigad,as_published
+Maharashtra,Karjat(Rashin),Ahmednagar,Karjat(Rashin),Ahilyanagar,as_published
+Maharashtra,Karjat(Rashin) APMC,Ahilyanagar,Karjat(Rashin),Ahilyanagar,apmc_rename_folded
+Maharashtra,Karjat(Rashin) APMC,Ahmednagar,Karjat(Rashin),Ahilyanagar,apmc_rename_folded
+Maharashtra,Karmala,Sholapur,Karmala,Solapur,as_published
+Maharashtra,Karmala APMC,Sholapur,Karmala,Solapur,apmc_rename_folded
+Maharashtra,Katol,Nagpur,Katol,Nagpur,as_published
+Maharashtra,Katol APMC,Nagpur,Katol,Nagpur,apmc_rename_folded
+Maharashtra,Keshranand Cotex  APMC,Dhule,Keshranand Cotex  APMC,Dhule,as_published
+Maharashtra,"Keshranand Cottex Pvt Agro, Dondicha, Dist Dhule",Dhule,"Keshranand Cottex Pvt Agro, Dondicha, Dist Dhule",Dhule,as_published
+Maharashtra,Khalapur (Shil-Phata),Raigad,Khalapur (Shil-Phata),Raigad,as_published
+Maharashtra,Khamgaon,Buldhana,Khamgaon,Buldhana,as_published
+Maharashtra,Khamgaon APMC,Buldhana,Khamgaon,Buldhana,apmc_rename_folded
+Maharashtra,Khed,Pune,Khed,Pune,as_published
+Maharashtra,Khed APMC,Pune,Khed,Pune,apmc_rename_folded
+Maharashtra,Khed(Chakan),Pune,Khed(Chakan),Pune,as_published
+Maharashtra,Khed(Chakan) APMC,Pune,Khed(Chakan),Pune,apmc_rename_folded
+Maharashtra,Kille Dharur,Beed,Kille Dharur,Beed,as_published
+Maharashtra,Kille Dharur APMC,Beed,Kille Dharur,Beed,apmc_rename_folded
+Maharashtra,Kinwat,Nanded,Kinwat,Nanded,as_published
+Maharashtra,Kinwat APMC,Nanded,Kinwat,Nanded,apmc_rename_folded
+Maharashtra,Kisan Market Yard,Yavatmal,Kisan Market Yard,Yavatmal,as_published
+Maharashtra,Kisan Market Yard APMC,Yavatmal,Kisan Market Yard,Yavatmal,apmc_rename_folded
+Maharashtra,"Kisan Market Yard, Tal Pusad, Dist Yeotmal",Yavatmal,"Kisan Market Yard, Tal Pusad, Dist Yeotmal",Yavatmal,as_published
+Maharashtra,Kolhapur,Kolhapur,Kolhapur,Kolhapur,as_published
+Maharashtra,Kolhapur APMC,Kolhapur,Kolhapur,Kolhapur,apmc_rename_folded
+Maharashtra,Kolhapur(Laxmipuri),Kolhapur,Kolhapur(Laxmipuri),Kolhapur,as_published
+Maharashtra,Kolhapur(Laxmipuri) APMC,Kolhapur,Kolhapur(Laxmipuri),Kolhapur,apmc_rename_folded
+Maharashtra,Kolhapur(Malkapur),Kolhapur,Kolhapur(Malkapur),Kolhapur,as_published
+Maharashtra,Kopargaon,Ahmednagar,Kopargaon,Ahilyanagar,as_published
+Maharashtra,Kopargaon APMC,Ahilyanagar,Kopargaon,Ahilyanagar,apmc_rename_folded
+Maharashtra,Kopargaon APMC,Ahmednagar,Kopargaon,Ahilyanagar,apmc_rename_folded
+Maharashtra,Koregaon,Satara,Koregaon,Satara,as_published
+Maharashtra,Koregaon APMC,Satara,Koregaon,Satara,apmc_rename_folded
+Maharashtra,Korpana,Chandrapur,Korpana,Chandrapur,as_published
+Maharashtra,Korpana APMC,Chandrapur,Korpana,Chandrapur,apmc_rename_folded
+Maharashtra,Krushi Utpanna Bazar Samiti Shegaon,Buldhana,Krushi Utpanna Bazar Samiti Shegaon,Buldhana,as_published
+Maharashtra,Krushna Krishi Bazar,Vashim,Krushna Krishi Bazar,Washim,as_published
+Maharashtra,Krushna Krishi Bazar  APMC,Vashim,Krushna Krishi Bazar,Washim,apmc_rename_folded
+Maharashtra,"Krushna Krishi Bazar, Washim",Washim,"Krushna Krishi Bazar, Washim",Washim,as_published
+Maharashtra,Kundalwadi,Nanded,Kundalwadi,Nanded,as_published
+Maharashtra,Kuntur,Nanded,Kuntur,Nanded,as_published
+Maharashtra,Kurdwadi,Sholapur,Kurdwadi,Solapur,as_published
+Maharashtra,Kurdwadi APMC,Sholapur,Kurdwadi,Solapur,apmc_rename_folded
+Maharashtra,Kurdwadi(Modnimb),Sholapur,Kurdwadi(Modnimb),Solapur,as_published
+Maharashtra,Kurdwadi(Modnimb) APMC,Sholapur,Kurdwadi(Modnimb),Solapur,apmc_rename_folded
+Maharashtra,Lakhandur,Bhandara,Lakhandur,Bhandara,as_published
+Maharashtra,Lakhandur APMC,Bhandara,Lakhandur,Bhandara,apmc_rename_folded
+Maharashtra,Lakhani,Bhandara,Lakhani,Bhandara,as_published
+Maharashtra,Lasalgaon,Nashik,Lasalgaon,Nashik,as_published
+Maharashtra,Lasalgaon APMC,Nashik,Lasalgaon,Nashik,apmc_rename_folded
+Maharashtra,Lasalgaon(Niphad),Nashik,Lasalgaon(Niphad),Nashik,as_published
+Maharashtra,Lasalgaon(Niphad) APMC,Nashik,Lasalgaon(Niphad),Nashik,apmc_rename_folded
+Maharashtra,Lasalgaon(Vinchur),Nashik,Lasalgaon(Vinchur),Nashik,as_published
+Maharashtra,Lasalgaon(Vinchur) APMC,Nashik,Lasalgaon(Vinchur),Nashik,apmc_rename_folded
+Maharashtra,Lasur Station,Chattrapati Sambhajinagar,Lasur Station,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Lasur Station APMC,Chattrapati Sambhajinagar,Lasur Station,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Latur,Latur,Latur,Latur,as_published
+Maharashtra,Latur APMC,Latur,Latur,Latur,apmc_rename_folded
+Maharashtra,Latur(Murud),Latur,Latur(Murud),Latur,as_published
+Maharashtra,Latur(Murud) APMC,Latur,Latur(Murud),Latur,apmc_rename_folded
+Maharashtra,Laxmi Sopan Agriculture Produce Marketing Co Ltd,Sholapur,Laxmi Sopan Agriculture Produce Marketing Co Ltd,Solapur,as_published
+Maharashtra,Laxmi Sopan Agriculture Produce Marketing Co Ltd APMC,Sholapur,Laxmi Sopan Agriculture Produce Marketing Co Ltd,Solapur,apmc_rename_folded
+Maharashtra,Loha,Nanded,Loha,Nanded,as_published
+Maharashtra,Loha APMC,Nanded,Loha,Nanded,apmc_rename_folded
+Maharashtra,Lohara,Dharashiv(Usmanabad),Lohara,Dharashiv,as_published
+Maharashtra,Lonand,Satara,Lonand,Satara,as_published
+Maharashtra,Lonand APMC,Satara,Lonand,Satara,apmc_rename_folded
+Maharashtra,Lonar,Buldhana,Lonar,Buldhana,as_published
+Maharashtra,Lonar APMC,Buldhana,Lonar,Buldhana,apmc_rename_folded
+Maharashtra,"M/S Kalpana Agri Commodities Marketing, Nagpur",Nagpur,"M/S Kalpana Agri Commodities Marketing, Nagpur",Nagpur,as_published
+Maharashtra,MS Kalpana Agri Commodities Marketing,Nagpur,MS Kalpana Agri Commodities Marketing,Nagpur,as_published
+Maharashtra,Mahagaon,Yavatmal,Mahagaon,Yavatmal,as_published
+Maharashtra,Maharaja Agresen Private Krushi Utappan Bazar Sama,Buldhana,Maharaja Agresen Private Krushi Utappan Bazar Sama,Buldhana,as_published
+Maharashtra,"Maharaja Agresen Pvt Krushi Utappan Bazar Samati, Dist Buldhana",Buldhana,"Maharaja Agresen Pvt Krushi Utappan Bazar Samati, Dist Buldhana",Buldhana,as_published
+Maharashtra,Mahavira Agricare,Yavatmal,Mahavira Agricare,Yavatmal,as_published
+Maharashtra,"Mahesh Krushi Utpanna Bazar, Digras",Yavatmal,"Mahesh Krushi Utpanna Bazar, Digras",Yavatmal,as_published
+Maharashtra,"Mahesh Krushi Utpanna Bazar, Digras APMC",Yavatmal,"Mahesh Krushi Utpanna Bazar, Digras",Yavatmal,apmc_rename_folded
+Maharashtra,"Mahesh Krushi Utpanna Bazar, Digras, Dist Yeotmal",Yavatmal,"Mahesh Krushi Utpanna Bazar, Digras, Dist Yeotmal",Yavatmal,as_published
+Maharashtra,Mahur,Nanded,Mahur,Nanded,as_published
+Maharashtra,Majalgaon,Beed,Majalgaon,Beed,as_published
+Maharashtra,Majalgaon APMC,Beed,Majalgaon,Beed,apmc_rename_folded
+Maharashtra,Malegaon,Nashik,Malegaon,Nashik,as_published
+Maharashtra,Malegaon APMC,Nashik,Malegaon,Nashik,apmc_rename_folded
+Maharashtra,Malegaon(Vashim),Vashim,Malegaon(Vashim),Washim,as_published
+Maharashtra,Malegaon(Vashim) APMC,Vashim,Malegaon(Vashim),Washim,apmc_rename_folded
+Maharashtra,Malegaon(Vashim) APMC,Washim,Malegaon(Vashim),Washim,apmc_rename_folded
+Maharashtra,Malharshree Farmers Producer Co Ltd,Nashik,Malharshree Farmers Producer Co Ltd,Nashik,as_published
+Maharashtra,Malharshree Farmers Producer Co Ltd APMC,Nashik,Malharshree Farmers Producer Co Ltd,Nashik,apmc_rename_folded
+Maharashtra,"Malharshree Khajgi Krushi Utpann Bajar, Chandanpuri Tal Malegaon, Nashik",Nashik,"Malharshree Khajgi Krushi Utpann Bajar, Chandanpuri Tal Malegaon, Nashik",Nashik,as_published
+Maharashtra,Malkapur,Buldhana,Malkapur,Buldhana,as_published
+Maharashtra,Malkapur APMC,Buldhana,Malkapur,Buldhana,apmc_rename_folded
+Maharashtra,Manchar,Pune,Manchar,Pune,as_published
+Maharashtra,Manchar APMC,Pune,Manchar,Pune,apmc_rename_folded
+Maharashtra,Mandhal,Nagpur,Mandhal,Nagpur,as_published
+Maharashtra,Mandhal APMC,Nagpur,Mandhal,Nagpur,apmc_rename_folded
+Maharashtra,Mangal Wedha,Sholapur,Mangal Wedha,Solapur,as_published
+Maharashtra,Mangal Wedha APMC,Sholapur,Mangal Wedha,Solapur,apmc_rename_folded
+Maharashtra,Mangrulpeer,Vashim,Mangrulpeer,Washim,as_published
+Maharashtra,Mangrulpeer APMC,Vashim,Mangrulpeer,Washim,apmc_rename_folded
+Maharashtra,Mangrulpeer APMC,Washim,Mangrulpeer,Washim,apmc_rename_folded
+Maharashtra,Mankamneshwar Farmar Producer CoLtd Sanchalit Mank,Nashik,Mankamneshwar Farmar Producer CoLtd Sanchalit Mank,Nashik,as_published
+Maharashtra,Manmad,Nashik,Manmad,Nashik,as_published
+Maharashtra,Manmad APMC,Nashik,Manmad,Nashik,apmc_rename_folded
+Maharashtra,Manora,Vashim,Manora,Washim,as_published
+Maharashtra,Manora APMC,Vashim,Manora,Washim,apmc_rename_folded
+Maharashtra,Manora APMC,Washim,Manora,Washim,apmc_rename_folded
+Maharashtra,Mantha,Jalana,Mantha,Jalna,as_published
+Maharashtra,Mantha APMC,Jalana,Mantha,Jalna,apmc_rename_folded
+Maharashtra,Mantha APMC,Jalna,Mantha,Jalna,apmc_rename_folded
+Maharashtra,Manwat,Parbhani,Manwat,Parbhani,as_published
+Maharashtra,Manwat APMC,Parbhani,Manwat,Parbhani,apmc_rename_folded
+Maharashtra,Marathawada Shetkari Khajgi Bazar Parisar,Hingoli,Marathawada Shetkari Khajgi Bazar Parisar,Hingoli,as_published
+Maharashtra,Maregoan,Yavatmal,Maregoan,Yavatmal,as_published
+Maharashtra,Mauda,Nagpur,Mauda,Nagpur,as_published
+Maharashtra,Mauda APMC,Nagpur,Mauda,Nagpur,apmc_rename_folded
+Maharashtra,Mehekar,Buldhana,Mehekar,Buldhana,as_published
+Maharashtra,Mehekar APMC,Buldhana,Mehekar,Buldhana,apmc_rename_folded
+Maharashtra,Mohol,Sholapur,Mohol,Solapur,as_published
+Maharashtra,Mohol APMC,Sholapur,Mohol,Solapur,apmc_rename_folded
+Maharashtra,Morshi,Amarawati,Morshi,Amravati,as_published
+Maharashtra,Morshi APMC,Amarawati,Morshi,Amravati,apmc_rename_folded
+Maharashtra,Motala,Buldhana,Motala,Buldhana,as_published
+Maharashtra,Motala APMC,Buldhana,Motala,Buldhana,apmc_rename_folded
+Maharashtra,Mudkhed,Nanded,Mudkhed,Nanded,as_published
+Maharashtra,Mudkhed APMC,Nanded,Mudkhed,Nanded,apmc_rename_folded
+Maharashtra,Mukhed,Nanded,Mukhed,Nanded,as_published
+Maharashtra,Mukhed APMC,Nanded,Mukhed,Nanded,apmc_rename_folded
+Maharashtra,Mukhed(Mukkambad),Nanded,Mukhed(Mukkambad),Nanded,as_published
+Maharashtra,Mukhed(Mukkambad) APMC,Nanded,Mukhed(Mukkambad),Nanded,apmc_rename_folded
+Maharashtra,Mul,Chandrapur,Mul,Chandrapur,as_published
+Maharashtra,Mulshi,Pune,Mulshi,Pune,as_published
+Maharashtra,Mumbai,Mumbai,Mumbai,Mumbai,as_published
+Maharashtra,Mumbai APMC,Mumbai,Mumbai,Mumbai,apmc_rename_folded
+Maharashtra,Mumbai- Fruit Market,Mumbai,Mumbai- Fruit Market,Mumbai,as_published
+Maharashtra,Mumbai-Onion & Potato Market APMC,Mumbai,Mumbai-Onion & Potato Market APMC,Mumbai,as_published
+Maharashtra,Murbad,Thane,Murbad,Thane,as_published
+Maharashtra,Murtizapur,Akola,Murtizapur,Akola,as_published
+Maharashtra,Murtizapur APMC,Akola,Murtizapur,Akola,apmc_rename_folded
+Maharashtra,Murud,Raigad,Murud,Raigad,as_published
+Maharashtra,Murum,Dharashiv(Usmanabad),Murum,Dharashiv,as_published
+Maharashtra,Murum APMC,Dharashiv,Murum,Dharashiv,apmc_rename_folded
+Maharashtra,Murum APMC,Dharashiv(Usmanabad),Murum,Dharashiv,apmc_rename_folded
+Maharashtra,N N Mundhada Agriculture Market Produce,Vashim,N N Mundhada Agriculture Market Produce,Washim,as_published
+Maharashtra,N N Mundhada Agriculture Market Produce  APMC,Vashim,N N Mundhada Agriculture Market Produce,Washim,apmc_rename_folded
+Maharashtra,"N.N.Mundhada Agriculture Market Produce, Dist Washim",Washim,"N.N.Mundhada Agriculture Market Produce, Dist Washim",Washim,as_published
+Maharashtra,Nagbhid,Chandrapur,Nagbhid,Chandrapur,as_published
+Maharashtra,Nagpur,Nagpur,Nagpur,Nagpur,as_published
+Maharashtra,Nagpur APMC,Nagpur,Nagpur,Nagpur,apmc_rename_folded
+Maharashtra,Naigaon,Nanded,Naigaon,Nanded,as_published
+Maharashtra,Naigaon APMC,Nanded,Naigaon,Nanded,apmc_rename_folded
+Maharashtra,Nampur,Nashik,Nampur,Nashik,as_published
+Maharashtra,Nampur APMC,Nashik,Nampur,Nashik,apmc_rename_folded
+Maharashtra,Nanded,Nanded,Nanded,Nanded,as_published
+Maharashtra,Nanded APMC,Nanded,Nanded,Nanded,apmc_rename_folded
+Maharashtra,Nandgaon,Nashik,Nandgaon,Nashik,as_published
+Maharashtra,Nandgaon APMC,Nashik,Nandgaon,Nashik,apmc_rename_folded
+Maharashtra,Nandgaon Khandeshwar,Amarawati,Nandgaon Khandeshwar,Amravati,as_published
+Maharashtra,Nandgaon Khandeshwar APMC,Amarawati,Nandgaon Khandeshwar,Amravati,apmc_rename_folded
+Maharashtra,Nandura,Buldhana,Nandura,Buldhana,as_published
+Maharashtra,Nandura APMC,Buldhana,Nandura,Buldhana,apmc_rename_folded
+Maharashtra,Nandurbar,Nandurbar,Nandurbar,Nandurbar,as_published
+Maharashtra,Nandurbar APMC,Nandurbar,Nandurbar,Nandurbar,apmc_rename_folded
+Maharashtra,Narkhed,Nagpur,Narkhed,Nagpur,as_published
+Maharashtra,Narkhed APMC,Nagpur,Narkhed,Nagpur,apmc_rename_folded
+Maharashtra,Nashik(Devlali),Nashik,Nashik(Devlali),Nashik,as_published
+Maharashtra,Nasik,Nashik,Nasik,Nashik,as_published
+Maharashtra,Nasik APMC,Nashik,Nasik,Nashik,apmc_rename_folded
+Maharashtra,Navapur,Nandurbar,Navapur,Nandurbar,as_published
+Maharashtra,Navapur APMC,Nandurbar,Navapur,Nandurbar,apmc_rename_folded
+Maharashtra,Ner Parasopant,Yavatmal,Ner Parasopant,Yavatmal,as_published
+Maharashtra,Ner Parasopant APMC,Yavatmal,Ner Parasopant,Yavatmal,apmc_rename_folded
+Maharashtra,Newasa,Ahmednagar,Newasa,Ahilyanagar,as_published
+Maharashtra,Newasa APMC,Ahilyanagar,Newasa,Ahilyanagar,apmc_rename_folded
+Maharashtra,Newasa APMC,Ahmednagar,Newasa,Ahilyanagar,apmc_rename_folded
+Maharashtra,Newasa(Ghodegaon),Ahmednagar,Newasa(Ghodegaon),Ahilyanagar,as_published
+Maharashtra,Newasa(Ghodegaon) APMC,Ahilyanagar,Newasa(Ghodegaon),Ahilyanagar,apmc_rename_folded
+Maharashtra,Newasa(Ghodegaon) APMC,Ahmednagar,Newasa(Ghodegaon),Ahilyanagar,apmc_rename_folded
+Maharashtra,Nilanga,Latur,Nilanga,Latur,as_published
+Maharashtra,Nilanga APMC,Latur,Nilanga,Latur,apmc_rename_folded
+Maharashtra,Nira,Pune,Nira,Pune,as_published
+Maharashtra,Nira(Saswad),Pune,Nira(Saswad),Pune,as_published
+Maharashtra,Nira(Saswad) APMC,Pune,Nira(Saswad),Pune,apmc_rename_folded
+Maharashtra,Om Chaitanya Multistate Agro Purpose CoOp Society,Ahmednagar,Om Chaitanya Multistate Agro Purpose CoOp Society,Ahilyanagar,as_published
+Maharashtra,Om Chaitanya Multistate Agro Purpose CoOp Society  APMC,Ahmednagar,Om Chaitanya Multistate Agro Purpose CoOp Society,Ahilyanagar,apmc_rename_folded
+Maharashtra,"Omchatinya Multi State Agro Purpose Co-Op Society, Dist Ahilyanagar",Ahilyanagar,"Omchatinya Multi State Agro Purpose Co-Op Society, Dist Ahilyanagar",Ahilyanagar,as_published
+Maharashtra,Pachora,Jalgaon,Pachora,Jalgaon,as_published
+Maharashtra,Pachora APMC,Jalgaon,Pachora,Jalgaon,apmc_rename_folded
+Maharashtra,Pachora(Bhadgaon),Jalgaon,Pachora(Bhadgaon),Jalgaon,as_published
+Maharashtra,Pachora(Bhadgaon) APMC,Jalgaon,Pachora(Bhadgaon),Jalgaon,apmc_rename_folded
+Maharashtra,Paithan,Chattrapati Sambhajinagar,Paithan,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Paithan APMC,Chattrapati Sambhajinagar,Paithan,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Palam,Parbhani,Palam,Parbhani,as_published
+Maharashtra,Palam APMC,Parbhani,Palam,Parbhani,apmc_rename_folded
+Maharashtra,Palghar,Thane,Palghar,Palghar,as_published
+Maharashtra,Palghar APMC,Palghar,Palghar,Palghar,apmc_rename_folded
+Maharashtra,Palghar APMC,Thane,Palghar,Palghar,apmc_rename_folded
+Maharashtra,Palus,Sangli,Palus,Sangli,as_published
+Maharashtra,Palus APMC,Sangli,Palus,Sangli,apmc_rename_folded
+Maharashtra,Pandhakawada,Yavatmal,Pandhakawada,Yavatmal,as_published
+Maharashtra,Pandhakawada APMC,Yavatmal,Pandhakawada,Yavatmal,apmc_rename_folded
+Maharashtra,Pandharpur,Sholapur,Pandharpur,Solapur,as_published
+Maharashtra,Pandharpur APMC,Sholapur,Pandharpur,Solapur,apmc_rename_folded
+Maharashtra,Panvel,Raigad,Panvel,Raigad,as_published
+Maharashtra,Parali Vaijyanath,Beed,Parali Vaijyanath,Beed,as_published
+Maharashtra,Parali Vaijyanath APMC,Beed,Parali Vaijyanath,Beed,apmc_rename_folded
+Maharashtra,Paranda,Dharashiv(Usmanabad),Paranda,Dharashiv,as_published
+Maharashtra,Paranda APMC,Dharashiv,Paranda,Dharashiv,apmc_rename_folded
+Maharashtra,Paranda APMC,Dharashiv(Usmanabad),Paranda,Dharashiv,apmc_rename_folded
+Maharashtra,Parbhani,Parbhani,Parbhani,Parbhani,as_published
+Maharashtra,Parbhani APMC,Parbhani,Parbhani,Parbhani,apmc_rename_folded
+Maharashtra,Parner,Ahmednagar,Parner,Ahilyanagar,as_published
+Maharashtra,Parner APMC,Ahilyanagar,Parner,Ahilyanagar,apmc_rename_folded
+Maharashtra,Parner APMC,Ahmednagar,Parner,Ahilyanagar,apmc_rename_folded
+Maharashtra,Parola,Jalgaon,Parola,Jalgaon,as_published
+Maharashtra,Parola APMC,Jalgaon,Parola,Jalgaon,apmc_rename_folded
+Maharashtra,Parshiwani,Nagpur,Parshiwani,Nagpur,as_published
+Maharashtra,Partur,Jalana,Partur,Jalna,as_published
+Maharashtra,Partur APMC,Jalana,Partur,Jalna,apmc_rename_folded
+Maharashtra,Partur APMC,Jalna,Partur,Jalna,apmc_rename_folded
+Maharashtra,Patan,Satara,Patan,Satara,as_published
+Maharashtra,Pathardi,Ahmednagar,Pathardi,Ahilyanagar,as_published
+Maharashtra,Pathardi APMC,Ahilyanagar,Pathardi,Ahilyanagar,apmc_rename_folded
+Maharashtra,Pathardi APMC,Ahmednagar,Pathardi,Ahilyanagar,apmc_rename_folded
+Maharashtra,Pathari,Parbhani,Pathari,Parbhani,as_published
+Maharashtra,Pathari APMC,Parbhani,Pathari,Parbhani,apmc_rename_folded
+Maharashtra,Patoda,Beed,Patoda,Beed,as_published
+Maharashtra,Patoda APMC,Beed,Patoda,Beed,apmc_rename_folded
+Maharashtra,Patur,Akola,Patur,Akola,as_published
+Maharashtra,Patur APMC,Akola,Patur,Akola,apmc_rename_folded
+Maharashtra,Pavani,Bhandara,Pavani,Bhandara,as_published
+Maharashtra,Pavani APMC,Bhandara,Pavani,Bhandara,apmc_rename_folded
+Maharashtra,Pen,Raigad,Pen,Raigad,as_published
+Maharashtra,Phaltan,Satara,Phaltan,Satara,as_published
+Maharashtra,Phaltan APMC,Satara,Phaltan,Satara,apmc_rename_folded
+Maharashtra,Pimpalgaon,Nashik,Pimpalgaon,Nashik,as_published
+Maharashtra,Pimpalgaon APMC,Nashik,Pimpalgaon,Nashik,apmc_rename_folded
+Maharashtra,Pimpalgaon Baswant APMC,Nashik,Pimpalgaon Baswant APMC,Nashik,as_published
+Maharashtra,Pimpalgaon Baswant(Saykheda),Nashik,Pimpalgaon Baswant(Saykheda),Nashik,as_published
+Maharashtra,Pimpalgaon Baswant(Saykheda) APMC,Nashik,Pimpalgaon Baswant(Saykheda),Nashik,apmc_rename_folded
+Maharashtra,Pombhurni,Chandrapur,Pombhurni,Chandrapur,as_published
+Maharashtra,Pombhurni APMC,Chandrapur,Pombhurni,Chandrapur,apmc_rename_folded
+Maharashtra,"Prasanna Krushi Market, Tal Parnet, Dist Ahilyanagar",Ahilyanagar,"Prasanna Krushi Market, Tal Parnet, Dist Ahilyanagar",Ahilyanagar,as_published
+Maharashtra,Pratap Nana Mahale Khajgi Bajar Samiti,Dhule,Pratap Nana Mahale Khajgi Bajar Samiti,Dhule,as_published
+Maharashtra,"Pratap Nana Mahale Khajgi Krushi Uttpana Bazar, Samati-Dhule",Dhule,"Pratap Nana Mahale Khajgi Krushi Uttpana Bazar, Samati-Dhule",Dhule,as_published
+Maharashtra,Premium Krushi Utpanna Bazar,Nashik,Premium Krushi Utpanna Bazar,Nashik,as_published
+Maharashtra,Pulgaon,Wardha,Pulgaon,Wardha,as_published
+Maharashtra,Pulgaon APMC,Wardha,Pulgaon,Wardha,apmc_rename_folded
+Maharashtra,Pune,Pune,Pune,Pune,as_published
+Maharashtra,Pune APMC,Pune,Pune,Pune,apmc_rename_folded
+Maharashtra,Pune(Khadiki),Pune,Pune(Khadiki),Pune,as_published
+Maharashtra,Pune(Khadiki) APMC,Pune,Pune(Khadiki),Pune,apmc_rename_folded
+Maharashtra,Pune(Manjri),Pune,Pune(Manjri),Pune,as_published
+Maharashtra,Pune(Manjri) APMC,Pune,Pune(Manjri),Pune,apmc_rename_folded
+Maharashtra,Pune(Moshi),Pune,Pune(Moshi),Pune,as_published
+Maharashtra,Pune(Moshi) APMC,Pune,Pune(Moshi),Pune,apmc_rename_folded
+Maharashtra,Pune(Pimpri),Pune,Pune(Pimpri),Pune,as_published
+Maharashtra,Pune(Pimpri) APMC,Pune,Pune(Pimpri),Pune,apmc_rename_folded
+Maharashtra,Purna,Parbhani,Purna,Parbhani,as_published
+Maharashtra,Purna APMC,Parbhani,Purna,Parbhani,apmc_rename_folded
+Maharashtra,Pusad,Yavatmal,Pusad,Yavatmal,as_published
+Maharashtra,Pusad APMC,Yavatmal,Pusad,Yavatmal,apmc_rename_folded
+Maharashtra,Rahata,Ahmednagar,Rahata,Ahilyanagar,as_published
+Maharashtra,Rahata APMC,Ahilyanagar,Rahata,Ahilyanagar,apmc_rename_folded
+Maharashtra,Rahata APMC,Ahmednagar,Rahata,Ahilyanagar,apmc_rename_folded
+Maharashtra,Rahuri,Ahmednagar,Rahuri,Ahilyanagar,as_published
+Maharashtra,Rahuri APMC,Ahilyanagar,Rahuri,Ahilyanagar,apmc_rename_folded
+Maharashtra,Rahuri APMC,Ahmednagar,Rahuri,Ahilyanagar,apmc_rename_folded
+Maharashtra,Rahuri(Songaon),Ahmednagar,Rahuri(Songaon),Ahilyanagar,as_published
+Maharashtra,Rahuri(Vambori),Ahmednagar,Rahuri(Vambori),Ahilyanagar,as_published
+Maharashtra,Rahuri(Vambori) APMC,Ahilyanagar,Rahuri(Vambori),Ahilyanagar,apmc_rename_folded
+Maharashtra,Rahuri(Vambori) APMC,Ahmednagar,Rahuri(Vambori),Ahilyanagar,apmc_rename_folded
+Maharashtra,Rajura,Chandrapur,Rajura,Chandrapur,as_published
+Maharashtra,Rajura APMC,Chandrapur,Rajura,Chandrapur,apmc_rename_folded
+Maharashtra,Ralegaon,Yavatmal,Ralegaon,Yavatmal,as_published
+Maharashtra,Ralegaon APMC,Yavatmal,Ralegaon,Yavatmal,apmc_rename_folded
+Maharashtra,Ramdev Krushi Bazaar,Yavatmal,Ramdev Krushi Bazaar,Yavatmal,as_published
+Maharashtra,Ramdev Krushi Bazaar APMC,Yavatmal,Ramdev Krushi Bazaar,Yavatmal,apmc_rename_folded
+Maharashtra,"Ramdev Krushi Bazaar, Digras road, Manora, Dist Washim",Yavatmal,"Ramdev Krushi Bazaar, Digras road, Manora, Dist Washim",Yavatmal,as_published
+Maharashtra,Ramtek,Nagpur,Ramtek,Nagpur,as_published
+Maharashtra,Ramtek APMC,Nagpur,Ramtek,Nagpur,apmc_rename_folded
+Maharashtra,Rangrao Patil Krushi Utpanna Khajgi Bazar,Latur,Rangrao Patil Krushi Utpanna Khajgi Bazar,Latur,as_published
+Maharashtra,Rangrao Patil Krushi Utpanna Khajgi Bazar  APMC,Latur,Rangrao Patil Krushi Utpanna Khajgi Bazar,Latur,apmc_rename_folded
+Maharashtra,Ratnagiri (Nachane),Ratnagiri,Ratnagiri (Nachane),Ratnagiri,as_published
+Maharashtra,Raver,Jalgaon,Raver,Jalgaon,as_published
+Maharashtra,Raver APMC,Jalgaon,Raver,Jalgaon,apmc_rename_folded
+Maharashtra,Raver(Sauda),Jalgaon,Raver(Sauda),Jalgaon,as_published
+Maharashtra,Renapur,Latur,Renapur,Latur,as_published
+Maharashtra,Risod,Vashim,Risod,Washim,as_published
+Maharashtra,Risod APMC,Vashim,Risod,Washim,apmc_rename_folded
+Maharashtra,Risod APMC,Washim,Risod,Washim,apmc_rename_folded
+Maharashtra,Roha,Raigad,Roha,Raigad,as_published
+Maharashtra,Sailu APMC,Parbhani,Sailu APMC,Parbhani,as_published
+Maharashtra,Sakri,Dhule,Sakri,Dhule,as_published
+Maharashtra,Sakri APMC,Dhule,Sakri,Dhule,apmc_rename_folded
+Maharashtra,Samudrapur,Wardha,Samudrapur,Wardha,as_published
+Maharashtra,Samudrapur APMC,Wardha,Samudrapur,Wardha,apmc_rename_folded
+Maharashtra,Sangamner,Ahmednagar,Sangamner,Ahilyanagar,as_published
+Maharashtra,Sangamner APMC,Ahilyanagar,Sangamner,Ahilyanagar,apmc_rename_folded
+Maharashtra,Sangamner APMC,Ahmednagar,Sangamner,Ahilyanagar,apmc_rename_folded
+Maharashtra,Sangli,Sangli,Sangli,Sangli,as_published
+Maharashtra,Sangli APMC,Sangli,Sangli,Sangli,apmc_rename_folded
+Maharashtra,Sangli(Miraj),Sangli,Sangli(Miraj),Sangli,as_published
+Maharashtra,"Sangli(Phale, Bhajipala Market) APMC",Sangli,"Sangli(Phale, Bhajipala Market) APMC",Sangli,as_published
+Maharashtra,"Sangli(Phale, Bhajipura Market)",Sangli,"Sangli(Phale, Bhajipura Market)",Sangli,as_published
+Maharashtra,"Sangli(Phale, Bhajipura Market) APMC",Sangli,"Sangli(Phale, Bhajipura Market)",Sangli,apmc_rename_folded
+Maharashtra,Sangola,Sholapur,Sangola,Solapur,as_published
+Maharashtra,Sangrampur,Buldhana,Sangrampur,Buldhana,as_published
+Maharashtra,Sangrampur(Varvatbakal),Buldhana,Sangrampur(Varvatbakal),Buldhana,as_published
+Maharashtra,Sangrampur(Varvatbakal) APMC,Buldhana,Sangrampur(Varvatbakal),Buldhana,apmc_rename_folded
+Maharashtra,"Sant Namdev Krushi Bazar,  APMC",Hingoli,"Sant Namdev Krushi Bazar,  APMC",Hingoli,as_published
+Maharashtra,"Sant Namdev Krushi Bazar, Tal Sengaon Dist Hingoli",Hingoli,"Sant Namdev Krushi Bazar, Tal Sengaon Dist Hingoli",Hingoli,as_published
+Maharashtra,Satana,Nashik,Satana,Nashik,as_published
+Maharashtra,Satana APMC,Nashik,Satana,Nashik,apmc_rename_folded
+Maharashtra,Satara,Satara,Satara,Satara,as_published
+Maharashtra,Satara APMC,Satara,Satara,Satara,apmc_rename_folded
+Maharashtra,Savali,Chandrapur,Savali,Chandrapur,as_published
+Maharashtra,Savner,Nagpur,Savner,Nagpur,as_published
+Maharashtra,Savner APMC,Nagpur,Savner,Nagpur,apmc_rename_folded
+Maharashtra,Selu,Parbhani,Selu,Parbhani,as_published
+Maharashtra,Selu APMC,Parbhani,Selu,Parbhani,apmc_rename_folded
+Maharashtra,Sengoan,Hingoli,Sengoan,Hingoli,as_published
+Maharashtra,Sengoan APMC,Hingoli,Sengoan,Hingoli,apmc_rename_folded
+Maharashtra,Shahada,Nandurbar,Shahada,Nandurbar,as_published
+Maharashtra,Shahada APMC,Nandurbar,Shahada,Nandurbar,apmc_rename_folded
+Maharashtra,Shahapur,Thane,Shahapur,Thane,as_published
+Maharashtra,"Shantilal Jain Agro Produce Market Pvt Ltd, Bodwad, Dist Jalgaon",Jalgaon,"Shantilal Jain Agro Produce Market Pvt Ltd, Bodwad, Dist Jalgaon",Jalgaon,as_published
+Maharashtra,Shegaon,Buldhana,Shegaon,Buldhana,as_published
+Maharashtra,Shegaon APMC,Buldhana,Shegaon,Buldhana,apmc_rename_folded
+Maharashtra,Shekari Krushi Khajgi Bazar APMC,Yavatmal,Shekari Krushi Khajgi Bazar APMC,Yavatmal,as_published
+Maharashtra,"Shekari Krushi Khajgi Bazar, Arni, Dist Yavatmal",Yavatmal,"Shekari Krushi Khajgi Bazar, Arni, Dist Yavatmal",Yavatmal,as_published
+Maharashtra,Shetkari Khushi Bazar,Amarawati,Shetkari Khushi Bazar,Amravati,as_published
+Maharashtra,Shetkari Khushi Bazar APMC,Amarawati,Shetkari Khushi Bazar,Amravati,apmc_rename_folded
+Maharashtra,"Shetkari Krushi Bazar, Roshankheda, Tal Varid, Dist Amravati",Amarawati,"Shetkari Krushi Bazar, Roshankheda, Tal Varid, Dist Amravati",Amravati,as_published
+Maharashtra,Shetkari Krushi Utapanna Bazar Roshankheda Tal Varud Dist Amravati,Amarawati,Shetkari Krushi Utapanna Bazar Roshankheda Tal Varud Dist Amravati,Amravati,as_published
+Maharashtra,Shevgaon,Ahmednagar,Shevgaon,Ahilyanagar,as_published
+Maharashtra,Shevgaon APMC,Ahilyanagar,Shevgaon,Ahilyanagar,apmc_rename_folded
+Maharashtra,Shevgaon APMC,Ahmednagar,Shevgaon,Ahilyanagar,apmc_rename_folded
+Maharashtra,Shevgaon(Bodhegaon),Ahmednagar,Shevgaon(Bodhegaon),Ahilyanagar,as_published
+Maharashtra,Shevgaon(Bodhegaon) APMC,Ahilyanagar,Shevgaon(Bodhegaon),Ahilyanagar,apmc_rename_folded
+Maharashtra,Shevgaon(Bodhegaon) APMC,Ahmednagar,Shevgaon(Bodhegaon),Ahilyanagar,apmc_rename_folded
+Maharashtra,Shirpur,Dhule,Shirpur,Dhule,as_published
+Maharashtra,Shirpur APMC,Dhule,Shirpur,Dhule,apmc_rename_folded
+Maharashtra,Shirur,Pune,Shirur,Pune,as_published
+Maharashtra,Shirur APMC,Pune,Shirur,Pune,apmc_rename_folded
+Maharashtra,Shivsiddha Govind Producer Company Limited Sanchal,Nashik,Shivsiddha Govind Producer Company Limited Sanchal,Nashik,as_published
+Maharashtra,Shivsiddha Govind Producer Company Limited Sanchal APMC,Nashik,Shivsiddha Govind Producer Company Limited Sanchal,Nashik,apmc_rename_folded
+Maharashtra,"Shivsiddha Govind Producer Company Ltd Sanchalit Khajgi Krush Utpann Bajar, Samati-Nashik",Nashik,"Shivsiddha Govind Producer Company Ltd Sanchalit Khajgi Krush Utpann Bajar, Samati-Nashik",Nashik,as_published
+Maharashtra,Shivsiddha Govind Producer Company Ltd Sanchalit Khajgi Krushi Utpann Bajar Samati-Abhona-Kalwan,Nashik,Shivsiddha Govind Producer Company Ltd Sanchalit Khajgi Krushi Utpann Bajar Samati-Abhona-Kalwan,Nashik,as_published
+Maharashtra,Shree Rameshwar Krushi Market,Nashik,Shree Rameshwar Krushi Market,Nashik,as_published
+Maharashtra,Shree Rameshwar Krushi Market  APMC,Nashik,Shree Rameshwar Krushi Market,Nashik,apmc_rename_folded
+Maharashtra,Shree Sairaj Krushi Market,Ahmednagar,Shree Sairaj Krushi Market,Ahilyanagar,as_published
+Maharashtra,Shree Sairaj Krushi Market APMC,Ahmednagar,Shree Sairaj Krushi Market,Ahilyanagar,apmc_rename_folded
+Maharashtra,"Shree Sairaj Krushi Market, Dist Ahilyanagar",Ahilyanagar,"Shree Sairaj Krushi Market, Dist Ahilyanagar",Ahilyanagar,as_published
+Maharashtra,Shree Salasar Krushi Bazar,Parbhani,Shree Salasar Krushi Bazar,Parbhani,as_published
+Maharashtra,Shree Salasar Krushi Bazar  APMC,Parbhani,Shree Salasar Krushi Bazar,Parbhani,apmc_rename_folded
+Maharashtra,"Shree Salasar Krushi Bazar, Dist Parbhani",Parbhani,"Shree Salasar Krushi Bazar, Dist Parbhani",Parbhani,as_published
+Maharashtra,"Shri Rameshwar Krushi Market, M.Nagar, Tal Deola, Dist Nashik",Nashik,"Shri Rameshwar Krushi Market, M.Nagar, Tal Deola, Dist Nashik",Nashik,as_published
+Maharashtra,Shrigonda,Ahmednagar,Shrigonda,Ahilyanagar,as_published
+Maharashtra,Shrigonda APMC,Ahilyanagar,Shrigonda,Ahilyanagar,apmc_rename_folded
+Maharashtra,Shrigonda APMC,Ahmednagar,Shrigonda,Ahilyanagar,apmc_rename_folded
+Maharashtra,Shrigonda(Gogargaon),Ahmednagar,Shrigonda(Gogargaon),Ahilyanagar,as_published
+Maharashtra,Shrirampur,Ahmednagar,Shrirampur,Ahilyanagar,as_published
+Maharashtra,Shrirampur APMC,Ahilyanagar,Shrirampur,Ahilyanagar,apmc_rename_folded
+Maharashtra,Shrirampur APMC,Ahmednagar,Shrirampur,Ahilyanagar,apmc_rename_folded
+Maharashtra,Shrirampur(Belapur),Ahmednagar,Shrirampur(Belapur),Ahilyanagar,as_published
+Maharashtra,Shrirampur(Belapur) APMC,Ahilyanagar,Shrirampur(Belapur),Ahilyanagar,apmc_rename_folded
+Maharashtra,Shrirampur(Belapur) APMC,Ahmednagar,Shrirampur(Belapur),Ahilyanagar,apmc_rename_folded
+Maharashtra,Sillod,Chattrapati Sambhajinagar,Sillod,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Sillod APMC,Chattrapati Sambhajinagar,Sillod,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Sillod(Bharadi),Chattrapati Sambhajinagar,Sillod(Bharadi),Chhatrapati Sambhajinagar,as_published
+Maharashtra,Sillod(Bharadi) APMC,Chattrapati Sambhajinagar,Sillod(Bharadi),Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Sindi,Wardha,Sindi,Wardha,as_published
+Maharashtra,Sindi APMC,Wardha,Sindi,Wardha,apmc_rename_folded
+Maharashtra,Sindi(Selu),Wardha,Sindi(Selu),Wardha,as_published
+Maharashtra,Sindi(Selu) APMC,Wardha,Sindi(Selu),Wardha,apmc_rename_folded
+Maharashtra,Sindkhed Raja,Buldhana,Sindkhed Raja,Buldhana,as_published
+Maharashtra,Sindkhed Raja APMC,Buldhana,Sindkhed Raja,Buldhana,apmc_rename_folded
+Maharashtra,Sinner,Nashik,Sinner,Nashik,as_published
+Maharashtra,Sinner APMC,Nashik,Sinner,Nashik,apmc_rename_folded
+Maharashtra,Solapur,Sholapur,Solapur,Solapur,as_published
+Maharashtra,Solapur APMC,Sholapur,Solapur,Solapur,apmc_rename_folded
+Maharashtra,Sonpeth,Parbhani,Sonpeth,Parbhani,as_published
+Maharashtra,Sonpeth APMC,Parbhani,Sonpeth,Parbhani,apmc_rename_folded
+Maharashtra,Suragana,Nashik,Suragana,Nashik,as_published
+Maharashtra,Tadkalas,Parbhani,Tadkalas,Parbhani,as_published
+Maharashtra,Tadkalas APMC,Parbhani,Tadkalas,Parbhani,apmc_rename_folded
+Maharashtra,Taloda,Nandurbar,Taloda,Nandurbar,as_published
+Maharashtra,Taloda APMC,Nandurbar,Taloda,Nandurbar,apmc_rename_folded
+Maharashtra,Tasgaon,Sangli,Tasgaon,Sangli,as_published
+Maharashtra,Tasgaon APMC,Sangli,Tasgaon,Sangli,apmc_rename_folded
+Maharashtra,Telhara,Akola,Telhara,Akola,as_published
+Maharashtra,Telhara APMC,Akola,Telhara,Akola,apmc_rename_folded
+Maharashtra,Tiwasa,Amarawati,Tiwasa,Amravati,as_published
+Maharashtra,Tuljapur,Dharashiv(Usmanabad),Tuljapur,Dharashiv,as_published
+Maharashtra,Tuljapur APMC,Dharashiv,Tuljapur,Dharashiv,apmc_rename_folded
+Maharashtra,Tuljapur APMC,Dharashiv(Usmanabad),Tuljapur,Dharashiv,apmc_rename_folded
+Maharashtra,Tumsar,Bhandara,Tumsar,Bhandara,as_published
+Maharashtra,Tumsar APMC,Bhandara,Tumsar,Bhandara,apmc_rename_folded
+Maharashtra,Udgir,Latur,Udgir,Latur,as_published
+Maharashtra,Udgir APMC,Latur,Udgir,Latur,apmc_rename_folded
+Maharashtra,Ulhasnagar,Thane,Ulhasnagar,Thane,as_published
+Maharashtra,Ulhasnagar APMC,Palghar,Ulhasnagar,Thane,apmc_rename_folded
+Maharashtra,Ulhasnagar APMC,Thane,Ulhasnagar,Thane,apmc_rename_folded
+Maharashtra,Umared,Nagpur,Umared,Nagpur,as_published
+Maharashtra,Umared APMC,Nagpur,Umared,Nagpur,apmc_rename_folded
+Maharashtra,Umarga,Dharashiv(Usmanabad),Umarga,Dharashiv,as_published
+Maharashtra,Umarga APMC,Dharashiv,Umarga,Dharashiv,apmc_rename_folded
+Maharashtra,Umarga APMC,Dharashiv(Usmanabad),Umarga,Dharashiv,apmc_rename_folded
+Maharashtra,Umari,Nanded,Umari,Nanded,as_published
+Maharashtra,Umari APMC,Nanded,Umari,Nanded,apmc_rename_folded
+Maharashtra,Umarked(Danki),Yavatmal,Umarked(Danki),Yavatmal,as_published
+Maharashtra,Umarked(Danki) APMC,Yavatmal,Umarked(Danki),Yavatmal,apmc_rename_folded
+Maharashtra,Umarkhed,Yavatmal,Umarkhed,Yavatmal,as_published
+Maharashtra,Umarkhed APMC,Yavatmal,Umarkhed,Yavatmal,apmc_rename_folded
+Maharashtra,Umrane,Nashik,Umrane,Nashik,as_published
+Maharashtra,Umrane APMC,Nashik,Umrane,Nashik,apmc_rename_folded
+Maharashtra,Vadgaonpeth,Kolhapur,Vadgaonpeth,Kolhapur,as_published
+Maharashtra,Vadgaonpeth APMC,Kolhapur,Vadgaonpeth,Kolhapur,apmc_rename_folded
+Maharashtra,Vaduj,Satara,Vaduj,Satara,as_published
+Maharashtra,Vaduj APMC,Satara,Vaduj,Satara,apmc_rename_folded
+Maharashtra,Vadvani,Beed,Vadvani,Beed,as_published
+Maharashtra,Vadvani APMC,Beed,Vadvani,Beed,apmc_rename_folded
+Maharashtra,Vai,Satara,Vai,Satara,as_published
+Maharashtra,Vai APMC,Satara,Vai,Satara,apmc_rename_folded
+Maharashtra,Vaijpur,Chattrapati Sambhajinagar,Vaijpur,Chhatrapati Sambhajinagar,as_published
+Maharashtra,Vaijpur APMC,Chattrapati Sambhajinagar,Vaijpur,Chhatrapati Sambhajinagar,apmc_rename_folded
+Maharashtra,Vani,Yavatmal,Vani,Yavatmal,as_published
+Maharashtra,Vani APMC,Yavatmal,Vani,Yavatmal,apmc_rename_folded
+Maharashtra,Varora,Chandrapur,Varora,Chandrapur,as_published
+Maharashtra,Varora APMC,Chandrapur,Varora,Chandrapur,apmc_rename_folded
+Maharashtra,Varud,Amarawati,Varud,Amravati,as_published
+Maharashtra,Varud APMC,Amarawati,Varud,Amravati,apmc_rename_folded
+Maharashtra,Varud(Rajura Bazar),Amarawati,Varud(Rajura Bazar),Amravati,as_published
+Maharashtra,Varud(Rajura Bazar) APMC,Amarawati,Varud(Rajura Bazar),Amravati,apmc_rename_folded
+Maharashtra,Vasai,Thane,Vasai,Palghar,as_published
+Maharashtra,Vasai APMC,Thane,Vasai,Palghar,apmc_rename_folded
+Maharashtra,Vashi New Mumbai,Mumbai,Vashi New Mumbai,Mumbai,as_published
+Maharashtra,Vashi New Mumbai APMC,Mumbai,Vashi New Mumbai,Mumbai,apmc_rename_folded
+Maharashtra,Vita,Sangli,Vita,Sangli,as_published
+Maharashtra,Vita APMC,Sangli,Vita,Sangli,apmc_rename_folded
+Maharashtra,Vitthal Krushi Utpanna Bazar,Hingoli,Vitthal Krushi Utpanna Bazar,Hingoli,as_published
+Maharashtra,Wardha,Wardha,Wardha,Wardha,as_published
+Maharashtra,Wardha APMC,Wardha,Wardha,Wardha,apmc_rename_folded
+Maharashtra,Washi (Dharashiv),Dharashiv(Usmanabad),Washi (Dharashiv),Dharashiv,as_published
+Maharashtra,Washi (Dharashiv) APMC,Dharashiv,Washi (Dharashiv),Dharashiv,apmc_rename_folded
+Maharashtra,Washi (Dharashiv) APMC,Dharashiv(Usmanabad),Washi (Dharashiv),Dharashiv,apmc_rename_folded
+Maharashtra,Washim,Vashim,Washim,Washim,as_published
+Maharashtra,Washim APMC,Vashim,Washim,Washim,apmc_rename_folded
+Maharashtra,Washim APMC,Washim,Washim,Washim,apmc_rename_folded
+Maharashtra,Washim(Ansing),Vashim,Washim(Ansing),Washim,as_published
+Maharashtra,Washim(Ansing) APMC,Vashim,Washim(Ansing),Washim,apmc_rename_folded
+Maharashtra,Washim(Ansing) APMC,Washim,Washim(Ansing),Washim,apmc_rename_folded
+Maharashtra,Yavatmal APMC,Yavatmal,Yavatmal APMC,Yavatmal,as_published
+Maharashtra,Yawal,Jalgaon,Yawal,Jalgaon,as_published
+Maharashtra,Yawal APMC,Jalgaon,Yawal,Jalgaon,apmc_rename_folded
+Maharashtra,Yeola,Nashik,Yeola,Nashik,as_published
+Maharashtra,Yeola APMC,Nashik,Yeola,Nashik,apmc_rename_folded
+Maharashtra,Yeotmal,Yavatmal,Yeotmal,Yavatmal,as_published
+Maharashtra,Yeotmal APMC,Yavatmal,Yeotmal,Yavatmal,apmc_rename_folded
+Maharashtra,ZariZamini,Yavatmal,ZariZamini,Yavatmal,as_published

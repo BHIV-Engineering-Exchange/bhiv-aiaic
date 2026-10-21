@@ -1,0 +1,25 @@
+crop,marketing_year,msp_rs_per_quintal,variety,published_label,aiaic_source_id,source
+bajra,2018-19,1950.0,NA,Bajra,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+bajra,2019-20,2000.0,NA,Bajra,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+bajra,2020-21,2150.0,NA,Bajra,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+bajra,2021-22,2250.0,NA,Bajra,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+bajra,2022-23,2350.0,NA,Bajra,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+bajra,2023-24,2500.0,NA,Bajra,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+bajra,2025-26,2775.0,,Bajra,cacp_msp_current,CACP Commodity-wise MSP Trend (via data.gov.in)
+bajra,2026-27,2900.0,,Bajra,cacp_msp_current,"CCEA decision, PIB release of 13 May 2026"
+gram,2019-20,4620.0,NA,Gram,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+gram,2020-21,4875.0,NA,Gram,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+gram,2021-22,5100.0,NA,Gram,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+gram,2022-23,5230.0,NA,Gram,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+gram,2023-24,5335.0,NA,Gram,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+gram,2024-25,5440.0,NA,Gram,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+gram,2025-26,5650.0,,Gram,cacp_msp_current,CACP Commodity-wise MSP Trend (via data.gov.in)
+gram,2026-27,5875.0,,Gram,cacp_msp_current,CACP Commodity-wise MSP Trend (via data.gov.in)
+maize,2018-19,1700.0,NA,Maize,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+maize,2019-20,1760.0,NA,Maize,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+maize,2020-21,1850.0,NA,Maize,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+maize,2021-22,1870.0,NA,Maize,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+maize,2022-23,1962.0,NA,Maize,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+maize,2023-24,2090.0,NA,Maize,msp_cacp,https://api.data.gov.in/resource/1832c7b4-82ef-4734-b2b4-c2e3a38a28d3
+maize,2025-26,2400.0,,Maize,cacp_msp_current,CACP Commodity-wise MSP Trend (via data.gov.in)
+maize,2026-27,2410.0,,Maize,cacp_msp_current,"CCEA decision, PIB release of 13 May 2026"

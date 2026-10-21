@@ -1,0 +1,85 @@
+{
+ "what": "CACP Minimum Support Prices AIAIC holds for maize, gram, bajra (Rs per quintal, per marketing year)",
+ "sources": [
+  "data.gov.in 'MSP Fixed from 2018-19 to 2023-24' (AIAIC source msp_cacp)",
+  "data.gov.in 'Commodity-wise MSP Trend' 2025-26 / 2026-27 (AIAIC source cacp_msp_current)"
+ ],
+ "licence": "Government Open Data Licence - India (GODL-India); attribute data.gov.in / CACP",
+ "held_years": {
+  "maize": [
+   "2018-19",
+   "2019-20",
+   "2020-21",
+   "2021-22",
+   "2022-23",
+   "2023-24",
+   "2025-26",
+   "2026-27"
+  ],
+  "gram": [
+   "2019-20",
+   "2020-21",
+   "2021-22",
+   "2022-23",
+   "2023-24",
+   "2024-25",
+   "2025-26",
+   "2026-27"
+  ],
+  "bajra": [
+   "2018-19",
+   "2019-20",
+   "2020-21",
+   "2021-22",
+   "2022-23",
+   "2023-24",
+   "2025-26",
+   "2026-27"
+  ]
+ },
+ "missing_years": {
+  "maize": [
+   "2016-17",
+   "2017-18",
+   "2024-25"
+  ],
+  "gram": [
+   "2016-17",
+   "2017-18",
+   "2018-19"
+  ],
+  "bajra": [
+   "2016-17",
+   "2017-18",
+   "2024-25"
+  ]
+ },
+ "not_applicable": {
+  "tomato": "no MSP is announced for tomato"
+ },
+ "labels_not_exported": [
+  "barley",
+  "copra",
+  "cotton",
+  "groundnut",
+  "jowar",
+  "jute",
+  "lentil",
+  "moong",
+  "mustard",
+  "nigerseed",
+  "paddy",
+  "ragi",
+  "safflower",
+  "sesamum",
+  "sugarcane",
+  "sunflower",
+  "urad"
+ ],
+ "meaning": "a government floor for a MARKETING SEASON (kharif seasons open in October, the Rabi Marketing Season in April), not a market price and not a forecast; join it to a price date by the season that date falls in. Rabi crops' rows (wheat, gram) are Rabi Marketing Seasons (msp_cacp relabelled at its adapter, 2026-10-03; its wheat 'crop year 2023-24' column, Rs 2,275, is RMS 2024-25)",
+ "file": {
+  "name": "msp_pilot_crops.csv",
+  "rows": 24,
+  "sha256": "8cb7a5c0890d94c21f0818b03b66a2a0c47cfd58fd47c9c9a746961194f7806e"
+ }
+}

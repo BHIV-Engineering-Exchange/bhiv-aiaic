@@ -1,0 +1,208 @@
+{
+ "what": "Official Agmarknet daily mandi prices for bajra, gram, maize, tomato, Maharashtra and Madhya Pradesh, with AIAIC's mandi identity, for the aiaic-ml-foundation forecast",
+ "source": "data.gov.in \"Variety-wise Daily Market Prices\" (Agmarknet, resource 35985678-0d79-46b4-9ed6-6f13308a1d24), the AIAIC owner's download in price-datasets/",
+ "licence": "Government Open Data Licence - India (GODL-India); attribute data.gov.in / Agmarknet",
+ "period": {
+  "first": "2001-02-08",
+  "last": "2026-08-26"
+ },
+ "from_year_requested": 2001,
+ "crops": [
+  "bajra",
+  "gram",
+  "maize",
+  "tomato"
+ ],
+ "states": [
+  "Madhya Pradesh",
+  "Maharashtra"
+ ],
+ "rows": 1766755,
+ "published_market_names": 1366,
+ "mandis": 776,
+ "per_state_crop": [
+  {
+   "state": "Madhya Pradesh",
+   "crop": "bajra",
+   "rows": 50742,
+   "first": "2002-04-11",
+   "last": "2026-08-25",
+   "published_market_names": 195,
+   "mandis": 160,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Madhya Pradesh",
+   "crop": "gram",
+   "rows": 284709,
+   "first": "2002-06-05",
+   "last": "2026-08-26",
+   "published_market_names": 515,
+   "mandis": 275,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Madhya Pradesh",
+   "crop": "maize",
+   "rows": 354263,
+   "first": "2002-02-26",
+   "last": "2026-08-26",
+   "published_market_names": 506,
+   "mandis": 291,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Madhya Pradesh",
+   "crop": "tomato",
+   "rows": 109359,
+   "first": "2002-03-21",
+   "last": "2026-08-26",
+   "published_market_names": 220,
+   "mandis": 153,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Maharashtra",
+   "crop": "bajra",
+   "rows": 207728,
+   "first": "2001-06-02",
+   "last": "2026-08-25",
+   "published_market_names": 368,
+   "mandis": 259,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Maharashtra",
+   "crop": "gram",
+   "rows": 394364,
+   "first": "2001-05-26",
+   "last": "2026-08-26",
+   "published_market_names": 585,
+   "mandis": 356,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Maharashtra",
+   "crop": "maize",
+   "rows": 197351,
+   "first": "2001-04-03",
+   "last": "2026-08-26",
+   "published_market_names": 389,
+   "mandis": 251,
+   "published_commodity_names": 1
+  },
+  {
+   "state": "Maharashtra",
+   "crop": "tomato",
+   "rows": 168239,
+   "first": "2001-02-08",
+   "last": "2026-08-26",
+   "published_market_names": 157,
+   "mandis": 105,
+   "published_commodity_names": 1
+  }
+ ],
+ "crop_spellings": [
+  {
+   "crop": "bajra",
+   "commodity": "Bajra(Pearl Millet/Cumbu)",
+   "rows": 258470,
+   "first": "2001-06-02",
+   "last": "2026-08-25"
+  },
+  {
+   "crop": "gram",
+   "commodity": "Bengal Gram(Gram)(Whole)",
+   "rows": 679073,
+   "first": "2001-05-26",
+   "last": "2026-08-26"
+  },
+  {
+   "crop": "maize",
+   "commodity": "Maize",
+   "rows": 551614,
+   "first": "2001-04-03",
+   "last": "2026-08-26"
+  },
+  {
+   "crop": "tomato",
+   "commodity": "Tomato",
+   "rows": 277598,
+   "first": "2001-02-08",
+   "last": "2026-08-26"
+  }
+ ],
+ "columns": {
+  "state, district, market, commodity, variety, grade": "exactly as published",
+  "crop": "AIAIC's crop for the published commodity (COMMODITY_TO_CROP): key a series on this, not on `commodity`",
+  "mandi": "AIAIC's identity for the market: key a series on this, not on `market`",
+  "mandi_district": "the mandi's district by AIAIC's closed district list",
+  "date": "ISO YYYY-MM-DD (published as DD/MM/YYYY)",
+  "min_price, max_price, modal_price": "Rs per quintal, nominal, as published (min/max may be empty)",
+  "source_file_id, source_line": "where the row was published; sources.csv names the file"
+ },
+ "crop_identity": "engine/dataset_adapters/agmarknet_adapter.py COMMODITY_TO_CROP (exact, hand-checked pairs; the 2025-11 tur spelling added 2026-10-02 on measured price continuity)",
+ "identity": {
+  "rules": "badyears-prep/build_price_shock_years.py, IDENTITY (D-116 M1, m12), all raw files",
+  "rule_counts": {
+   "as_published": 771,
+   "apmc_rename_folded": 630,
+   "one_name_two_mandis_split_by_district_label": 1
+  },
+  "build_info": {
+   "apmc_names_folded": 706,
+   "names_split_into_two_mandis": 1,
+   "mandis_placed_by_their_taluka": 5
+  }
+ },
+ "reading_rules": "as price_history: whole duplicate files skipped, DD/MM/YYYY dates, modal price > 0, every published line kept (file + line)",
+ "raw_files_read": 90,
+ "raw_files_with_rows": 90,
+ "counts": {
+  "processed_form_excluded: Bengal Gram Dal (Chana Dal)": 4981
+ },
+ "not_included": [
+  "arrivals: AIAIC holds no arrivals history (the daily price files carry no arrivals column)",
+  "any price after the last raw file AIAIC holds"
+ ],
+ "limits": [
+  "Coverage is thin in the early years and varies by mandi; check per-mandi history before using a year",
+  "Prices are nominal rupees; no inflation adjustment",
+  "Processed forms are not the crop: milled dal and milled rice (places.grown.PROCESSED_FORMS) are left out even where COMMODITY_TO_CROP maps them to the grain; `counts` names each one dropped",
+  "The identity rules are AIAIC's judgement, stated in the builder; mandi_identity.csv lists every fold so it can be checked",
+  "In a renaming week Agmarknet publishes the SAME quote under both names (old and new mandi or crop spelling): take one price per crop, mandi and day (e.g. the median), never a sum or a count of rows",
+  "'Red Gram' (MP 2001-2016; MH 1,199 rows 2001-2008) is not included as tur. Botanically red gram IS tur, but at the same mandi on the same day the two names' prices are a median 0.99 apart and 0.70-1.54x (p10-p90, 129,433 MP pairs): two co-reported series, not the identical quotes the other spellings show. It waits for an agronomist's or the publisher's answer"
+ ],
+ "files": {
+  "agmarknet_pilot_mh_mp_2001_2026.csv.gz": {
+   "sha256": "616566ac6cd15f91727cd781c0a7a6fcb048b3576cc0bce08bf635cd370441b3",
+   "bytes": 18555072
+  },
+  "sources.csv": {
+   "sha256": "f9a8fcae45db4a77b01fad7adc8d8864591879517e0cf7a17231afc43b5d54ad",
+   "bytes": 13311
+  },
+  "mandi_identity.csv": {
+   "sha256": "b27b69d21d440875ed1ef501efdc1c2f9101cb1a71fc7ba84588408ddf79d776",
+   "bytes": 99219
+  }
+ },
+ "generator": {
+  "script": "for_team/aryan/export_pilot_prices_for_aryan.py",
+  "aiaic_git_head": "bdc42647d3a1d208bf4dced5c9842ae440472a68",
+  "uncommitted_changes_in_dependencies": "M engine/places/grown.py",
+  "dependencies_not_in_git": {
+   "for_team/aryan/export_pilot_prices_for_aryan.py": "not in any commit (gitignored folder); its sha256 is in dependencies_sha256"
+  },
+  "dependencies_sha256": {
+   "for_team/aryan/export_pilot_prices_for_aryan.py": "38f927de64fbb87a2a2dc8b47c4a550457a7c70d88e02f6067a9296db39307c3",
+   "badyears-prep/build_price_shock_years.py": "03ec05ed0c6a1e247fdc694b0c59ff1e9fa0b74fcc0e4a12c9f6fb2b9b2890e6",
+   "price-prep/build_seasonal_from_datasets.py": "c1bf653ba7317fc3e221afcef8350670e5f499b797061c572b6ed4205ab8f6b8",
+   "engine/dataset_adapters/agmarknet_adapter.py": "9784e014ac18d33cc7fb391caabca2dd965565c96b147657c86857759ee18c16",
+   "engine/intelligence/market_regions.py": "18da47fc9c5ea6970aaba3016a8d8bd8a336ee987e87dadfbd375c6526a28526",
+   "engine/historical_evidence/evidence_inventory.json": "164f2ebee45c82730b4ee1d978fe17cc9577eb3885b9bcade487cd4ec7b75e3e",
+   "engine/places/grown.py": "24f0ec2f16feb27139e305fac31b913ce78d3bc5aaaced3866e145cf7285d787"
+  },
+  "generated_at_utc": "2026-10-17T18:44:07Z"
+ }
+}
