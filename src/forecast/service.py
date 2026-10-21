@@ -74,9 +74,9 @@ KNOWN_UNKNOWNS = {
 
 def _freshness(trained_through: str, generated_at: datetime) -> str:
     days = (generated_at.date() - pd.Timestamp(trained_through).date()).days
-    if days < 30:
+    if days < 7:
         return "fresh"
-    if days < 90:
+    if days < 30:
         return "aging"
     return "stale"
 
@@ -107,6 +107,8 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     target = as_of + np.timedelta64(horizon, "D")
     freshness = _freshness(meta["trained_through"], generated_dt)
     engine_version = os.environ.get("ENGINE_VERSION") or Path(meta["model_file"]).stem
+    backtest = _backtest_row(meta, commodity, state, horizon)
+    synthetic = req.get("history") is not None
     base = {
         "decision_id": f"forecast-{uuid.uuid4().hex[:8]}",
         "generated_at": generated_at,
@@ -114,8 +116,10 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         "commodity": commodity, "state": state, "market": market, "as_of": str(as_of), "horizon_days": horizon,
         "target_date": str(target), "unit": "INR per quintal (modal price)",
         "model": {"file": meta["model_file"], "trained_at": meta["trained_at"], "trained_through": meta["trained_through"],
-                  "data_source": meta["data_source"], "data_hash": meta["data_hash"]},
-        "backtest": _backtest_row(meta, commodity, state, horizon),
+                  "data_source": meta["data_source"], "data_hash": meta["data_hash"],
+                  "backtest_skill": backtest.get("skill_vs_persistence") if backtest else None,
+                  "backtest_coverage": backtest.get("coverage_p10_p90") if backtest else None},
+        "backtest": backtest,
         "last_price": None,
         "last_price_date": None,
         "expected_change_pct": None,
@@ -124,7 +128,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         "known_unknowns": KNOWN_UNKNOWNS.get(commodity.lower(), []),
         "read_these_first": [],
         "sources_used": [{"source_name": meta["data_source"], "trained_through": meta["trained_through"],
-                          "real_world_freshness": freshness}],
+                          "real_world_freshness": freshness, "synthetic": synthetic}],
     }
 
     def abstain(code: str, why: str) -> Dict:
@@ -141,10 +145,10 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         return abstain("in_sample", f"This day's outcome ({target}) is inside the model's training data (to "
                                     f"{meta['trained_through']}), so a range here would not be a forecast.")
     latest = np.datetime64(meta["trained_through"], "D") + np.timedelta64(ASOF_TOLERANCE_DAYS, "D")
-    if as_of > latest and not req.get("history") and as_of > np.datetime64(generated_dt.date(), "D"):
+    if as_of > latest and not synthetic and as_of > np.datetime64(generated_dt.date(), "D"):
         return abstain("as_of_outside_history", f"The model's prices end on {meta['trained_through']}; send `history` "
                                                 "to forecast from a later day.")
-    if req.get("history"):
+    if synthetic:
         h = pd.DataFrame(req["history"])
         h["date"] = pd.to_datetime(h["date"]).dt.normalize()
         g = h[["date", "modal_price"]]
