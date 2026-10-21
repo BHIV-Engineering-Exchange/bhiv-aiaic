@@ -109,6 +109,16 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     engine_version = os.environ.get("ENGINE_VERSION") or Path(meta["model_file"]).stem
     backtest = _backtest_row(meta, commodity, state, horizon)
     synthetic = req.get("history") is not None
+    known_unknowns = [
+        *KNOWN_UNKNOWNS.get(commodity.lower(), []),
+        f"Model trained on data up to {meta['trained_through']}. Forecast patterns are based on historical prices, "
+        "not recent market conditions.",
+    ]
+    read_these_first = (
+        ["This forecast is not better than a simple guess."]
+        if backtest and backtest.get("skill_vs_persistence", 0) < 0
+        else []
+    )
     base = {
         "decision_id": f"forecast-{uuid.uuid4().hex[:8]}",
         "generated_at": generated_at,
@@ -125,8 +135,8 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         "expected_change_pct": None,
         "direction": "UNCLEAR",
         "confidence": "low",
-        "known_unknowns": KNOWN_UNKNOWNS.get(commodity.lower(), []),
-        "read_these_first": [],
+        "known_unknowns": known_unknowns,
+        "read_these_first": read_these_first,
         "sources_used": [{"source_name": meta["data_source"], "trained_through": meta["trained_through"],
                           "real_world_freshness": freshness, "synthetic": synthetic}],
     }
@@ -163,7 +173,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     days_since_last = (generated_dt.date() - pd.Timestamp(last_price_date).date()).days
     base.update({"last_price": last_price, "last_price_date": last_price_date, "days_since_last_price": days_since_last})
     if days_since_last > 30 and as_of >= np.datetime64(generated_dt.date(), "D"):
-        base["read_these_first"] = [f"The last price is {days_since_last} days old."]
+        base["read_these_first"].append(f"The last price is {days_since_last} days old.")
         return {**base, "abstain": True, "reason_code": "STALE_PRICE",
                 "reason": f"The last price is {days_since_last} days old.",
                 "p10": None, "p50": None, "p90": None}
