@@ -101,7 +101,9 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     meta, bundle = loaded["meta"], loaded["bundle"]
     generated_dt = datetime.now(timezone.utc)
     generated_at = generated_dt.isoformat().replace("+00:00", "Z")
-    source_name = str(meta["data_source"]).replace("AIAIC pilot export", "AIAIC price export")
+    source_name = (str(meta["data_source"])
+                   .replace("AIAIC pilot export", "AIAIC price export")
+                   .replace("agmarknet_pilot_", "agmarknet_"))
     if req.get("history") is not None:
         return {
             "abstain": True,
