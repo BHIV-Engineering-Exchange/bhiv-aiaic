@@ -80,6 +80,21 @@ def test_a_day_inside_the_training_data_is_refused_as_in_sample(monkeypatch, tra
     assert r["abstain"] is True and r["reason_code"] == "in_sample" and r["p50"] is None, r
 
 
+def test_stale_price_age_uses_as_of_for_field_and_reason(monkeypatch, trained):
+    import pandas as pd
+
+    models, meta = trained
+    as_of = (pd.Timestamp(meta["trained_through"]) + pd.Timedelta(days=31)).date().isoformat()
+    r = _client(monkeypatch, models).post("/v1/forecast", json={
+        "commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon",
+        "as_of": as_of, "horizon_days": 7,
+    }).json()
+
+    assert r["abstain"] is True and r["reason_code"] == "STALE_PRICE", r
+    assert r["days_since_last_price"] == 31
+    assert r["reason"] == "The last price is 31 days old."
+
+
 def test_the_cli_refuses_a_crop_that_is_not_in_the_data(tmp_path, synthetic):
     """`--crops` names are exact, as the data spells them (Agmarknet writes "Soyabean"); a typo is refused, not
     silently trained on nothing."""

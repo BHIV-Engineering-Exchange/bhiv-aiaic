@@ -181,13 +181,12 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         return abstain("no_recent_price", "No price for this mandi on or before that day.")
     last_price_date = g["date"].max().date().isoformat()
     last_price = float(g.loc[g["date"].idxmax(), "modal_price"])
-    days_since_last = (generated_dt.date() - pd.Timestamp(last_price_date).date()).days
+    days_since_last = (pd.Timestamp(as_of).date() - pd.Timestamp(last_price_date).date()).days
     base.update({"last_price": last_price, "last_price_date": last_price_date, "days_since_last_price": days_since_last})
-    days_since_as_of = (pd.Timestamp(as_of).date() - pd.Timestamp(last_price_date).date()).days
-    if days_since_as_of > 30:
-        base["read_these_first"].append(f"The last price is {days_since_as_of} days old.")
+    if days_since_last > 30:
+        base["read_these_first"].append(f"The last price is {days_since_last} days old.")
         return {**base, "abstain": True, "reason_code": "STALE_PRICE",
-                "reason": f"The last price is {days_since_as_of} days old.",
+                "reason": f"The last price is {days_since_last} days old.",
                 "p10": None, "p50": None, "p90": None}
     bt = base["backtest"]
     if not bt or not bt.get("usable"):
