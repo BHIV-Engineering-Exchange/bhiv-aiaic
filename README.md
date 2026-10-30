@@ -1,69 +1,84 @@
-# AIAIC ML Foundation — mandi price forecast service
+# AIAIC ML Foundation - mandi price forecast service
 
 **Owner:** Aryan Sawant
-**Project:** AIAIC (Agricultural Intelligence & Income Creation Platform)
-**Status (2026-10-02):** the forecast is integrated with AIAIC's backend as an EXPERIMENTAL range, shown on the
-operator dashboard only. It is not an input to any AIAIC decision.
+**Current release:** `forecast-v2026.10.17`
+**Status:** Experimental. AIAIC may show ranges on the operator dashboard, but
+the forecast is not an input to an AIAIC decision.
 
----
+## What this project does
 
-## What this is
+This service forecasts the future modal mandi price for a crop, state, market,
+and horizon. It uses official Agmarknet daily price exports from data.gov.in,
+walk-forward evaluation, three LightGBM quantile models (p10, p50, p90), and
+split-conformal range calibration. It refuses to present a forecast when the
+requested group has not demonstrated skill against the persistence baseline,
+has insufficient scored cases, or has coverage below 70%.
 
-A service that answers: "on day `as_of`, what range is this mandi's modal price likely to be in after
-`horizon_days`, and has this model beaten the simple rule *the price stays where it is*?"
+The current release is trained through 2026-08-26 on the pilot_v2 export. It
+supports these crops and states:
 
-- **Data:** official Agmarknet daily mandi prices (data.gov.in "Variety-wise Daily Market Prices"), exported by
-  AIAIC with a `MANIFEST.json` (period, counts, sha256) and AIAIC's mandi identity.
-- **Model:** three LightGBM quantile models (p10, p50, p90), a walk-forward backtest, and split-conformal widening
-  of the range (Romano, Patterson and Candès, 2019).
-- **Features:** the mandi's own prices dated on or before `as_of` only (last price, 7/14/30-day lags by DATE,
-  30-day mean, spread and count, recent changes, target month). Never the same day's min or max price, never a
-  price after `as_of`.
-- **Honesty:** a crop, state and horizon answers only when its backtest beat persistence, with a range that held at
-  least 70% of outcomes over at least 20 cases. Everything else abstains with a reason.
+| Crop | States |
+|---|---|
+| onion | Madhya Pradesh, Maharashtra |
+| soybean | Madhya Pradesh, Maharashtra |
+| tur | Madhya Pradesh, Maharashtra |
+| wheat | Madhya Pradesh, Maharashtra |
 
-## Current model
+Supported forecast horizons are 7 and 30 days. The release has 16 evaluated
+crop/state/horizon groups; 14 are usable and two onion/Maharashtra groups
+abstain under the release rules. Overall backtest skill versus persistence is
+`0.0739`, with 86.31% p10-p90 coverage (18,719 scored cases).
 
-`forecast_20261002T064450Z_9595e12e` (Onion, Soyabean, Wheat; Maharashtra and Madhya Pradesh; 2016-2026; trained
-through 2026-08-26): **overall skill -0.157 against persistence; 4 of 12 crop/state/horizon groups usable** (Onion MP
-7 days; Wheat MP 7 and 30 days; Wheat MH 30 days). The full table is in `DEP.md` section 7.
-
-The earlier `/v1/predict` model's figures (R² 0.9946, MAPE 4.52%) are **not** forecasting skill: it read the same
-day's min and max price. It is retired (410 Gone).
-
-## Quick start
+## Run it
 
 ```bash
 pip install -r requirements.txt
-pytest tests -q                                        # no model needed (SYNTHETIC test data, labelled)
-python -m src.forecast.train --help                    # train: see DEP.md section 3
-python scripts/package_forecast_release.py --from <models dir>
+python -m pytest tests -q                 # 70 tests
+python -m src.forecast.train --help       # training options
+python scripts/package_forecast_release.py --from <models-dir>
 docker compose -f docker/docker-compose.yml up --build -d
 curl http://127.0.0.1:8040/v1/ready
 ```
 
-| Endpoint | Method | What it does |
+The release bundle is in `models/release/` and is checked by
+`RELEASE.json`/`SHA256SUMS`. For the complete training and release procedure,
+see `DEP.md`.
+
+## API
+
+| Endpoint | Method | Purpose |
 |---|---|---|
-| `/v1/health` | GET | liveness, always 200; `status` is `ok` only when the forecast model is loaded |
-| `/v1/ready` | GET | 200 when the forecast model is loaded, else 503 |
-| `/v1/forecast/meta` | GET | the model, its data, its closed lists, its backtest |
-| `/v1/forecast` | POST | a range (p10, p50, p90) with its backtest, or an abstention with a reason |
-| `/v1/predict` | any | 410 Gone |
+| `/v1/health` | GET | Liveness and model status |
+| `/v1/ready` | GET | 200 only when the release model is loaded |
+| `/v1/forecast/meta` | GET | Release metadata, closed lists, and backtest |
+| `/v1/forecast` | POST | Forecast range or an explicit abstention |
+| `/v1/predict` | any | 410 Gone; retired because it leaked same-day min/max |
 
-## How AIAIC uses it
+Example request:
 
-AIAIC calls this service over HTTP at `ML_PRICE_API_URL` (on the VM: `http://aiaic-ml:8000`, inside the docker
-network, no public port). AIAIC re-checks the backtest rules itself and labels every range "experimental; not used
-in decisions". New models reach AIAIC as tagged releases (DEP.md section 4), never as files copied into AIAIC.
+```bash
+curl -X POST http://127.0.0.1:8040/v1/forecast \
+  -H "Content-Type: application/json" \
+  -d '{"commodity":"onion","state":"Madhya Pradesh","market":"A lot","as_of":"2026-08-26","horizon_days":7}'
+```
 
-## Documents
+Successful responses include `request_id`, `execution_status`, `decision_id`,
+`generated_at`, `engine_version`, the request fields, `target_date`, `p10`,
+`p50`, `p90`, `unit`, `last_price`, `expected_change_pct`, `direction`,
+`confidence`, `backtest`, `model`, `known_unknowns`, `read_these_first`, and
+`sources_used`. An abstention keeps the same audit fields and returns
+`abstain: true`, `reason_code`, `reason`, and null quantiles. The model never
+uses same-day min/max prices or prices after `as_of`.
 
-- `DEP.md`: train, package, release, Docker, API contract, failure behaviour, known limitations.
-- `review_packet/`, `evidence_packet/`: the Test 1 review and its evidence.
+## Integration and limitations
 
-## Test 1 pipeline (kept, not served)
+AIAIC calls the service through `ML_PRICE_API_URL` (normally
+`http://aiaic-ml:8000` inside the Docker network). New model bundles are
+identified by a dated release tag, not copied into the AIAIC repository.
+`confidence`, `direction`, and `known_unknowns` are advisory response fields;
+they do not turn an experimental forecast into a decision.
 
-`run_pipeline.py` and `src/{ingestion,validation,preprocessing,features,training,inference}` are the Test 1
-pipeline (ingest, validate with quarantine, preprocess, features, train, persist with a data hash). Its model read
-same-day min/max prices, so it is not served. No modifications were made to TANTRA, the reasoning engine,
-governance, runtime contracts, PIG or Bucket.
+The retired Test 1 pipeline remains in `src/{ingestion,validation,preprocessing,
+features,training,inference}` for historical review and is not served. No
+changes were made to TANTRA, the reasoning engine, governance, runtime
+contracts, PIG, or Bucket.

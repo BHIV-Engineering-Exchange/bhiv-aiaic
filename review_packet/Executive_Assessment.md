@@ -1,85 +1,55 @@
 # Executive Assessment
-**Candidate:** Aryan Sawant | **Test 1:** ML Foundation
 
----
+**Current release:** `forecast-v2026.10.17`
+**Model:** `forecast_20261016T062532Z_97c62dd7.joblib`
 
-## What Was Built
+## What was built
 
-A prototype ML foundation for agricultural crop price prediction, built in a
-standalone repository for integration testing. The earlier `/v1/predict`
-endpoint has been retired because its same-day min/max inputs leaked information
-about the same-day modal-price target.
+This repository provides an experimental, leakage-safe mandi price forecast
+service. The pilot_v2 data was retrained and evaluated with walk-forward
+backtesting. Five experiment families were compared, with selection isolated
+from the untouched scored half. The release serves calibrated p10/p50/p90
+ranges and abstains when its evidence is insufficient.
 
-The retired endpoint's reported R²=0.9946 and MAPE=4.52% are not valid
-forecast-quality metrics and must not be presented as accuracy claims. Use the
-future-dated `/v1/forecast` endpoint and its release backtest for forecast
-evaluation.
+## Assessment
 
----
+**Data and reproducibility - PASS.** The model uses the Agmarknet export,
+records its data hash and packages checksummed release assets.
 
-## Assessment Against Success Criteria
+**Forecast validity - PASS.** Features are derived only from prices available
+on or before `as_of`. The retired `/v1/predict` endpoint is 410 and is not
+part of the served contract.
 
-**Uses real datasets only** — PASS
-Real Indian mandi price data (740k rows, 2023–2025). No synthetic data used
-or generated anywhere in the pipeline. Clearly documented dataset source and
-assumptions in known_limitations.md.
+**Evaluation - PASS with honest limits.** The release scores 18,719 cases,
+with model MAE Rs 267.83/q versus persistence Rs 289.21/q, skill `0.0739`,
+and 86.31% calibrated coverage. Fourteen of 16 groups are usable; the two
+onion/Maharashtra groups abstain.
 
-**Deterministic preprocessing** — PASS
-Every pipeline stage computes and records a SHA-256 content hash of the
-dataframe. The hash is written to a local JSON manifest and optionally mirrored
-to MongoDB. Any run can be reproduced exactly by replaying with the same data
-hash. Random seeds are fixed (seed=42) everywhere.
+**API and operations - PASS.** `/v1/forecast`, `/v1/forecast/meta`,
+`/v1/ready`, and `/v1/health` are implemented. Responses carry
+`confidence`, `direction`, `known_unknowns`, model/backtest provenance, and
+source freshness. Docker packaging verifies the release bundle.
 
-**Clean feature engineering** — PASS
-Lag features (1/7/14 days), rolling mean/std (7/14/30 day windows), and
-seasonal encoding (kharif/rabi/zaid + cyclical month encoding). No leakage —
-rolling features use shift(1) before windowing so today's price never appears
-in its own features.
+**Verification - PASS.** The current suite reports **70 passed**. The only
+reported results are existing dependency/deprecation and date-parsing
+warnings.
 
-**Production-ready FastAPI inference service** — PASS
-Full FastAPI service with Pydantic request/response validation, structured
-error handling (200/422/503), health endpoint reporting model status and
-MongoDB availability, and Swagger UI auto-documentation.
+## Integration boundary
 
-**Dockerized deployment** — PASS
-Dockerfile (Python 3.11-slim, non-root user, health check) and
-docker-compose.yml (API + MongoDB, volume mounts, service health dependency).
+AIAIC consumes the service through `ML_PRICE_API_URL` and identifies model
+assets by the release tag. The service remains labelled experimental and is
+not used for decisions. No TANTRA, reasoning engine, governance, runtime
+contract, PIG, or Bucket code was modified.
 
-**Replay-safe execution** — PASS
-Dataset version registry tracks content hash, row count, column list,
-source name, stage, and parent hash at every pipeline stage — forming a
-complete lineage chain from raw CSV to trained model.
+## Remaining gaps
 
-**Well documented** — PASS
-README with setup, run, API, and integration notes. Architecture summary.
-Known limitations. REVIEW_PACKET with all required evidence.
+- No automated retraining or hot model reload exists.
+- Agmarknet live API ingestion is not the deployed training path; releases use
+  an exported, hashed dataset.
+- Docker was packaged and release-smoke-tested, but the local development
+  machine does not provide a full production VM integration test.
+- Forecast quality remains crop/state/market dependent; usable-group status is
+  the gate, not a guarantee of accuracy.
 
-**Fully testable** — PASS
-42 unit tests across ingestion, validation, preprocessing, features,
-inference, and API layers. 42/42 passing. Test output saved in runtime_logs/.
-
-**No duplicate capabilities** — PASS
-No modifications to TANTRA, reasoning engine, governance, runtime contracts,
-PIG, Bucket, or existing integrations. Fully isolated codebase.
-
-**Ready for Test 2 ecosystem integration** — PASS
-predict_price(payload) in src/inference/predictor.py is the single callable
-integration point. Feature columns are stored in model metadata JSON — no
-hardcoded assumptions about column lists. Dataset versioning means the exact
-training data can be reproduced for any future model comparison.
-
----
-
-## Honest Self-Assessment
-
-**Strong points:**
-- Replay-safety is genuinely implemented, not just claimed
-- Baseline comparison (naive lag-1) makes model quality honestly assessable
-- Row-level quarantine logging means "why was this row rejected" is always answerable
-- No-leakage guarantee in rolling features is explicitly tested
-
-**Gaps acknowledged:**
-- MongoDB not smoke-tested in Docker (Docker not available locally)
-- Agmarknet live API designed but replaced with Kaggle CSV (documented)
-- commodity_price.csv dates didn't parse (2,733 rows quarantined) — acceptable
-- Model not versioned with MLflow (lightweight JSON run registry used instead)
+The historical same-day `/v1/predict` R2/MAE/MAPE numbers are leakage-contaminated
+and are intentionally excluded from this assessment.

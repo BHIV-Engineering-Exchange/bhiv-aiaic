@@ -1,77 +1,55 @@
-# Known Limitations & Assumptions
-**Service:** AIAIC ML Foundation | **Candidate:** Aryan Sawant
+# Known Limitations and Assumptions
 
----
+**Current release:** `forecast-v2026.10.17`
+**Training data:** pilot_v2 Agmarknet export, through 2026-08-26
 
-## Dataset Assumptions
+## Data assumptions
 
-**Date format**
-`Agriculture_price_dataset.csv` uses `M/D/YYYY` format (e.g. `6/6/2023`).
-`commodity_price.csv` uses a different format that failed parsing —
-2,733 rows quarantined as `unparseable_date`. These are from the smaller
-supplementary file and do not affect training quality meaningfully.
+- Prices are treated as nominal INR per quintal modal prices.
+- The model uses normalized `mandi` and `crop` identities to join series
+  across Agmarknet market renames and takes one price per crop, mandi and day.
+- The release is closed to onion, soybean, tur and wheat in Maharashtra and
+  Madhya Pradesh. Other crops, states, or mandis abstain as
+  `not_trained_for`.
+- The source is an export from data.gov.in. It does not provide arrivals
+  history, and source freshness depends on a later export and release.
+- Early history can be sparse. A mandi with no recent quote abstains rather
+  than receiving a synthetic value.
 
-**Price units**
-All prices assumed to be in INR per quintal. No unit normalization was applied.
-If source data contains mixed units, predictions will be off for those rows.
+## Model and evaluation limitations
 
-**Commodity spelling**
-Commodity names are matched exactly (case-sensitive after normalization).
-"Onion" and "onion" would be treated as different categories.
+- The release supports only 7- and 30-day horizons.
+- A group is usable only with at least 20 scored cases, positive skill against
+  persistence, and p10-p90 coverage of at least 70%. The service therefore
+  abstains for the two onion/Maharashtra groups.
+- Backtest results are aggregate evidence, not a promise for an individual
+  market or future regime.
+- Five experiment families were evaluated on pilot_v2. Variant choice is
+  based on calibration data; final numbers come from untouched scored data.
+- The release uses historical prices and has no arrivals, weather, event, or
+  other causal market features.
+- There is no automated retraining trigger. A new model must be trained,
+  packaged, checked, and released under a new tag.
 
----
+## API and deployment limitations
 
-## Pipeline Limitations
+- The model bundle is loaded and cached by the service; replacing it requires
+  a restart. There is no hot `/reload` endpoint.
+- Caller-supplied `history` is rejected in production as `SYNTHETIC_INPUT`;
+  the service uses its stored release history.
+- A request more than 7 days beyond the model history without an accepted
+  current release abstains. Prices more than 30 days old trigger
+  `STALE_PRICE`.
+- `confidence` and `direction` are advisory summaries derived from the
+  backtest and forecast range. `known_unknowns` is an explicit uncertainty
+  list; none of these fields is a decision recommendation.
+- The release is Docker-packaged and smoke-tested, but a full AIAIC VM
+  integration depends on the consuming deployment and network.
+- MongoDB is optional and is not used by the current forecast service.
 
-**Model reload requires restart**
-The trained model is cached with `@lru_cache` on first API request.
-If a new model is trained while the API is running, the API must be
-restarted to pick it up. A future `/reload` endpoint would fix this.
+## Retired endpoint
 
-**No MLflow tracking**
-A lightweight JSON run registry is used instead of MLflow. Full MLflow
-integration (experiment tracking, artifact store, UI) is not implemented
-but the run registry schema is compatible with MLflow concepts.
-
-**Agmarknet live API not connected**
-The service was originally designed to pull live data from the
-data.gov.in Agmarknet API. This was replaced with local Kaggle CSVs
-because API key registration was blocked during development. The client
-code exists in `src/ingestion/agmarknet_client.py` and can be activated
-by setting `AIAIC_AGMARKNET_API_KEY` in `.env`.
-
----
-
-## Deployment Limitations
-
-**Docker not smoke-tested locally**
-Docker Desktop was not available in the local build environment.
-The Dockerfile and docker-compose.yml are production-ready and reviewed
-for correctness, but were not run end-to-end locally. The API was fully
-verified without Docker using uvicorn directly.
-
-**MongoDB optional**
-MongoDB is used for dataset version mirroring and training run logging.
-If MongoDB is unreachable, the service degrades gracefully to local JSON.
-This is by design — the service must work in environments without a
-running MongoDB instance.
-
----
-
-## Model Limitations
-
-**Price scale varies by commodity**
-A single model is trained across all commodities and states. Commodity-specific
-models would likely improve accuracy for individual crops but were not built
-in this version.
-
-**No retraining trigger**
-There is no automated retraining when new data arrives. Retraining requires
-manually running `python run_pipeline.py` again.
-
-**Feature availability at inference time**
-The model's strongest features are lag and rolling price features
-(modal_price_lag_1, modal_price_roll_mean_7 etc.). If a caller doesn't
-supply these (e.g. for a completely new market with no price history),
-prediction quality will degrade. The API logs a warning when features
-are missing but still returns a prediction.
+`/v1/predict` is permanently retired with 410. Its same-day min/max inputs
+leaked the same-day modal-price target, so its old R2, MAE, and MAPE figures
+are not forecast-quality evidence and must not be presented as current
+metrics.

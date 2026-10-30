@@ -1,55 +1,52 @@
-# REVIEW PACKET — AIAIC ML Foundation
+# REVIEW PACKET - AIAIC ML Foundation
+
 **Candidate:** Aryan Sawant
-**Test:** Test 1 — ML Foundation & Prediction Service
-**Intake:** AIAIC 7-4-3
-**Submitted:** August 2026
-**Status:** COMPLETE
+**Test:** Test 1 - ML Foundation & Prediction Service
+**Current release:** `forecast-v2026.10.17`
+**Status:** Complete for the current experimental forecast release
 
----
+## Quick summary
 
-## Quick Summary
+The repository now serves `/v1/forecast`, not the retired leaky `/v1/predict`.
+The current bundle was retrained from pilot_v2, evaluated through walk-forward
+backtesting, and compared across 5 experiment families. The release has 16
+crop/state/horizon groups, 14 usable groups, overall skill `0.0739` versus
+persistence, and 86.31% calibrated p10-p90 coverage over 18,719 cases.
 
-| Item | Result |
-|------|--------|
-| Real dataset used | ✅ 740,125 rows, Indian mandi price data |
-| Deterministic preprocessing | ✅ Hash-verified at every stage |
-| Feature engineering | ✅ Lag (1/7/14d), rolling (7/14/30d), seasonal |
-| Forecast-quality evidence | ❌ The retired `/v1/predict` scores below are invalid for forecasting: same-day min/max prices leaked into the target |
-| Forecast service | `/v1/predict` retired (410); use `/v1/forecast` and its release backtest |
-| FastAPI service | ✅ /predict + /health, Pydantic validated |
-| Docker deployment | ✅ Dockerfile + docker-compose (API + Mongo) |
-| Unit tests | ✅ 42/42 passing |
-| Replay-safe | ✅ SHA-256 content hash at every pipeline stage |
-| Integration-ready | ✅ No modifications to existing architecture |
+| Check | Current result |
+|---|---|
+| Source data | Agmarknet via data.gov.in; pilot_v2 export |
+| Crops | onion, soybean, tur, wheat |
+| States | Maharashtra, Madhya Pradesh |
+| Horizons | 7 and 30 days |
+| Release tag | `forecast-v2026.10.17` |
+| API | `/v1/forecast`, `/v1/forecast/meta`, `/v1/ready` |
+| Response additions | `confidence`, `direction`, `known_unknowns`, audit/source fields |
+| Tests | **70 passed** |
+| Retired API | `/v1/predict` returns 410 |
 
----
+## Evidence index
 
-## Folder Index
+| Path | Contents |
+|---|---|
+| `../models/release/RELEASE.json` | Release metadata and full backtest |
+| `../models/release/SHA256SUMS` | Bundle checksums |
+| `../experiments/` | pilot_v2 experiment log and run evidence |
+| `../evidence_packet/` | Release smoke and replay evidence |
+| `Executive_Assessment.md` | Current assessment |
+| `Assignment_vs_Delivery.md` | Requirement mapping |
+| `known_limitations.md` | Current limitations and assumptions |
 
-| Folder/File | Contents |
-|-------------|----------|
-| `REVIEW_PACKET.md` | This file — master index |
-| `Executive_Assessment.md` | Self-assessment of build quality |
-| `Assignment_vs_Delivery.md` | Line-by-line requirement mapping |
-| `architecture_summary.md` | System architecture explanation |
-| `known_limitations.md` | Honest gaps and assumptions |
-| `screenshots/` | API, pipeline, test, repo screenshots |
-| `code_packet/` | 8 key files with explanations |
-| `api_samples/` | predict + health JSON samples |
-| `runtime_logs/` | Pipeline run log + test results |
-| `deployment_proof/` | Docker setup proof |
+## Key release numbers
 
----
+- Model: `forecast_20261016T062532Z_97c62dd7.joblib`
+- Trained through: 2026-08-26
+- Scored cases: 18,719
+- Model MAE: Rs 267.83/q
+- Persistence MAE: Rs 289.21/q
+- Skill versus persistence: `0.0739`
+- Calibrated p10-p90 coverage: `86.31%`
+- Usable groups: 14 of 16
 
-## Key Numbers
-
-- **740,125** rows ingested
-- **737,389** clean rows after validation
-- **2,736** rows quarantined (logged with reasons)
-- **735,774** rows used for training after feature engineering
-- **699,750** training rows / **36,024** test rows (time-based split)
-- **Retired `/v1/predict` metrics (not forecast quality):** R² 0.9946, MAE 44.07 INR/quintal, MAPE 4.52%.
-  The endpoint used same-day min/max prices to predict the same day's modal price, so these figures are leakage-
-  contaminated and must not be used as model-quality or production-accuracy claims.
-- **42/42** unit tests passing
-- **~55 seconds** full pipeline runtime on 740k rows
+The old `/v1/predict` R2, MAE, and MAPE figures are leakage-contaminated
+historical figures and are not current model-quality claims.
