@@ -135,28 +135,30 @@ def forecast(req: Dict, models_dir: str) -> Dict:
             "engine_version": engine_version,
             "commodity": commodity, "state": state, "market": market, "as_of": str(as_of), "horizon_days": horizon,
             "target_date": str(target), "unit": "INR per quintal (modal price)",
-            "last_price": None, "last_price_date": None, "days_since_last_price": None,
-            "expected_change_pct": None, "direction": "UNCLEAR",
-            "known_unknowns": known_unknowns,
             "model": {"file": meta["model_file"], "trained_at": meta["trained_at"], "trained_through": meta["trained_through"],
                       "data_source": meta["data_source"], "data_hash": meta["data_hash"],
                       "backtest_skill": backtest.get("skill_vs_persistence") if backtest else None,
                       "backtest_coverage": backtest.get("coverage_p10_p90") if backtest else None},
             "backtest": backtest,
-            "abstain": True,
-            "reason_code": "SYNTHETIC_INPUT",
-            "reason": "Caller-supplied history is not accepted in production. Use the stored model history.",
+            "last_price": None, "last_price_date": None, "days_since_last_price": None,
+            "expected_change_pct": None, "direction": "UNCLEAR",
             "confidence": "low",
             "confidence_rule": confidence_rule,
+            "known_unknowns": known_unknowns,
             "read_these_first": read_these_first,
             "sources_used": [{"source_name": source_name, "trained_through": meta["trained_through"],
                               "observed_on": meta["trained_through"],
                               "licence": "Government Open Data Licence - India (GODL-India)",
                               "real_world_freshness": freshness,
                               "synthetic": True}],
+            "abstain": True,
+            "reason_code": "SYNTHETIC_INPUT",
+            "reason": "Caller-supplied history is not accepted in production. Use the stored model history.",
             "p10": None,
             "p50": None,
             "p90": None,
+            "range_widened_by": None,
+            "what_this_is": None,
         }
     commodity, state, market = _norm(req.get("commodity")), _norm(req.get("state")), _norm(req.get("market"))
     horizon = int(req.get("horizon_days") or 0)
@@ -199,10 +201,19 @@ def forecast(req: Dict, models_dir: str) -> Dict:
                           "observed_on": meta["trained_through"],
                           "licence": "Government Open Data Licence - India (GODL-India)",
                           "real_world_freshness": freshness, "synthetic": False}],
+        "abstain": None,
+        "reason_code": None,
+        "reason": None,
+        "p10": None,
+        "p50": None,
+        "p90": None,
+        "range_widened_by": None,
+        "what_this_is": None,
     }
 
     def abstain(code: str, why: str) -> Dict:
-        return {**base, "abstain": True, "reason_code": code, "reason": why, "p10": None, "p50": None, "p90": None}
+        return {**base, "abstain": True, "reason_code": code, "reason": why, "p10": None, "p50": None, "p90": None,
+                "range_widened_by": None, "what_this_is": None}
 
     if freshness == "stale":
         base["read_these_first"].append(
@@ -237,7 +248,8 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         base["read_these_first"].append(f"The last price is {days_since_last} days old.")
         return {**base, "abstain": True, "reason_code": "STALE_PRICE",
                 "reason": f"The last price is {days_since_last} days old.",
-                "p10": None, "p50": None, "p90": None}
+                "p10": None, "p50": None, "p90": None,
+                "range_widened_by": None, "what_this_is": None}
     bt = base["backtest"]
     if not bt or not bt.get("usable"):
         return abstain("no_skill", "In its backtest the model did not beat 'the price stays where it is' for this crop, "
@@ -254,7 +266,8 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     direction = "UP" if expected_change_pct > 3 else "DOWN" if expected_change_pct < -3 else "FLAT"
     base.update({"confidence": _confidence(bt, False, freshness == "stale"), "expected_change_pct": expected_change_pct,
                  "direction": direction})
-    return {**base, "abstain": False, "p10": p10, "p50": p50, "p90": p90,
+    return {**base, "abstain": False, "reason_code": None, "reason": None,
+            "p10": p10, "p50": p50, "p90": p90,
             "range_widened_by": qhat,
             "what_this_is": ("A range for the modal price at this mandi around the target date: p50 is the middle "
                              "estimate. In the backtest the outcome fell inside p10-p90 in the share of cases given as "
