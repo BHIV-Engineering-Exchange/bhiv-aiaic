@@ -5,9 +5,21 @@ clone and in CI. No figure here describes a real market.
 """
 
 import pytest
+from datetime import datetime, timezone
 from fastapi.testclient import TestClient
 
 from src.forecast import service
+
+
+def _generated_at(monkeypatch, date_text):
+    generated = datetime.fromisoformat(date_text).replace(tzinfo=timezone.utc)
+
+    class FixedDatetime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return generated if tz else generated.replace(tzinfo=None)
+
+    monkeypatch.setattr(service, "datetime", FixedDatetime)
 
 
 @pytest.fixture
@@ -43,8 +55,9 @@ def test_meta_says_what_the_model_never_reads(client):
     assert not {"min_price", "max_price"} & set(m["features"])
 
 
-def test_a_usable_group_answers_with_an_ordered_range_and_its_backtest(client, api_models):
+def test_a_usable_group_answers_with_an_ordered_range_and_its_backtest(client, api_models, monkeypatch):
     _models, meta = api_models
+    _generated_at(monkeypatch, meta["trained_through"])
     usable = [g for g in meta["backtest"]["groups"] if g["usable"]]
     assert usable, "the synthetic data must give at least one usable group, or this test proves nothing"
     r = client.post("/v1/forecast", json=_ask(meta, usable[0]))
@@ -55,8 +68,9 @@ def test_a_usable_group_answers_with_an_ordered_range_and_its_backtest(client, a
     assert out["request_id"] and out["execution_status"] == "SUCCESS"
 
 
-def test_the_same_question_gets_the_same_range(client, api_models):
+def test_the_same_question_gets_the_same_range(client, api_models, monkeypatch):
     _models, meta = api_models
+    _generated_at(monkeypatch, meta["trained_through"])
     g = [g for g in meta["backtest"]["groups"] if g["usable"]][0]
     a = client.post("/v1/forecast", json=_ask(meta, g)).json()
     b = client.post("/v1/forecast", json=_ask(meta, g)).json()
@@ -64,8 +78,9 @@ def test_the_same_question_gets_the_same_range(client, api_models):
     assert a["request_id"] != b["request_id"]
 
 
-def test_an_untrained_crop_or_mandi_is_refused_not_guessed(client, api_models):
+def test_an_untrained_crop_or_mandi_is_refused_not_guessed(client, api_models, monkeypatch):
     _models, meta = api_models
+    _generated_at(monkeypatch, meta["trained_through"])
     g = meta["backtest"]["groups"][0]
     for over in ({"commodity": "Saffron"}, {"market": "Nowhere"}):
         out = client.post("/v1/forecast", json=_ask(meta, g, **over)).json()

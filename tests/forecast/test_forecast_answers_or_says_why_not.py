@@ -2,10 +2,22 @@
 Trained on SYNTHETIC data (tests/forecast/conftest.py); no figure here describes a real market."""
 
 import json
+from datetime import datetime, timezone
 
 from fastapi.testclient import TestClient
 
 from src.forecast import service
+
+
+def _generated_at(monkeypatch, date_text):
+    generated = datetime.fromisoformat(date_text).replace(tzinfo=timezone.utc)
+
+    class FixedDatetime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return generated if tz else generated.replace(tzinfo=None)
+
+    monkeypatch.setattr(service, "datetime", FixedDatetime)
 
 
 def _client(monkeypatch, models_dir):
@@ -26,6 +38,7 @@ def test_the_backtest_is_against_the_naive_rule_and_recorded(trained):
 
 def test_a_usable_group_gets_an_ordered_range(monkeypatch, trained):
     models, meta = trained
+    _generated_at(monkeypatch, meta["trained_through"])
     usable = [g for g in meta["backtest"]["groups"] if g["usable"]]
     c = _client(monkeypatch, models)
     for g in usable[:2]:
@@ -39,6 +52,7 @@ def test_a_usable_group_gets_an_ordered_range(monkeypatch, trained):
 
 def test_a_group_without_skill_abstains_and_still_shows_its_record(monkeypatch, trained):
     models, meta = trained
+    _generated_at(monkeypatch, meta["trained_through"])
     meta_path = models / meta["model_file"].replace(".joblib", ".json")
     saved = meta_path.read_text()
     try:
@@ -60,6 +74,7 @@ def test_a_group_without_skill_abstains_and_still_shows_its_record(monkeypatch, 
 
 def test_an_unknown_crop_mandi_or_horizon_is_refused_not_guessed(monkeypatch, trained):
     models, meta = trained
+    _generated_at(monkeypatch, meta["trained_through"])
     c = _client(monkeypatch, models)
     ask = {"commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon", "as_of": meta["trained_through"],
            "horizon_days": 7}
@@ -75,6 +90,7 @@ def test_a_day_inside_the_training_data_is_refused_as_in_sample(monkeypatch, tra
     import pandas as pd
     models, meta = trained
     early = (pd.Timestamp(meta["trained_through"]) - pd.Timedelta(days=30)).date().isoformat()
+    _generated_at(monkeypatch, early)
     r = _client(monkeypatch, models).post("/v1/forecast", json={
         "commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon", "as_of": early, "horizon_days": 7}).json()
     assert r["abstain"] is True and r["reason_code"] == "in_sample" and r["p50"] is None, r
@@ -85,6 +101,7 @@ def test_stale_price_age_uses_as_of_for_field_and_reason(monkeypatch, trained):
 
     models, meta = trained
     as_of = (pd.Timestamp(meta["trained_through"]) + pd.Timedelta(days=31)).date().isoformat()
+    _generated_at(monkeypatch, as_of)
     r = _client(monkeypatch, models).post("/v1/forecast", json={
         "commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon",
         "as_of": as_of, "horizon_days": 7,
