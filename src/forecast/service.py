@@ -5,6 +5,7 @@ Abstains (answers with `abstain: true` and a reason code, never a guessed range)
 - `horizon_not_trained`: the horizon is not one the model was trained for;
 - `no_recent_price`: the mandi has no quote in the 7 days before `as_of`;
 - `as_of_outside_history`: `as_of` is later than the model's data plus 7 days (it would forecast from stale prices);
+- `PAST_TARGET`: the target date is before the forecast was generated;
 - `no_skill`: in the walk-forward backtest the model did not beat "the price stays where it is" for this crop, state
   and horizon, or had too few test samples to say.
 The backtest row is returned in every case, so a caller can show how the model has done.
@@ -81,7 +82,10 @@ def _freshness(trained_through: str, generated_at: datetime) -> str:
     return "stale"
 
 
-def _confidence(backtest: Optional[Dict], abstain: bool) -> str:
+def _confidence(backtest: Optional[Dict], abstain: bool, stale: bool = False) -> str:
+    # high: skill above 0.15 and coverage above 0.80. medium: skill above 0.05 and coverage above 0.70.
+    # low: all other cases. Capped at medium when data is stale. Always low when abstain is true.
+    # STALE_PRICE triggers when days_since_last_price is above 30.
     if abstain or not backtest:
         return "low"
     skill = backtest.get("skill_vs_persistence", 0)
@@ -92,7 +96,7 @@ def _confidence(backtest: Optional[Dict], abstain: bool) -> str:
         value = "medium"
     else:
         value = "low"
-    return "medium" if value == "high" else value
+    return "medium" if stale and value == "high" else value
 
 
 def forecast(req: Dict, models_dir: str) -> Dict:
@@ -104,15 +108,51 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     source_name = (str(meta["data_source"])
                    .replace("AIAIC pilot export", "AIAIC price export")
                    .replace("agmarknet_pilot_", "agmarknet_"))
+    confidence_rule = ("high: skill above 0.15 and coverage above 0.80. medium: skill above 0.05 and coverage above "
+                       "0.70. low: all other cases. Capped at medium when data is stale. Always low when abstain is "
+                       "true. STALE_PRICE triggers when days_since_last_price is above 30.")
     if req.get("history") is not None:
+        commodity, state, market = _norm(req.get("commodity")), _norm(req.get("state")), _norm(req.get("market"))
+        horizon = int(req.get("horizon_days") or 0)
+        as_of = np.datetime64(pd.Timestamp(req.get("as_of")).normalize().date(), "D")
+        target = as_of + np.timedelta64(horizon, "D")
+        freshness = _freshness(meta["trained_through"], generated_dt)
+        engine_version = os.environ.get("ENGINE_VERSION") or Path(meta["model_file"]).stem
+        backtest = _backtest_row(meta, commodity, state, horizon)
+        known_unknowns = [
+            *KNOWN_UNKNOWNS.get(commodity.lower(), []),
+            f"Model trained on data up to {meta['trained_through']}. Forecast patterns are based on historical prices, "
+            "not recent market conditions.",
+        ]
+        read_these_first = ["This answer uses test data, not real market prices."]
+        if freshness == "stale":
+            read_these_first.append(
+                "This forecast uses data that is more than 30 days old. Confidence is capped at medium."
+            )
         return {
+            "decision_id": f"forecast-{uuid.uuid4().hex[:8]}",
+            "generated_at": generated_at,
+            "engine_version": engine_version,
+            "commodity": commodity, "state": state, "market": market, "as_of": str(as_of), "horizon_days": horizon,
+            "target_date": str(target), "unit": "INR per quintal (modal price)",
+            "last_price": None, "last_price_date": None, "days_since_last_price": None,
+            "expected_change_pct": None, "direction": "UNCLEAR",
+            "known_unknowns": known_unknowns,
+            "model": {"file": meta["model_file"], "trained_at": meta["trained_at"], "trained_through": meta["trained_through"],
+                      "data_source": meta["data_source"], "data_hash": meta["data_hash"],
+                      "backtest_skill": backtest.get("skill_vs_persistence") if backtest else None,
+                      "backtest_coverage": backtest.get("coverage_p10_p90") if backtest else None},
+            "backtest": backtest,
             "abstain": True,
             "reason_code": "SYNTHETIC_INPUT",
             "reason": "Caller-supplied history is not accepted in production. Use the stored model history.",
             "confidence": "low",
-            "read_these_first": ["This answer uses test data, not real market prices."],
+            "confidence_rule": confidence_rule,
+            "read_these_first": read_these_first,
             "sources_used": [{"source_name": source_name, "trained_through": meta["trained_through"],
-                              "real_world_freshness": _freshness(meta["trained_through"], generated_dt),
+                              "observed_on": meta["trained_through"],
+                              "licence": "Government Open Data Licence - India (GODL-India)",
+                              "real_world_freshness": freshness,
                               "synthetic": True}],
             "p10": None,
             "p50": None,
@@ -148,18 +188,28 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         "backtest": backtest,
         "last_price": None,
         "last_price_date": None,
+        "days_since_last_price": None,
         "expected_change_pct": None,
         "direction": "UNCLEAR",
         "confidence": "low",
+        "confidence_rule": confidence_rule,
         "known_unknowns": known_unknowns,
         "read_these_first": read_these_first,
         "sources_used": [{"source_name": source_name, "trained_through": meta["trained_through"],
+                          "observed_on": meta["trained_through"],
+                          "licence": "Government Open Data Licence - India (GODL-India)",
                           "real_world_freshness": freshness, "synthetic": False}],
     }
 
     def abstain(code: str, why: str) -> Dict:
         return {**base, "abstain": True, "reason_code": code, "reason": why, "p10": None, "p50": None, "p90": None}
 
+    if freshness == "stale":
+        base["read_these_first"].append(
+            "This forecast uses data that is more than 30 days old. Confidence is capped at medium."
+        )
+    if target < np.datetime64(generated_dt.date(), "D"):
+        return abstain("PAST_TARGET", "The target date is in the past.")
     if commodity not in meta["commodities"] or state not in meta["states"] \
             or market not in meta["markets"].get(f"{commodity}|{state}", []):
         return abstain("not_trained_for", "This crop, state and mandi are not in what the model was trained on.")
@@ -202,7 +252,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     p10, p50, p90 = (round(float(v), 2) for v in (raw[0] - qhat, raw[1], raw[2] + qhat))
     expected_change_pct = round((p50 - last_price) / last_price * 100, 2)
     direction = "UP" if expected_change_pct > 3 else "DOWN" if expected_change_pct < -3 else "FLAT"
-    base.update({"confidence": _confidence(bt, False), "expected_change_pct": expected_change_pct,
+    base.update({"confidence": _confidence(bt, False, freshness == "stale"), "expected_change_pct": expected_change_pct,
                  "direction": direction})
     return {**base, "abstain": False, "p10": p10, "p50": p50, "p90": p90,
             "range_widened_by": qhat,
