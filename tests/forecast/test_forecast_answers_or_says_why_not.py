@@ -9,6 +9,21 @@ from fastapi.testclient import TestClient
 from src.forecast import service
 
 
+REQUIRED_FIELDS = {
+    "decision_id", "generated_at", "engine_version", "commodity", "state", "market", "as_of",
+    "horizon_days", "target_date", "unit", "abstain", "reason_code", "reason", "p10", "p50", "p90",
+    "last_price", "last_price_date", "days_since_last_price", "expected_change_pct", "direction",
+    "confidence", "confidence_rule", "known_unknowns", "read_these_first", "sources_used", "model",
+    "backtest",
+}
+SOURCE_FIELDS = {
+    "source_name", "trained_through", "observed_on", "licence", "real_world_freshness", "synthetic",
+}
+MODEL_FIELDS = {
+    "file", "trained_at", "trained_through", "data_hash", "backtest_skill", "backtest_coverage",
+}
+
+
 def _generated_at(monkeypatch, date_text):
     generated = datetime.fromisoformat(date_text).replace(tzinfo=timezone.utc)
 
@@ -48,6 +63,18 @@ def test_a_usable_group_gets_an_ordered_range(monkeypatch, trained):
         assert r["abstain"] is False, r
         assert r["p10"] <= r["p50"] <= r["p90"]
         assert r["backtest"]["skill_vs_persistence"] > 0
+
+
+def test_every_forecast_response_has_the_full_field_set(monkeypatch, trained):
+    models, meta = trained
+    _generated_at(monkeypatch, meta["trained_through"])
+    body = {"commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon",
+            "as_of": meta["trained_through"], "horizon_days": 7}
+    response = _client(monkeypatch, models).post("/v1/forecast", json=body).json()
+    assert REQUIRED_FIELDS <= set(response)
+    assert SOURCE_FIELDS <= set(response["sources_used"][0])
+    assert MODEL_FIELDS <= set(response["model"])
+    assert "execution_status" not in response
 
 
 def test_a_group_without_skill_abstains_and_still_shows_its_record(monkeypatch, trained):

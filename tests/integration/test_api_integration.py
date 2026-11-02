@@ -65,7 +65,7 @@ def test_a_usable_group_answers_with_an_ordered_range_and_its_backtest(client, a
     out = r.json()
     assert out["abstain"] is False and out["p10"] <= out["p50"] <= out["p90"]
     assert out["backtest"]["usable"] is True and out["model"]["file"] == meta["model_file"]
-    assert out["request_id"] and out["execution_status"] == "SUCCESS"
+    assert "execution_status" not in out
 
 
 def test_the_same_question_gets_the_same_range(client, api_models, monkeypatch):
@@ -75,7 +75,7 @@ def test_the_same_question_gets_the_same_range(client, api_models, monkeypatch):
     a = client.post("/v1/forecast", json=_ask(meta, g)).json()
     b = client.post("/v1/forecast", json=_ask(meta, g)).json()
     assert (a["p10"], a["p50"], a["p90"]) == (b["p10"], b["p50"], b["p90"])
-    assert a["request_id"] != b["request_id"]
+    assert a["decision_id"] != b["decision_id"]
 
 
 def test_an_untrained_crop_or_mandi_is_refused_not_guessed(client, api_models, monkeypatch):

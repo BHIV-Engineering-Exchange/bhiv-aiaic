@@ -3,7 +3,6 @@ src/forecast/__init__.py for why it could not forecast)."""
 
 from __future__ import annotations
 
-import uuid
 from datetime import date
 from typing import List, Optional
 
@@ -37,7 +36,7 @@ def post_forecast(req: ForecastRequest) -> dict:
         out = forecast(req.model_dump(mode="json"), str(settings.models_dir))
     except ForecastUnavailable as e:
         raise HTTPException(status_code=503, detail=str(e)) from None
-    return {"request_id": str(uuid.uuid4()), "execution_status": "SUCCESS", **out}
+    return out
 
 
 @router.get("/forecast/meta")
