@@ -123,6 +123,31 @@ def test_a_day_inside_the_training_data_is_refused_as_in_sample(monkeypatch, tra
     assert r["abstain"] is True and r["reason_code"] == "in_sample" and r["p50"] is None, r
 
 
+def test_replay_skips_past_target_but_keeps_other_checks(monkeypatch, trained):
+    import pandas as pd
+
+    models, meta = trained
+    as_of = (pd.Timestamp(meta["trained_through"]) - pd.Timedelta(days=1)).date().isoformat()
+    target = (pd.Timestamp(as_of) + pd.Timedelta(days=7)).date().isoformat()
+    _generated_at(monkeypatch, (pd.Timestamp(target) + pd.Timedelta(days=1)).isoformat())
+    meta_path = models / meta["model_file"].replace(".joblib", ".json")
+    saved = meta_path.read_text()
+    try:
+        m = json.loads(saved)
+        m["trained_through"] = (pd.Timestamp(as_of) - pd.Timedelta(days=8)).date().isoformat()
+        meta_path.write_text(json.dumps(m))
+        c = _client(monkeypatch, models)
+        body = {"commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon",
+                "as_of": as_of, "horizon_days": 7, "replay": True}
+        r = c.post("/v1/forecast", json=body).json()
+        assert r["abstain"] is False and r["reason_code"] is None
+        assert r["p10"] is not None and r["p50"] is not None and r["p90"] is not None
+        assert "TEST REPLAY EXAMPLE" in r["read_these_first"][0]
+    finally:
+        meta_path.write_text(saved)
+        service.reset_cache()
+
+
 def test_stale_price_age_uses_as_of_for_field_and_reason(monkeypatch, trained):
     import pandas as pd
 

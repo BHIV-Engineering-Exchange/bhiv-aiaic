@@ -243,11 +243,11 @@ def forecast(req: Dict, models_dir: str) -> Dict:
             "last_price_date": last_price_date,
             "days_since_last_price": (pd.Timestamp(as_of).date() - pd.Timestamp(last_price_date).date()).days,
         })
-    if as_of <= np.datetime64(meta["trained_through"], "D") and as_of < np.datetime64(generated_dt.date(), "D"):
+    if req.get("replay"):
         base["read_these_first"].append(
             "TEST REPLAY EXAMPLE: This is a replay example using historical data, not a live forecast."
         )
-    if target < np.datetime64(generated_dt.date(), "D"):
+    if not req.get("replay") and target < np.datetime64(generated_dt.date(), "D"):
         return abstain("PAST_TARGET", "The target date is in the past.")
     if horizon not in meta["horizons_days"]:
         return abstain("horizon_not_trained", f"Horizons trained: {meta['horizons_days']} days.")

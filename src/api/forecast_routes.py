@@ -26,6 +26,7 @@ class ForecastRequest(BaseModel):
     market: str = Field(min_length=1, max_length=96, examples=["Lasalgaon"])
     as_of: date = Field(examples=["2025-10-01"])
     horizon_days: int = Field(ge=1, le=90, examples=[7])
+    replay: bool = Field(default=False, description="Allow historical examples whose target date is in the past")
     history: Optional[List[HistoryPoint]] = Field(default=None, max_length=400,
                                                   description="Optional: this mandi's recent prices, oldest first")
 

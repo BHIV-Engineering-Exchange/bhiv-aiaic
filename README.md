@@ -59,7 +59,7 @@ Example request:
 ```bash
 curl -X POST http://127.0.0.1:8040/v1/forecast \
   -H "Content-Type: application/json" \
-  -d '{"commodity":"onion","state":"Madhya Pradesh","market":"A lot","as_of":"2026-08-26","horizon_days":7}'
+  -d '{"commodity":"onion","state":"Madhya Pradesh","market":"A lot","as_of":"2026-08-26","horizon_days":7,"replay":false}'
 ```
 
 Successful responses include `request_id`, `execution_status`, `decision_id`,
@@ -68,7 +68,9 @@ Successful responses include `request_id`, `execution_status`, `decision_id`,
 `confidence`, `backtest`, `model`, `known_unknowns`, `read_these_first`, and
 `sources_used`. An abstention keeps the same audit fields and returns
 `abstain: true`, `reason_code`, `reason`, and null quantiles. The model never
-uses same-day min/max prices or prices after `as_of`.
+uses same-day min/max prices or prices after `as_of`. Set `replay: true` to
+allow a historical example whose target date is in the past; all other checks
+still apply.
 
 ## Integration and limitations
 

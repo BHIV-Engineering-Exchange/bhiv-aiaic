@@ -84,7 +84,7 @@ Content-Type: application/json
 ```
 
 ```json
-{"commodity":"onion","state":"Madhya Pradesh","market":"A lot","as_of":"2026-08-26","horizon_days":7}
+{"commodity":"onion","state":"Madhya Pradesh","market":"A lot","as_of":"2026-08-26","horizon_days":7,"replay":false}
 ```
 
 The response contains the audit fields `request_id`, `execution_status`,
@@ -95,7 +95,8 @@ The response contains the audit fields `request_id`, `execution_status`,
 `abstain: true`, `reason_code`, `reason`, and null quantiles. Common reason
 codes are `not_trained_for`, `horizon_not_trained`, `in_sample`,
 `as_of_outside_history`, `no_skill`, `no_recent_price`, `STALE_PRICE`, and
-`SYNTHETIC_INPUT`.
+`SYNTHETIC_INPUT`. Set `replay: true` to allow a historical example whose
+target date is in the past; all other checks still apply.
 
 `GET /v1/forecast/meta` exposes the model file, source, dates, closed lists,
 market quote dates, features, and the full backtest.
