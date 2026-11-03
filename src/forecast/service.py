@@ -102,7 +102,7 @@ def _confidence(backtest: Optional[Dict], abstain: bool, stale: bool = False) ->
 def forecast(req: Dict, models_dir: str) -> Dict:
     """`req`: commodity, state, market, as_of (YYYY-MM-DD), horizon_days, optional history [{date, modal_price}]."""
     loaded = load_bundle(models_dir)
-    meta, bundle = loaded["meta"], loaded["bundle"]
+    meta, bundle, hist = loaded["meta"], loaded["bundle"], loaded["history"]
     generated_dt = datetime.now(timezone.utc)
     generated_at = generated_dt.isoformat().replace("+00:00", "Z")
     source_name = (str(meta["data_source"])
@@ -124,6 +124,16 @@ def forecast(req: Dict, models_dir: str) -> Dict:
             f"Model trained on data up to {meta['trained_through']}. Forecast patterns are based on historical prices, "
             "not recent market conditions.",
         ]
+        stored = hist[(hist["commodity"] == commodity) & (hist["state"] == state) & (hist["market"] == market)]
+        stored = stored[stored["date"] <= pd.Timestamp(as_of)]
+        stored_fields = {}
+        if not stored.empty:
+            stored_date = stored["date"].max().date().isoformat()
+            stored_fields = {
+                "last_price": float(stored.loc[stored["date"].idxmax(), "modal_price"]),
+                "last_price_date": stored_date,
+                "days_since_last_price": (pd.Timestamp(as_of).date() - pd.Timestamp(stored_date).date()).days,
+            }
         read_these_first = ["This answer uses test data, not real market prices."]
         if freshness == "stale":
             read_these_first.append(
@@ -140,7 +150,9 @@ def forecast(req: Dict, models_dir: str) -> Dict:
                       "backtest_skill": backtest.get("skill_vs_persistence") if backtest else None,
                       "backtest_coverage": backtest.get("coverage_p10_p90") if backtest else None},
             "backtest": backtest,
-            "last_price": None, "last_price_date": None, "days_since_last_price": None,
+            "last_price": stored_fields.get("last_price"),
+            "last_price_date": stored_fields.get("last_price_date"),
+            "days_since_last_price": stored_fields.get("days_since_last_price"),
             "expected_change_pct": None, "direction": "UNCLEAR",
             "confidence": "low",
             "confidence_rule": confidence_rule,
@@ -219,11 +231,24 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         base["read_these_first"].append(
             "This forecast uses data that is more than 30 days old. Confidence is capped at medium."
         )
-    if target < np.datetime64(generated_dt.date(), "D"):
-        return abstain("PAST_TARGET", "The target date is in the past.")
     if commodity not in meta["commodities"] or state not in meta["states"] \
             or market not in meta["markets"].get(f"{commodity}|{state}", []):
         return abstain("not_trained_for", "This crop, state and mandi are not in what the model was trained on.")
+    g = hist[(hist["commodity"] == commodity) & (hist["state"] == state) & (hist["market"] == market)]
+    g = g[g["date"] <= pd.Timestamp(as_of)]
+    if not g.empty:
+        last_price_date = g["date"].max().date().isoformat()
+        base.update({
+            "last_price": float(g.loc[g["date"].idxmax(), "modal_price"]),
+            "last_price_date": last_price_date,
+            "days_since_last_price": (pd.Timestamp(as_of).date() - pd.Timestamp(last_price_date).date()).days,
+        })
+    if as_of <= np.datetime64(meta["trained_through"], "D") and as_of < np.datetime64(generated_dt.date(), "D"):
+        base["read_these_first"].append(
+            "TEST REPLAY EXAMPLE: This is a replay example using historical data, not a live forecast."
+        )
+    if target < np.datetime64(generated_dt.date(), "D"):
+        return abstain("PAST_TARGET", "The target date is in the past.")
     if horizon not in meta["horizons_days"]:
         return abstain("horizon_not_trained", f"Horizons trained: {meta['horizons_days']} days.")
     if target <= np.datetime64(meta["trained_through"], "D"):
@@ -235,15 +260,10 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     if as_of > latest and as_of > np.datetime64(generated_dt.date(), "D"):
         return abstain("as_of_outside_history", f"The model's prices end on {meta['trained_through']}; send `history` "
                                                 "to forecast from a later day.")
-    hist = loaded["history"]
-    g = hist[(hist["commodity"] == commodity) & (hist["state"] == state) & (hist["market"] == market)]
-    g = g[g["date"] <= pd.Timestamp(as_of)]
     if g.empty:
         return abstain("no_recent_price", "No price for this mandi on or before that day.")
-    last_price_date = g["date"].max().date().isoformat()
-    last_price = float(g.loc[g["date"].idxmax(), "modal_price"])
-    days_since_last = (pd.Timestamp(as_of).date() - pd.Timestamp(last_price_date).date()).days
-    base.update({"last_price": last_price, "last_price_date": last_price_date, "days_since_last_price": days_since_last})
+    last_price = base["last_price"]
+    days_since_last = base["days_since_last_price"]
     if days_since_last > 30:
         base["read_these_first"].append(f"The last price is {days_since_last} days old.")
         return {**base, "abstain": True, "reason_code": "STALE_PRICE",
