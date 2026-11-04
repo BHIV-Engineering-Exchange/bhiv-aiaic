@@ -55,7 +55,7 @@ def _smoke(meta: dict) -> dict:
         raise SystemExit(f"release does not serve its own model: {out}")
     usable = [g for g in meta["backtest"]["groups"] if g.get("usable")]
     if not usable:
-        out["forecast"] = "no usable group: every forecast will abstain (no_skill); say so in the release notes"
+        out["forecast"] = "no usable group: every forecast will abstain (NO_SKILL); say so in the release notes"
         return out
     as_of = meta["trained_through"]
     last = meta.get("market_last_quote") or {}
@@ -66,7 +66,7 @@ def _smoke(meta: dict) -> dict:
         for market in recent[:40]:
             r = c.post("/v1/forecast", json={"commodity": g["commodity"], "state": g["state"], "market": market,
                                              "as_of": as_of, "horizon_days": g["horizon_days"]}).json()
-            if r.get("reason_code") == "no_recent_price":
+            if r.get("reason_code") == "NO_RECENT_PRICE":
                 continue
             if r.get("abstain") is not False or not (r["p10"] <= r["p50"] <= r["p90"]):
                 raise SystemExit(f"a usable group did not answer: {r}")

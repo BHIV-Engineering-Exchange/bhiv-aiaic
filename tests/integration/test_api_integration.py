@@ -84,7 +84,7 @@ def test_an_untrained_crop_or_mandi_is_refused_not_guessed(client, api_models, m
     g = meta["backtest"]["groups"][0]
     for over in ({"commodity": "Saffron"}, {"market": "Nowhere"}):
         out = client.post("/v1/forecast", json=_ask(meta, g, **over)).json()
-        assert out["abstain"] is True and out["reason_code"] == "not_trained_for" and out["p50"] is None
+        assert out["abstain"] is True and out["reason_code"] == "NOT_TRAINED_FOR" and out["p50"] is None
 
 
 def test_predict_stays_gone_when_a_model_is_loaded(client):

@@ -11,7 +11,7 @@ from src.forecast import service
 
 REQUIRED_FIELDS = {
     "decision_id", "generated_at", "engine_version", "commodity", "state", "market", "as_of",
-    "horizon_days", "target_date", "unit", "abstain", "reason_code", "reason", "p10", "p50", "p90",
+    "horizon_days", "target_date", "unit", "replay", "abstain", "reason_code", "reason", "p10", "p50", "p90",
     "last_price", "last_price_date", "days_since_last_price", "expected_change_pct", "direction",
     "confidence", "confidence_rule", "known_unknowns", "read_these_first", "sources_used", "model",
     "backtest",
@@ -72,6 +72,7 @@ def test_every_forecast_response_has_the_full_field_set(monkeypatch, trained):
             "as_of": meta["trained_through"], "horizon_days": 7}
     response = _client(monkeypatch, models).post("/v1/forecast", json=body).json()
     assert REQUIRED_FIELDS <= set(response)
+    assert response["replay"] is False
     assert SOURCE_FIELDS <= set(response["sources_used"][0])
     assert MODEL_FIELDS <= set(response["model"])
     assert "execution_status" not in response
@@ -92,7 +93,7 @@ def test_a_group_without_skill_abstains_and_still_shows_its_record(monkeypatch, 
         r = c.post("/v1/forecast", json={"commodity": g["commodity"], "state": g["state"],
                                          "market": m["markets"][f"{g['commodity']}|{g['state']}"][0],
                                          "as_of": m["trained_through"], "horizon_days": g["horizon_days"]}).json()
-        assert r["abstain"] is True and r["reason_code"] == "no_skill" and r["p50"] is None
+        assert r["abstain"] is True and r["reason_code"] == "NO_SKILL" and r["p50"] is None
         assert r["backtest"]["n"] == g["n"]
     finally:
         meta_path.write_text(saved)
@@ -105,8 +106,8 @@ def test_an_unknown_crop_mandi_or_horizon_is_refused_not_guessed(monkeypatch, tr
     c = _client(monkeypatch, models)
     ask = {"commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon", "as_of": meta["trained_through"],
            "horizon_days": 7}
-    for change, code in (({"commodity": "Saffron"}, "not_trained_for"), ({"market": "Nowhere APMC"}, "not_trained_for"),
-                         ({"horizon_days": 11}, "horizon_not_trained"), ({"as_of": "2031-01-01"}, "as_of_outside_history")):
+    for change, code in (({"commodity": "Saffron"}, "NOT_TRAINED_FOR"), ({"market": "Nowhere APMC"}, "NOT_TRAINED_FOR"),
+                         ({"horizon_days": 11}, "HORIZON_NOT_TRAINED"), ({"as_of": "2031-01-01"}, "AS_OF_OUTSIDE_HISTORY")):
         r = c.post("/v1/forecast", json={**ask, **change}).json()
         assert r["abstain"] is True and r["reason_code"] == code, (change, r)
 
@@ -120,7 +121,7 @@ def test_a_day_inside_the_training_data_is_refused_as_in_sample(monkeypatch, tra
     _generated_at(monkeypatch, early)
     r = _client(monkeypatch, models).post("/v1/forecast", json={
         "commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon", "as_of": early, "horizon_days": 7}).json()
-    assert r["abstain"] is True and r["reason_code"] == "in_sample" and r["p50"] is None, r
+    assert r["abstain"] is True and r["reason_code"] == "IN_SAMPLE" and r["p50"] is None, r
 
 
 def test_replay_skips_past_target_but_keeps_other_checks(monkeypatch, trained):
@@ -141,6 +142,7 @@ def test_replay_skips_past_target_but_keeps_other_checks(monkeypatch, trained):
                 "as_of": as_of, "horizon_days": 7, "replay": True}
         r = c.post("/v1/forecast", json=body).json()
         assert r["abstain"] is False and r["reason_code"] is None
+        assert r["replay"] is True
         assert r["p10"] is not None and r["p50"] is not None and r["p90"] is not None
         assert "TEST REPLAY EXAMPLE" in r["read_these_first"][0]
     finally:
@@ -162,6 +164,19 @@ def test_stale_price_age_uses_as_of_for_field_and_reason(monkeypatch, trained):
     assert r["abstain"] is True and r["reason_code"] == "STALE_PRICE", r
     assert r["days_since_last_price"] == 31
     assert r["reason"] == "The last price is 31 days old."
+
+
+def test_synthetic_history_rejection_preserves_replay(monkeypatch, trained):
+    models, meta = trained
+    _generated_at(monkeypatch, meta["trained_through"])
+    body = {
+        "commodity": "Onion", "state": "Maharashtra", "market": "Lasalgaon",
+        "as_of": meta["trained_through"], "horizon_days": 7,
+        "replay": True, "history": [{"date": meta["trained_through"], "modal_price": 1800}],
+    }
+    r = _client(monkeypatch, models).post("/v1/forecast", json=body).json()
+    assert r["abstain"] is True and r["reason_code"] == "SYNTHETIC_INPUT"
+    assert r["replay"] is True
 
 
 def test_the_cli_refuses_a_crop_that_is_not_in_the_data(tmp_path, synthetic):

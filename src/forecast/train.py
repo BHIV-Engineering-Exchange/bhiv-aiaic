@@ -178,7 +178,7 @@ def train(df: pd.DataFrame, horizons: List[int], source: str, models_dir: Path, 
     # The served models are REFITTED on every sample, the backtest period included. The backtest above is the record
     # of this PROCEDURE (the same features, settings and seed, fitted up to the cutoff), not of these exact fitted
     # models. Their range is widened by the `qhat` calibrated above. A day whose outcome is inside this training data
-    # is refused by the service (`in_sample`), since a range there would describe a known price.
+    # is refused by the service (`IN_SAMPLE`), since a range there would describe a known price.
     Xall = _categorical(samples, categories)
     served = {q: _fit(Xall, samples["target"], q, seed) for q in QUANTILES}
 
@@ -194,7 +194,7 @@ def train(df: pd.DataFrame, horizons: List[int], source: str, models_dir: Path, 
     markets = {f"{c}|{s}": sorted(g["market"].unique().tolist())
                for (c, s), g in daily.groupby(["commodity", "state"], observed=True)}
     # The last day each mandi quoted: a caller can tell a mandi that still reports from one that stopped (the
-    # service refuses the latter with `no_recent_price`; this says so before anyone asks).
+    # service refuses the latter with `NO_RECENT_PRICE`; this says so before anyone asks).
     last_quote = {f"{c}|{s}": {m: str(d.date()) for m, d in g.groupby("market", observed=True)["date"].max().items()}
                   for (c, s), g in daily.groupby(["commodity", "state"], observed=True)}
     meta = {

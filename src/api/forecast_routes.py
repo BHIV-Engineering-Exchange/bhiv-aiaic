@@ -37,6 +37,7 @@ def post_forecast(req: ForecastRequest) -> dict:
         out = forecast(req.model_dump(mode="json"), str(settings.models_dir))
     except ForecastUnavailable as e:
         raise HTTPException(status_code=503, detail=str(e)) from None
+    out["replay"] = req.replay
     return out
 
 

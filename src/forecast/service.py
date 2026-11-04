@@ -1,12 +1,12 @@
 """Answer a forecast request from the latest trained bundle, or say plainly why not.
 
 Abstains (answers with `abstain: true` and a reason code, never a guessed range) when:
-- `not_trained_for`: the commodity, state or mandi is not in the model's closed lists;
-- `horizon_not_trained`: the horizon is not one the model was trained for;
-- `no_recent_price`: the mandi has no quote in the 7 days before `as_of`;
-- `as_of_outside_history`: `as_of` is later than the model's data plus 7 days (it would forecast from stale prices);
+- `NOT_TRAINED_FOR`: the commodity, state or mandi is not in the model's closed lists;
+- `HORIZON_NOT_TRAINED`: the horizon is not one the model was trained for;
+- `NO_RECENT_PRICE`: the mandi has no quote in the 7 days before `as_of`;
+- `AS_OF_OUTSIDE_HISTORY`: `as_of` is later than the model's data plus 7 days (it would forecast from stale prices);
 - `PAST_TARGET`: the target date is before the forecast was generated;
-- `no_skill`: in the walk-forward backtest the model did not beat "the price stays where it is" for this crop, state
+- `NO_SKILL`: in the walk-forward backtest the model did not beat "the price stays where it is" for this crop, state
   and horizon, or had too few test samples to say.
 The backtest row is returned in every case, so a caller can show how the model has done.
 """
@@ -164,6 +164,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
                               "real_world_freshness": freshness,
                               "synthetic": True}],
             "abstain": True,
+            "replay": bool(req.get("replay", False)),
             "reason_code": "SYNTHETIC_INPUT",
             "reason": "Caller-supplied history is not accepted in production. Use the stored model history.",
             "p10": None,
@@ -195,6 +196,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         "engine_version": engine_version,
         "commodity": commodity, "state": state, "market": market, "as_of": str(as_of), "horizon_days": horizon,
         "target_date": str(target), "unit": "INR per quintal (modal price)",
+        "replay": bool(req.get("replay", False)),
         "model": {"file": meta["model_file"], "trained_at": meta["trained_at"], "trained_through": meta["trained_through"],
                   "data_source": meta["data_source"], "data_hash": meta["data_hash"],
                   "backtest_skill": backtest.get("skill_vs_persistence") if backtest else None,
@@ -233,7 +235,7 @@ def forecast(req: Dict, models_dir: str) -> Dict:
         )
     if commodity not in meta["commodities"] or state not in meta["states"] \
             or market not in meta["markets"].get(f"{commodity}|{state}", []):
-        return abstain("not_trained_for", "This crop, state and mandi are not in what the model was trained on.")
+        return abstain("NOT_TRAINED_FOR", "This crop, state and mandi are not in what the model was trained on.")
     g = hist[(hist["commodity"] == commodity) & (hist["state"] == state) & (hist["market"] == market)]
     g = g[g["date"] <= pd.Timestamp(as_of)]
     if not g.empty:
@@ -250,18 +252,18 @@ def forecast(req: Dict, models_dir: str) -> Dict:
     if not req.get("replay") and target < np.datetime64(generated_dt.date(), "D"):
         return abstain("PAST_TARGET", "The target date is in the past.")
     if horizon not in meta["horizons_days"]:
-        return abstain("horizon_not_trained", f"Horizons trained: {meta['horizons_days']} days.")
+        return abstain("HORIZON_NOT_TRAINED", f"Horizons trained: {meta['horizons_days']} days.")
     if target <= np.datetime64(meta["trained_through"], "D"):
         # The served models were fitted on every sample up to `trained_through`, so this day's outcome is in their
         # training data. A range here would describe a known price, and it would look far better than a forecast.
-        return abstain("in_sample", f"This day's outcome ({target}) is inside the model's training data (to "
+        return abstain("IN_SAMPLE", f"This day's outcome ({target}) is inside the model's training data (to "
                                     f"{meta['trained_through']}), so a range here would not be a forecast.")
     latest = np.datetime64(meta["trained_through"], "D") + np.timedelta64(ASOF_TOLERANCE_DAYS, "D")
     if as_of > latest and as_of > np.datetime64(generated_dt.date(), "D"):
-        return abstain("as_of_outside_history", f"The model's prices end on {meta['trained_through']}; send `history` "
+        return abstain("AS_OF_OUTSIDE_HISTORY", f"The model's prices end on {meta['trained_through']}; send `history` "
                                                 "to forecast from a later day.")
     if g.empty:
-        return abstain("no_recent_price", "No price for this mandi on or before that day.")
+        return abstain("NO_RECENT_PRICE", "No price for this mandi on or before that day.")
     last_price = base["last_price"]
     days_since_last = base["days_since_last_price"]
     if days_since_last > 30:
@@ -272,12 +274,12 @@ def forecast(req: Dict, models_dir: str) -> Dict:
                 "range_widened_by": None, "what_this_is": None}
     bt = base["backtest"]
     if not bt or not bt.get("usable"):
-        return abstain("no_skill", "In its backtest the model did not beat 'the price stays where it is' for this crop, "
+        return abstain("NO_SKILL", "In its backtest the model did not beat 'the price stays where it is' for this crop, "
                                    "state and horizon, or its range held too few of the real outcomes (under 70%), or "
                                    "there were too few test cases to say.")
     row = features_as_of((commodity, state, market), Series.from_frame(g), as_of, horizon)
     if row is None:
-        return abstain("no_recent_price", f"The mandi has no quote in the {ASOF_TOLERANCE_DAYS} days before {as_of}.")
+        return abstain("NO_RECENT_PRICE", f"The mandi has no quote in the {ASOF_TOLERANCE_DAYS} days before {as_of}.")
     X = _categorical(pd.DataFrame([row]), bundle["categories"])
     qhat = float((meta.get("range_widening") or {}).get(str(horizon), {}).get("qhat", 0.0))
     raw = predict_quantiles(bundle["models"], X)[0]
